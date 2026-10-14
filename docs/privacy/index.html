@@ -78,11 +78,12 @@
         <h2 id="summary">1. Summary</h2>
         <ul>
           <li>Desktab does not require an account, does not show ads, and contains no analytics, telemetry or crash-reporting code.</li>
-          <li>The application does not make network connections of its own and does not send your files, file names, folder paths or settings to the developer or to anyone else.</li>
+          <li>The application does not make network connections of its own and does not send your files, file names, folder paths or settings to the developer or to anyone else. (Section 5 lists actions that involve other software.)</li>
           <li>Your settings and layout are stored only on your PC, in the application’s own data folder.</li>
+          <li>The developer receives only what you choose to send, by email or in a public GitHub issue.</li>
           <li>Microsoft (Windows and the Microsoft Store) and GitHub (this website and public support issues) process some data as separate services. They are described below and are not part of the application itself.</li>
         </ul>
-        <p>These statements about the application are based on a review of the application’s source code for the version prepared for the first Microsoft Store release. If a later version changes them, this policy will be updated before that version is released.</p>
+        <p>These statements about the application are based on a review of the application’s source code for the version prepared for the first Microsoft Store release. This is a source-code review; it has not been confirmed by monitoring network traffic. If a later version changes these statements, this policy will be updated before that version is released.</p>
 
         <h2 id="who">2. Who this policy covers</h2>
         <p>This policy covers (a) the Desktab application for Windows and (b) this website at <code>nevzatius.github.io/desktab-site</code>. The publisher of Desktab is <strong>nevzatius</strong>, an individual developer. Desktab is currently preparing for its first Microsoft Store release and is not yet publicly available.</p>
@@ -97,6 +98,7 @@
               <tr><td>Desktab (on your PC)</td><td>Runs locally as you</td><td>Folders you choose, settings and layout kept on your PC. Nothing is sent out by the application.</td></tr>
               <tr><td>Windows</td><td>Operating system and shell</td><td>Icons and previews, opening files, Recycle Bin, clipboard, drag and drop. Governed by Microsoft’s terms and your Windows settings.</td></tr>
               <tr><td>Microsoft Store</td><td>Distribution, licensing and payments</td><td>Download, updates, license and (in future) purchase records, and Microsoft’s own diagnostics. Governed by Microsoft’s privacy statement.</td></tr>
+              <tr><td>Email providers</td><td>Delivery of messages you send to the developer</td><td>Your email address and message, if you write to the developer. Governed by the terms of the providers involved.</td></tr>
               <tr><td>GitHub</td><td>Website hosting and public issue tracker</td><td>Technical visit data when you load this site; anything you post in a public issue.</td></tr>
             </tbody>
           </table>
@@ -105,9 +107,9 @@
         <h2 id="access">3. What the app accesses</h2>
         <p>The application is a desktop program that runs with your normal user permissions. It accesses only what you point it at or ask it to do:</p>
         <ul>
-          <li><strong>Folders you choose.</strong> It lists the items in the folders you open as workspaces, using their names and basic attributes (for example, whether an item is a file or a folder), and watches those folders so changes made elsewhere appear automatically. The application does not read, index or copy the contents of your files.</li>
+          <li><strong>Folders you choose.</strong> It lists the items in the folders you open as workspaces, using their names and basic attributes (for example, whether an item is a file or a folder), and watches those folders so changes made elsewhere appear automatically. Apart from copying files when you ask it to, the application does not read or index the contents of your files.</li>
           <li><strong>Icons and previews.</strong> Icons and thumbnails are produced by Windows. Windows itself may read parts of a file to create a thumbnail; that processing is done by the operating system, not by Desktab.</li>
-          <li><strong>File operations you request.</strong> Open (with the default Windows application for that file type), rename, create a folder, copy, move, and send to the Recycle Bin. The application does not overwrite existing files and does not permanently delete files.</li>
+          <li><strong>File operations you request.</strong> Open (with the default Windows application for that file type), rename, create a folder, copy, move, and send to the Recycle Bin. The application is designed not to overwrite existing files, and it does not permanently delete files: deleted items go to the Recycle Bin.</li>
           <li><strong>Clipboard.</strong> When you use copy, cut or paste on files, the application writes or reads the file list on the Windows clipboard. Clipboard contents are not stored.</li>
           <li><strong>Drag and drop.</strong> Files you drag between Windows Explorer and Desktab are handled as normal Windows drag-and-drop operations.</li>
           <li><strong>Desktop items (optional feature).</strong> If you use the feature that gathers items from your Windows Desktop into a workspace, the application reads the names, types, sizes and dates of the items on your Desktop to prepare a plan, and moves items only after you confirm. A local record is kept so the move can be undone (see section 4).</li>
@@ -141,7 +143,7 @@
         </ul>
 
         <h2 id="telemetry">6. Telemetry and analytics</h2>
-        <p>The application contains no telemetry, usage analytics, advertising, or crash-reporting component. Desktab does not know how many people use it, which features they use, or what is in their folders.</p>
+        <p>The application contains no telemetry, usage analytics, advertising, or crash-reporting component. The application cannot report how many people use it, which features they use, or what is in their folders.</p>
 
         <h2 id="microsoft">7. Microsoft Store and Windows</h2>
         <p>Desktab is distributed through the Microsoft Store and runs on Windows. Microsoft processes data in connection with those services under its own privacy statement and your Windows settings, for example:</p>
@@ -158,28 +160,31 @@
         <ul>
           <li><strong>Microsoft</strong> — Windows and the Microsoft Store, as described in section 7.</li>
           <li><strong>GitHub</strong> — hosting for this website and for the public support issue tracker, as described in sections 9 and 10.</li>
+          <li><strong>Email providers</strong> — the services that deliver your email to the developer, if you write to <a href="mailto:celiknevzatcan7@gmail.com">celiknevzatcan7@gmail.com</a>, as described in section 10.</li>
         </ul>
 
         <h2 id="website">9. This website</h2>
-        <p>This website is a set of static pages hosted on GitHub Pages. It does not use cookies, analytics, tracking scripts, advertising, embedded third-party content, or external fonts, and it does not ask you for personal information.</p>
-        <p>As the hosting provider, GitHub may process technical data about your visit, such as your IP address and request details, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. The developer does not receive this data in an identifiable form.</p>
+        <p>This website is a set of static pages hosted on GitHub Pages. The pages themselves do not use cookies, analytics, tracking scripts, advertising, embedded third-party content, or external fonts, and they do not ask you for personal information. The developer has not enabled any visitor analytics for this website.</p>
+        <p>As the hosting provider, GitHub may process technical data about your visit, such as your IP address and request details, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
 
         <h2 id="support">10. Support inquiries</h2>
-        <p>Support and bug reports are handled through GitHub Issues in the public repository linked from the <a href="../support/">Support page</a>. Anything you post in an issue is public, is visible to anyone, and is processed by GitHub under its terms and privacy statement. Please do not include passwords, private files, file names or paths you consider private, or other personal information in a public issue. The application does not attach logs or diagnostic data to reports, and the developer does not ask for your settings file.</p>
-        <p>No private support email address is published at this time. If one is added, this policy and the Support page will be updated.</p>
+        <p><strong>By email.</strong> You can write to <a href="mailto:celiknevzatcan7@gmail.com">celiknevzatcan7@gmail.com</a>. The developer receives your email address and whatever you write, and uses them only to answer your message. The message passes through your email provider and the developer’s email provider, which process it under their own terms. The developer may keep the correspondence for as long as needed to handle your request.</p>
+        <p><strong>By GitHub Issues.</strong> Support and bug reports can also be posted in the public repository linked from the <a href="../support/">Support page</a>. Anything you post in an issue is public, is visible to anyone, and is processed by GitHub under its terms and privacy statement.</p>
+        <p>Please do not include passwords, private files, file names or paths you consider private, or other personal information in a public issue, and avoid sending them by email as well. The application does not attach logs or diagnostic data to reports, and the developer does not ask for your settings file.</p>
 
         <h2 id="choices">11. Your choices and deletion</h2>
         <ul>
           <li><strong>Your files.</strong> Workspace folders are ordinary folders on your PC. Desktab does not delete them or move them anywhere you did not ask it to.</li>
-          <li><strong>Local app data.</strong> Uninstalling the Microsoft Store version through Windows <em>Settings → Apps</em> removes the application’s package data folder, including the settings file and journals described above.</li>
-          <li><strong>Data held by the developer.</strong> The developer holds no personal data collected by the application, so there is nothing from the application to access, correct or delete on a server. For content you posted in a public GitHub issue, you can edit or delete it using GitHub’s own tools.</li>
+          <li><strong>Local app data.</strong> When you uninstall a Microsoft Store app through Windows <em>Settings → Apps</em>, Windows normally removes the app’s package data folder, which is where the settings file and journals described above are kept.</li>
+          <li><strong>Data held by the developer.</strong> The application sends the developer no personal data, so there is nothing from the application to access, correct or delete on a server. If you wrote to the developer by email and want the correspondence deleted, ask at the address in section 13. For content you posted in a public GitHub issue, you can edit or delete it using GitHub’s own tools.</li>
         </ul>
 
         <h2 id="children">12. Children</h2>
         <p>Desktab does not collect personal data from anyone, including children, and does not include social features, advertising or communication between users.</p>
 
         <h2 id="contact">13. Contact</h2>
-        <p>Questions about this policy can be asked by opening an issue in the public repository linked on the <a href="../support/">Support page</a>. Because issues are public, please do not include personal information, and keep the question general.</p>
+        <p>Questions about this policy or about your data can be sent to <a href="mailto:celiknevzatcan7@gmail.com?subject=Desktab%20privacy">celiknevzatcan7@gmail.com</a>.</p>
+        <p>General questions can also be asked in the public repository linked on the <a href="../support/">Support page</a>. Because issues are public, please do not include personal information there.</p>
 
         <h2 id="changes">14. Changes to this policy</h2>
         <p>If the application or this website changes in a way that affects this policy, an updated version will be published at this address with a new “Last updated” date. The change history of this website is publicly visible in its repository.</p>

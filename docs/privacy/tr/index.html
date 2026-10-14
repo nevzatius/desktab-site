@@ -78,11 +78,12 @@
         <h2 id="summary">1. Özet</h2>
         <ul>
           <li>Desktab hesap gerektirmez, reklam göstermez ve analiz, telemetri veya çökme raporlama kodu içermez.</li>
-          <li>Uygulama kendi başına ağ bağlantısı kurmaz; dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı geliştiriciye ya da başkasına göndermez.</li>
+          <li>Uygulama kendi başına ağ bağlantısı kurmaz; dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı geliştiriciye ya da başkasına göndermez. (Başka yazılımları devreye sokan eylemler bölüm 5’te listelenmiştir.)</li>
           <li>Ayarlarınız ve yerleşiminiz yalnızca bilgisayarınızda, uygulamanın kendi veri klasöründe saklanır.</li>
+          <li>Geliştirici yalnızca sizin e-posta ile ya da herkese açık bir GitHub kaydında kendi isteğinizle gönderdiğiniz bilgileri alır.</li>
           <li>Microsoft (Windows ve Microsoft Store) ile GitHub (bu web sitesi ve herkese açık destek kayıtları) bazı verileri ayrı hizmetler olarak işler. Bunlar aşağıda açıklanmıştır ve uygulamanın kendisinin parçası değildir.</li>
         </ul>
-        <p>Uygulamaya ilişkin bu ifadeler, ilk Microsoft Store sürümü için hazırlanan sürümün kaynak kodunun incelenmesine dayanır. Sonraki bir sürüm bunları değiştirirse, o sürüm yayımlanmadan önce bu politika güncellenecektir.</p>
+        <p>Uygulamaya ilişkin bu ifadeler, ilk Microsoft Store sürümü için hazırlanan sürümün kaynak kodunun incelenmesine dayanır. Bu bir kaynak kodu incelemesidir; ağ trafiği izlenerek doğrulanmamıştır. Sonraki bir sürüm bu ifadeleri değiştirirse, o sürüm yayımlanmadan önce bu politika güncellenecektir.</p>
 
         <h2 id="who">2. Bu politikanın kapsamı</h2>
         <p>Bu politika (a) Windows için Desktab uygulamasını ve (b) <code>nevzatius.github.io/desktab-site</code> adresindeki bu web sitesini kapsar. Desktab’ın yayıncısı, bireysel bir geliştirici olan <strong>nevzatius</strong>’tur. Desktab şu anda ilk Microsoft Store sürümüne hazırlanmaktadır ve henüz herkese açık değildir.</p>
@@ -97,6 +98,7 @@
               <tr><td>Desktab (bilgisayarınızda)</td><td>Sizin kullanıcı hesabınızla yerelde çalışır</td><td>Seçtiğiniz klasörler, bilgisayarınızda tutulan ayarlar ve yerleşim. Uygulama dışarıya hiçbir şey göndermez.</td></tr>
               <tr><td>Windows</td><td>İşletim sistemi ve kabuk</td><td>Simgeler ve önizlemeler, dosyaları açma, Geri Dönüşüm Kutusu, pano, sürükle-bırak. Microsoft’un koşullarına ve Windows ayarlarınıza tabidir.</td></tr>
               <tr><td>Microsoft Store</td><td>Dağıtım, lisanslama ve ödemeler</td><td>İndirme, güncellemeler, lisans ve (ileride) satın alma kayıtları ile Microsoft’un kendi tanılama verileri. Microsoft’un gizlilik bildirimine tabidir.</td></tr>
+              <tr><td>E-posta sağlayıcıları</td><td>Geliştiriciye gönderdiğiniz iletilerin iletimi</td><td>Geliştiriciye yazarsanız e-posta adresiniz ve iletiniz. İlgili sağlayıcıların koşullarına tabidir.</td></tr>
               <tr><td>GitHub</td><td>Web sitesi barındırma ve herkese açık sorun izleyici</td><td>Bu siteyi yüklediğinizde oluşan teknik ziyaret verileri; herkese açık bir kayda yazdığınız her şey.</td></tr>
             </tbody>
           </table>
@@ -105,9 +107,9 @@
         <h2 id="access">3. Uygulamanın eriştikleri</h2>
         <p>Uygulama, normal kullanıcı izinlerinizle çalışan bir masaüstü programıdır. Yalnızca işaret ettiğiniz veya yapmasını istediğiniz şeylere erişir:</p>
         <ul>
-          <li><strong>Seçtiğiniz klasörler.</strong> Çalışma alanı olarak açtığınız klasörlerdeki öğeleri adları ve temel özellikleriyle (örneğin bir öğenin dosya mı klasör mü olduğu) listeler ve başka yerde yapılan değişiklikler otomatik görünsün diye bu klasörleri izler. Uygulama dosyalarınızın içeriğini okumaz, dizinlemez veya kopyalamaz.</li>
+          <li><strong>Seçtiğiniz klasörler.</strong> Çalışma alanı olarak açtığınız klasörlerdeki öğeleri adları ve temel özellikleriyle (örneğin bir öğenin dosya mı klasör mü olduğu) listeler ve başka yerde yapılan değişiklikler otomatik görünsün diye bu klasörleri izler. Siz istediğinizde dosyaları kopyalamak dışında, uygulama dosyalarınızın içeriğini okumaz veya dizinlemez.</li>
           <li><strong>Simgeler ve önizlemeler.</strong> Simgeleri ve küçük resimleri Windows üretir. Windows küçük resim oluşturmak için bir dosyanın bir kısmını okuyabilir; bu işlemi Desktab değil, işletim sistemi yapar.</li>
-          <li><strong>İstediğiniz dosya işlemleri.</strong> Açma (o dosya türü için Windows’un varsayılan uygulamasıyla), yeniden adlandırma, klasör oluşturma, kopyalama, taşıma ve Geri Dönüşüm Kutusu’na gönderme. Uygulama mevcut dosyaların üzerine yazmaz ve dosyaları kalıcı olarak silmez.</li>
+          <li><strong>İstediğiniz dosya işlemleri.</strong> Açma (o dosya türü için Windows’un varsayılan uygulamasıyla), yeniden adlandırma, klasör oluşturma, kopyalama, taşıma ve Geri Dönüşüm Kutusu’na gönderme. Uygulama mevcut dosyaların üzerine yazmayacak şekilde tasarlanmıştır ve dosyaları kalıcı olarak silmez: silinen öğeler Geri Dönüşüm Kutusu’na gider.</li>
           <li><strong>Pano.</strong> Dosyalarda kopyala, kes veya yapıştır kullandığınızda uygulama, Windows panosuna dosya listesini yazar veya panodan okur. Pano içeriği saklanmaz.</li>
           <li><strong>Sürükle-bırak.</strong> Windows Gezgini ile Desktab arasında sürüklediğiniz dosyalar normal Windows sürükle-bırak işlemleri olarak ele alınır.</li>
           <li><strong>Masaüstü öğeleri (isteğe bağlı özellik).</strong> Windows Masaüstü’nüzdeki öğeleri bir çalışma alanına toplayan özelliği kullanırsanız, uygulama bir plan hazırlamak için Masaüstü’ndeki öğelerin adlarını, türlerini, boyutlarını ve tarihlerini okur; öğeleri yalnızca siz onayladıktan sonra taşır. Taşımanın geri alınabilmesi için yerel bir kayıt tutulur (bkz. bölüm 4).</li>
@@ -141,7 +143,7 @@
         </ul>
 
         <h2 id="telemetry">6. Telemetri ve analiz</h2>
-        <p>Uygulama telemetri, kullanım analizi, reklam veya çökme raporlama bileşeni içermez. Desktab’ın kaç kişi tarafından kullanıldığını, hangi özelliklerin kullanıldığını veya klasörlerinizde ne olduğunu bilmesi mümkün değildir.</p>
+        <p>Uygulama telemetri, kullanım analizi, reklam veya çökme raporlama bileşeni içermez. Uygulama, kaç kişi tarafından kullanıldığını, hangi özelliklerin kullanıldığını veya klasörlerinizde ne olduğunu bildiremez.</p>
 
         <h2 id="microsoft">7. Microsoft Store ve Windows</h2>
         <p>Desktab, Microsoft Store üzerinden dağıtılır ve Windows’ta çalışır. Microsoft, bu hizmetlerle bağlantılı olarak kendi gizlilik bildirimine ve Windows ayarlarınıza göre veri işler; örneğin:</p>
@@ -158,28 +160,31 @@
         <ul>
           <li><strong>Microsoft</strong> — Windows ve Microsoft Store; bölüm 7’de açıklandığı gibi.</li>
           <li><strong>GitHub</strong> — bu web sitesinin ve herkese açık destek kayıtlarının barındırılması; bölüm 9 ve 10’da açıklandığı gibi.</li>
+          <li><strong>E-posta sağlayıcıları</strong> — <a href="mailto:celiknevzatcan7@gmail.com">celiknevzatcan7@gmail.com</a> adresine yazarsanız iletinizi geliştiriciye ulaştıran hizmetler; bölüm 10’da açıklandığı gibi.</li>
         </ul>
 
         <h2 id="website">9. Bu web sitesi</h2>
-        <p>Bu web sitesi, GitHub Pages üzerinde barındırılan statik sayfalardan oluşur. Çerez, analiz, izleme betiği, reklam, gömülü üçüncü taraf içerik veya harici yazı tipi kullanmaz ve sizden kişisel bilgi istemez.</p>
-        <p>Barındırma sağlayıcısı olarak GitHub, ziyaretinizle ilgili IP adresiniz ve istek ayrıntıları gibi teknik verileri <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Genel Gizlilik Bildirimi</a> kapsamında işleyebilir. Geliştirici bu verileri kimliği belirlenebilir biçimde almaz.</p>
+        <p>Bu web sitesi, GitHub Pages üzerinde barındırılan statik sayfalardan oluşur. Sayfaların kendisi çerez, analiz, izleme betiği, reklam, gömülü üçüncü taraf içerik veya harici yazı tipi kullanmaz ve sizden kişisel bilgi istemez. Geliştirici bu web sitesi için herhangi bir ziyaretçi analizi etkinleştirmemiştir.</p>
+        <p>Barındırma sağlayıcısı olarak GitHub, ziyaretinizle ilgili IP adresiniz ve istek ayrıntıları gibi teknik verileri <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Genel Gizlilik Bildirimi</a> kapsamında işleyebilir.</p>
 
         <h2 id="support">10. Destek talepleri</h2>
-        <p>Destek ve hata bildirimleri, <a href="../../support/tr/">Destek sayfasından</a> bağlantı verilen herkese açık depodaki GitHub Issues üzerinden yürütülür. Bir kayda yazdığınız her şey herkese açıktır, herkes tarafından görülebilir ve GitHub tarafından kendi koşulları ve gizlilik bildirimi kapsamında işlenir. Lütfen herkese açık bir kayda parola, özel dosya, özel saydığınız dosya adı veya yol ya da başka kişisel bilgi eklemeyin. Uygulama raporlara günlük veya tanılama verisi eklemez ve geliştirici sizden ayar dosyanızı istemez.</p>
-        <p>Şu anda yayımlanmış özel bir destek e-posta adresi yoktur. Bir adres eklenirse bu politika ve Destek sayfası güncellenecektir.</p>
+        <p><strong>E-posta ile.</strong> <a href="mailto:celiknevzatcan7@gmail.com">celiknevzatcan7@gmail.com</a> adresine yazabilirsiniz. Geliştirici e-posta adresinizi ve yazdığınız her şeyi alır ve bunları yalnızca iletinizi yanıtlamak için kullanır. İleti, sizin e-posta sağlayıcınızdan ve geliştiricinin e-posta sağlayıcısından geçer; bu sağlayıcılar iletiyi kendi koşullarına göre işler. Geliştirici, talebinizi ele almak için gerektiği sürece yazışmayı saklayabilir.</p>
+        <p><strong>GitHub Issues ile.</strong> Destek ve hata bildirimleri, <a href="../../support/tr/">Destek sayfasından</a> bağlantı verilen herkese açık depoda da paylaşılabilir. Bir kayda yazdığınız her şey herkese açıktır, herkes tarafından görülebilir ve GitHub tarafından kendi koşulları ve gizlilik bildirimi kapsamında işlenir.</p>
+        <p>Lütfen herkese açık bir kayda parola, özel dosya, özel saydığınız dosya adı veya yol ya da başka kişisel bilgi eklemeyin; bunları e-postayla da göndermeyin. Uygulama raporlara günlük veya tanılama verisi eklemez ve geliştirici sizden ayar dosyanızı istemez.</p>
 
         <h2 id="choices">11. Seçenekleriniz ve silme</h2>
         <ul>
           <li><strong>Dosyalarınız.</strong> Çalışma alanı klasörleri bilgisayarınızdaki sıradan klasörlerdir. Desktab bunları silmez ve sizin istemediğiniz bir yere taşımaz.</li>
-          <li><strong>Yerel uygulama verileri.</strong> Microsoft Store sürümünü Windows <em>Ayarlar → Uygulamalar</em> üzerinden kaldırmak, yukarıda açıklanan ayar dosyası ve günlükler dahil uygulamanın paket veri klasörünü kaldırır.</li>
-          <li><strong>Geliştiricide bulunan veriler.</strong> Geliştiricide uygulama tarafından toplanmış kişisel veri bulunmaz; dolayısıyla uygulamadan kaynaklanan ve bir sunucuda erişilecek, düzeltilecek veya silinecek bir şey yoktur. Herkese açık bir GitHub kaydına yazdığınız içeriği GitHub’ın kendi araçlarıyla düzenleyebilir veya silebilirsiniz.</li>
+          <li><strong>Yerel uygulama verileri.</strong> Bir Microsoft Store uygulamasını Windows <em>Ayarlar → Uygulamalar</em> üzerinden kaldırdığınızda Windows normalde uygulamanın paket veri klasörünü kaldırır; yukarıda açıklanan ayar dosyası ve günlükler bu klasörde tutulur.</li>
+          <li><strong>Geliştiricide bulunan veriler.</strong> Uygulama geliştiriciye kişisel veri göndermez; dolayısıyla uygulamadan kaynaklanan ve bir sunucuda erişilecek, düzeltilecek veya silinecek bir şey yoktur. Geliştiriciye e-posta yazdıysanız ve yazışmanın silinmesini istiyorsanız bölüm 13’teki adrese başvurun. Herkese açık bir GitHub kaydına yazdığınız içeriği GitHub’ın kendi araçlarıyla düzenleyebilir veya silebilirsiniz.</li>
         </ul>
 
         <h2 id="children">12. Çocuklar</h2>
         <p>Desktab, çocuklar dahil hiç kimseden kişisel veri toplamaz; sosyal özellik, reklam veya kullanıcılar arası iletişim içermez.</p>
 
         <h2 id="contact">13. İletişim</h2>
-        <p>Bu politikayla ilgili sorular, <a href="../../support/tr/">Destek sayfasında</a> bağlantısı verilen herkese açık depoda bir kayıt (issue) açılarak sorulabilir. Kayıtlar herkese açık olduğundan lütfen kişisel bilgi eklemeyin ve soruyu genel tutun.</p>
+        <p>Bu politikayla veya verilerinizle ilgili sorular <a href="mailto:celiknevzatcan7@gmail.com?subject=Desktab%20gizlilik">celiknevzatcan7@gmail.com</a> adresine gönderilebilir.</p>
+        <p>Genel sorular, <a href="../../support/tr/">Destek sayfasında</a> bağlantısı verilen herkese açık depoda da sorulabilir. Kayıtlar herkese açık olduğundan lütfen orada kişisel bilgi eklemeyin.</p>
 
         <h2 id="changes">14. Politikadaki değişiklikler</h2>
         <p>Uygulamada veya bu web sitesinde bu politikayı etkileyen bir değişiklik olursa, güncellenmiş sürüm bu adreste yeni bir “Son güncelleme” tarihiyle yayımlanır. Bu web sitesinin değişiklik geçmişi, deposunda herkese açık olarak görülebilir.</p>

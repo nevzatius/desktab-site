@@ -22,11 +22,23 @@ docs/                     <- published by GitHub Pages
   assets/images/          favicon and social preview image
   404.html, robots.txt, sitemap.xml, .nojekyll
 .github/ISSUE_TEMPLATE/   public bug-report and feedback forms
+scripts/set-contact-email.ps1   changes the contact email everywhere
 ```
 
 No framework, no build step, no JavaScript, no external requests (system fonts only), no cookies, no analytics.
 
 All internal links are **relative**, so the site works under the project path `/desktab-site/`, under a custom domain, and from a local preview. Only `<link rel="canonical">`, `hreflang`, Open Graph URLs, `sitemap.xml` and `404.html` use the absolute `https://nevzatius.github.io/desktab-site/` address; if the site moves to a custom domain, replace that prefix in those places.
+
+## Contact email
+
+The public contact address is shown on the Support pages (EN/TR) and in the Privacy Policy (EN/TR, sections 8, 10 and 13), as `mailto:` links. To change it everywhere at once:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\set-contact-email.ps1 -Old old@example.com -New new@example.com
+git diff
+```
+
+Review the diff and commit. The address is plain text in the HTML (no JavaScript), so it can be harvested by spam bots, and once pushed it remains in the public git history.
 
 ## Preview locally
 
@@ -56,6 +68,6 @@ Then open <http://localhost:8080/>. (Opening the files directly with `file://` w
 ## Content rules
 
 - Do not state that Desktab is downloadable until a real Microsoft Store URL is confirmed. Then add that URL (and only that) to the home pages and the Support page.
-- Do not display a Pro price until it is final.
+- Do not display a Pro price until it is final. Free and Pro are shown as **planned, unreleased** features until they actually ship.
 - The Privacy Policy must be re-checked against the application whenever the application's data handling changes.
 - No analytics, trackers, or third-party embeds.
