@@ -29,6 +29,10 @@ No framework, no build step, no JavaScript, no external requests (system fonts o
 
 All internal links are **relative**, so the site works under the project path `/desktab-site/`, under a custom domain, and from a local preview. Only `<link rel="canonical">`, `hreflang`, Open Graph URLs, `sitemap.xml` and `404.html` use the absolute `https://nevzatius.github.io/desktab-site/` address; if the site moves to a custom domain, replace that prefix in those places.
 
+## Screenshots
+
+`docs/assets/images/app-{main,nav,dark}-{en,tr}.png` are real captures of a pre-release build of the Desktab app (English and Turkish interface), taken with demo files: all folder and file names are made up and the images are abstract gradients. The test/QA badge was removed from the capture build. Show only features that are part of the planned Free plan (two workspaces, light/dark, static image background); do not add screenshots of Pro-only features until Pro is released. `og-image.png` is the social preview image.
+
 ## Contact email
 
 The public contact address is shown on the Support pages (EN/TR) and in the Privacy Policy (EN/TR, sections 8, 10 and 13), as `mailto:` links. To change it everywhere at once:
