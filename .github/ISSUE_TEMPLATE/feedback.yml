@@ -1,0 +1,21 @@
+name: Feedback or idea / Geri bildirim veya fikir
+description: Suggest an improvement. / Bir iyileştirme önerin.
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public. / Bu kayıt herkese açıktır.**
+        Do not include passwords, private files or personal information. / Parola, özel dosya veya kişisel bilgi eklemeyin.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do? / Ne yapmaya çalışıyorsunuz?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help? / Ne yardımcı olurdu?
+    validations:
+      required: true

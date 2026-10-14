@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — Desktab</title>
+  <meta name="description" content="Desktab support: troubleshooting tips, how to report a bug or send feedback, supported Windows versions, how to find your app version, and Microsoft Store availability.">
+  <link rel="canonical" href="https://nevzatius.github.io/desktab-site/support/">
+  <link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/support/">
+  <link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/support/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://nevzatius.github.io/desktab-site/support/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Desktab">
+  <meta property="og:title" content="Support — Desktab">
+  <meta property="og:description" content="Troubleshooting, bug reports and feedback for Desktab.">
+  <meta property="og:url" content="https://nevzatius.github.io/desktab-site/support/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:image" content="https://nevzatius.github.io/desktab-site/assets/images/og-image.png">
+  <meta property="og:image:alt" content="Desktab wordmark with the tagline: The freedom of a desktop. The organization of a folder.">
+  <meta name="theme-color" content="#0b1b33">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../" aria-label="Desktab — home"><span class="brand-mark" aria-hidden="true">D</span>Desktab</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../#features">Features</a></li>
+          <li><a href="../privacy/">Privacy Policy</a></li>
+          <li><a href="./" aria-current="page">Support</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <span lang="en" aria-current="true">EN</span>
+          <a href="tr/" lang="tr" hreflang="tr" aria-label="Türkçe">TR</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container narrow">
+        <h1>Support</h1>
+        <p>Help, bug reports and feedback for Desktab.</p>
+      </div>
+    </div>
+
+    <div class="doc">
+      <div class="container narrow">
+
+        <h2 id="status">Microsoft Store availability</h2>
+        <p>Desktab is preparing for its first public Microsoft Store release. It is <strong>not available to download yet</strong>. This page will be updated with the Store link once the release is confirmed.</p>
+
+        <h2 id="contact">Where to get help</h2>
+        <p>Support, bug reports and feedback are handled through GitHub Issues in the public Desktab website repository:</p>
+        <p><a href="https://github.com/nevzatius/desktab-site/issues">github.com/nevzatius/desktab-site/issues</a></p>
+        <p>You need a free GitHub account to open an issue. Support is provided on a best-effort basis; no response time is guaranteed. No support email address is published at this time.</p>
+        <div class="callout warn">
+          <p><strong>Issues are public.</strong> Anyone can read what you post. Never include passwords, private files, personal information, or file names and folder paths you consider private. If a screenshot shows personal file names, crop or edit it first.</p>
+        </div>
+
+        <h2 id="troubleshooting">Basic troubleshooting</h2>
+        <ul>
+          <li><strong>Something looks out of date.</strong> Press <code>F5</code> to refresh the current workspace, or close and reopen Desktab.</li>
+          <li><strong>A file is not shown.</strong> Desktab does not list items that Windows marks as hidden or system files.</li>
+          <li><strong>A file will not open.</strong> Desktab opens files with the default Windows application for that file type. Check that Windows has an app set for it.</li>
+          <li><strong>I deleted something by mistake.</strong> Desktab sends deleted items to the Windows Recycle Bin. Open the Recycle Bin and restore them from there.</li>
+          <li><strong>The Ctrl+Shift+Space shortcut does nothing.</strong> Another program may already be using that shortcut. Desktab reports this in its status bar.</li>
+          <li><strong>A video or animated background does not display.</strong> The file must be on a local drive (network paths and web addresses are not supported), and video playback depends on the codecs available in Windows. MP4 (H.264) is the safest choice. If the file cannot be played, Desktab falls back to a default background.</li>
+        </ul>
+
+        <h2 id="report">How to report a bug</h2>
+        <ol>
+          <li>Search the <a href="https://github.com/nevzatius/desktab-site/issues">existing issues</a> to see whether it has already been reported.</li>
+          <li>Open a new issue and choose the bug report form.</li>
+          <li>Include: your Desktab version, your Windows version, what you did, what you expected, and what happened instead.</li>
+          <li>Add a screenshot only if it contains nothing private.</li>
+        </ol>
+
+        <h2 id="feedback">Feedback and ideas</h2>
+        <p>Suggestions are welcome. Open an issue in the same repository and describe what you are trying to do and what would help. Please keep one idea per issue.</p>
+
+        <h2 id="windows">Supported Windows versions</h2>
+        <ul>
+          <li>Windows 10, version 2004 (build 19041) or later, and Windows 11.</li>
+          <li>64-bit (x64) only. ARM64 and 32-bit versions of Windows are not supported.</li>
+          <li>No separate .NET installation is required.</li>
+        </ul>
+        <p>Pre-release testing so far has been done on Windows 10 version 22H2. Testing on Windows 11 is still in progress.</p>
+
+        <h2 id="version">Where to find your app version</h2>
+        <p>Open Windows <em>Settings → Apps → Installed apps</em> (on Windows 10: <em>Apps &amp; features</em>), select Desktab, and open <em>Advanced options</em>. The version number is listed there. Please include it when you report a problem.</p>
+
+        <h2 id="privacy">Privacy</h2>
+        <p>Read how Desktab and this website handle data in the <a href="../privacy/">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Desktab</div>
+          <p>The freedom of a desktop. The organization of a folder.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="../">Home</a></li>
+            <li><a href="../#features">Features</a></li>
+            <li><a href="../privacy/">Privacy Policy</a></li>
+            <li><a href="./">Support</a></li>
+            <li><a href="tr/" lang="tr" hreflang="tr">Türkçe</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="copyright">
+        <p>© 2026 nevzatius. All rights reserved.</p>
+        <p>Desktab is not yet available on the Microsoft Store. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Local-only files; never commit
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+node_modules/
+.env
+*.pfx
+*.snk

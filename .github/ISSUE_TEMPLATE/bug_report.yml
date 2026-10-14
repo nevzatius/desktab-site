@@ -1,0 +1,47 @@
+name: Bug report / Hata bildirimi
+description: Report a problem with Desktab. / Desktab ile ilgili bir sorunu bildirin.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public. / Bu kayıt herkese açıktır.**
+        Do not include passwords, private files, personal information, or file names and paths you consider private.
+        Parola, özel dosya, kişisel bilgi veya özel saydığınız dosya adı ve yol eklemeyin.
+  - type: input
+    id: app-version
+    attributes:
+      label: Desktab version / Desktab sürümü
+      description: Windows Settings → Apps → Installed apps → Desktab → Advanced options.
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version / Windows sürümü
+      placeholder: "Windows 10 22H2, Windows 11 ..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do? / Ne yaptınız?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect? / Ne bekliyordunuz?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead? / Bunun yerine ne oldu?
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else? / Eklemek istedikleriniz
+      description: Add a screenshot only if it contains nothing private. / Ekran görüntüsünü yalnızca özel hiçbir şey içermiyorsa ekleyin.

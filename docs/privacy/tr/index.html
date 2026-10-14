@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gizlilik Politikası — Desktab</title>
+  <meta name="description" content="Desktab Windows uygulaması ve bu web sitesinin verileri nasıl işlediği: uygulamanın eriştikleri, bilgisayarınızda saklananlar, iletilen ve iletilmeyen veriler, Microsoft ve GitHub’ın işlediği veriler.">
+  <link rel="canonical" href="https://nevzatius.github.io/desktab-site/privacy/tr/">
+  <link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/privacy/">
+  <link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/privacy/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://nevzatius.github.io/desktab-site/privacy/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Desktab">
+  <meta property="og:title" content="Gizlilik Politikası — Desktab">
+  <meta property="og:description" content="Desktab Windows uygulaması ve web sitesinin verileri nasıl işlediği.">
+  <meta property="og:url" content="https://nevzatius.github.io/desktab-site/privacy/tr/">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://nevzatius.github.io/desktab-site/assets/images/og-image.png">
+  <meta property="og:image:alt" content="Desktab yazı logosu ve slogan: The freedom of a desktop. The organization of a folder.">
+  <meta name="theme-color" content="#0b1b33">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../../tr/" aria-label="Desktab — ana sayfa"><span class="brand-mark" aria-hidden="true">D</span>Desktab</a>
+      <nav class="site-nav" aria-label="Ana menü">
+        <ul>
+          <li><a href="../../tr/">Ana Sayfa</a></li>
+          <li><a href="../../tr/#features">Özellikler</a></li>
+          <li><a href="./" aria-current="page">Gizlilik Politikası</a></li>
+          <li><a href="../../support/tr/">Destek</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Dil">
+          <a href="../" lang="en" hreflang="en" aria-label="English">EN</a>
+          <span lang="tr" aria-current="true">TR</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container narrow">
+        <h1>Gizlilik Politikası</h1>
+        <p>Windows için Desktab ve Desktab web sitesi.</p>
+        <p class="meta">Yürürlük tarihi: 14 Ekim 2026 · Son güncelleme: 14 Ekim 2026</p>
+      </div>
+    </div>
+
+    <div class="doc">
+      <div class="container narrow">
+
+        <nav class="toc" aria-label="Bu sayfada">
+          <strong>Bu sayfada</strong>
+          <ol>
+            <li><a href="#summary">Özet</a></li>
+            <li><a href="#who">Bu politikanın kapsamı</a></li>
+            <li><a href="#access">Uygulamanın eriştikleri</a></li>
+            <li><a href="#local">Bilgisayarınızda saklananlar</a></li>
+            <li><a href="#transmit">Uygulamanın ilettikleri</a></li>
+            <li><a href="#telemetry">Telemetri ve analiz</a></li>
+            <li><a href="#microsoft">Microsoft Store ve Windows</a></li>
+            <li><a href="#third">Üçüncü taraf hizmetler</a></li>
+            <li><a href="#website">Bu web sitesi</a></li>
+            <li><a href="#support">Destek talepleri</a></li>
+            <li><a href="#choices">Seçenekleriniz ve silme</a></li>
+            <li><a href="#children">Çocuklar</a></li>
+            <li><a href="#contact">İletişim</a></li>
+            <li><a href="#changes">Politikadaki değişiklikler</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="summary">1. Özet</h2>
+        <ul>
+          <li>Desktab hesap gerektirmez, reklam göstermez ve analiz, telemetri veya çökme raporlama kodu içermez.</li>
+          <li>Uygulama kendi başına ağ bağlantısı kurmaz; dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı geliştiriciye ya da başkasına göndermez.</li>
+          <li>Ayarlarınız ve yerleşiminiz yalnızca bilgisayarınızda, uygulamanın kendi veri klasöründe saklanır.</li>
+          <li>Microsoft (Windows ve Microsoft Store) ile GitHub (bu web sitesi ve herkese açık destek kayıtları) bazı verileri ayrı hizmetler olarak işler. Bunlar aşağıda açıklanmıştır ve uygulamanın kendisinin parçası değildir.</li>
+        </ul>
+        <p>Uygulamaya ilişkin bu ifadeler, ilk Microsoft Store sürümü için hazırlanan sürümün kaynak kodunun incelenmesine dayanır. Sonraki bir sürüm bunları değiştirirse, o sürüm yayımlanmadan önce bu politika güncellenecektir.</p>
+
+        <h2 id="who">2. Bu politikanın kapsamı</h2>
+        <p>Bu politika (a) Windows için Desktab uygulamasını ve (b) <code>nevzatius.github.io/desktab-site</code> adresindeki bu web sitesini kapsar. Desktab’ın yayıncısı, bireysel bir geliştirici olan <strong>nevzatius</strong>’tur. Desktab şu anda ilk Microsoft Store sürümüne hazırlanmaktadır ve henüz herkese açık değildir.</p>
+
+        <h3>Kim neyi işler?</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Taraf</th><th scope="col">Rolü</th><th scope="col">İlgili veri</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Desktab (bilgisayarınızda)</td><td>Sizin kullanıcı hesabınızla yerelde çalışır</td><td>Seçtiğiniz klasörler, bilgisayarınızda tutulan ayarlar ve yerleşim. Uygulama dışarıya hiçbir şey göndermez.</td></tr>
+              <tr><td>Windows</td><td>İşletim sistemi ve kabuk</td><td>Simgeler ve önizlemeler, dosyaları açma, Geri Dönüşüm Kutusu, pano, sürükle-bırak. Microsoft’un koşullarına ve Windows ayarlarınıza tabidir.</td></tr>
+              <tr><td>Microsoft Store</td><td>Dağıtım, lisanslama ve ödemeler</td><td>İndirme, güncellemeler, lisans ve (ileride) satın alma kayıtları ile Microsoft’un kendi tanılama verileri. Microsoft’un gizlilik bildirimine tabidir.</td></tr>
+              <tr><td>GitHub</td><td>Web sitesi barındırma ve herkese açık sorun izleyici</td><td>Bu siteyi yüklediğinizde oluşan teknik ziyaret verileri; herkese açık bir kayda yazdığınız her şey.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="access">3. Uygulamanın eriştikleri</h2>
+        <p>Uygulama, normal kullanıcı izinlerinizle çalışan bir masaüstü programıdır. Yalnızca işaret ettiğiniz veya yapmasını istediğiniz şeylere erişir:</p>
+        <ul>
+          <li><strong>Seçtiğiniz klasörler.</strong> Çalışma alanı olarak açtığınız klasörlerdeki öğeleri adları ve temel özellikleriyle (örneğin bir öğenin dosya mı klasör mü olduğu) listeler ve başka yerde yapılan değişiklikler otomatik görünsün diye bu klasörleri izler. Uygulama dosyalarınızın içeriğini okumaz, dizinlemez veya kopyalamaz.</li>
+          <li><strong>Simgeler ve önizlemeler.</strong> Simgeleri ve küçük resimleri Windows üretir. Windows küçük resim oluşturmak için bir dosyanın bir kısmını okuyabilir; bu işlemi Desktab değil, işletim sistemi yapar.</li>
+          <li><strong>İstediğiniz dosya işlemleri.</strong> Açma (o dosya türü için Windows’un varsayılan uygulamasıyla), yeniden adlandırma, klasör oluşturma, kopyalama, taşıma ve Geri Dönüşüm Kutusu’na gönderme. Uygulama mevcut dosyaların üzerine yazmaz ve dosyaları kalıcı olarak silmez.</li>
+          <li><strong>Pano.</strong> Dosyalarda kopyala, kes veya yapıştır kullandığınızda uygulama, Windows panosuna dosya listesini yazar veya panodan okur. Pano içeriği saklanmaz.</li>
+          <li><strong>Sürükle-bırak.</strong> Windows Gezgini ile Desktab arasında sürüklediğiniz dosyalar normal Windows sürükle-bırak işlemleri olarak ele alınır.</li>
+          <li><strong>Masaüstü öğeleri (isteğe bağlı özellik).</strong> Windows Masaüstü’nüzdeki öğeleri bir çalışma alanına toplayan özelliği kullanırsanız, uygulama bir plan hazırlamak için Masaüstü’ndeki öğelerin adlarını, türlerini, boyutlarını ve tarihlerini okur; öğeleri yalnızca siz onayladıktan sonra taşır. Taşımanın geri alınabilmesi için yerel bir kayıt tutulur (bkz. bölüm 4).</li>
+          <li><strong>Arka plan dosyası.</strong> Arka plan olarak bir görsel, GIF veya video seçerseniz uygulama, göstermek için bu dosyayı okur. Dosya kopyalanmaz; yalnızca yolu hatırlanır.</li>
+          <li><strong>Windows görünüm tercihleri.</strong> Uygulama, Windows’un açık veya koyu modda olduğunu okur ve arayüz dilini önceden seçmek için Windows görüntüleme dilinizi kullanabilir.</li>
+          <li><strong>Klavye kısayolu.</strong> Uygulama, kendi penceresini göstermek veya gizlemek için Windows’a tek bir genel kısayol (Ctrl+Shift+Space) kaydeder. Tuş vuruşlarını kaydetmez.</li>
+        </ul>
+
+        <h2 id="local">4. Bilgisayarınızda saklananlar</h2>
+        <p>Uygulama küçük bir ayar dosyası ve, Masaüstü toplama özelliğini kullanırsanız, günlük dosyaları tutar. Bunlar yalnızca bilgisayarınızda, uygulamanın kendi veri klasöründe saklanır. Microsoft Store sürümünde bu klasör <code>%LOCALAPPDATA%\Packages\&lt;paket ailesi adı&gt;\LocalState</code> yoludur.</p>
+        <h3>Ayar dosyası</h3>
+        <ul>
+          <li>Çalışma alanı klasörlerinizin yolları ve adları, sıraları ve sekme ayarları.</li>
+          <li>Pencere boyutu ve konumu.</li>
+          <li>Her klasör için, çalışma alanındaki her öğenin konumu (dosya adı ve X/Y koordinatları).</li>
+          <li>Görünüm ve dil tercihleri; bir arka plan dosyası seçerseniz o dosyanın yolu.</li>
+          <li>“Sık Kullanılanlar” görünümü için: Desktab içinden açtığınız öğelerin adları, açılma sayıları ve son açılma zamanları.</li>
+        </ul>
+        <p>Uygulama ayrıca, hasar görmüş bir dosya kurtarılabilsin diye ayar dosyasının bir yedek kopyasını tutar.</p>
+        <h3>Masaüstü toplama günlükleri</h3>
+        <p>Masaüstü öğelerini toplarsanız, her işlem; taşınan öğelerin özgün yolunu, yeni yolunu, türünü, boyutunu ve zaman damgalarını listeleyen küçük bir yerel dosyaya kaydedilir. Böylece taşıma geri alınabilir.</p>
+        <h3>Saklanmayanlar</h3>
+        <p>Uygulama dosya içeriklerini, pano içeriğini veya günlük (log) dosyalarını saklamaz. Uygulama beklenmedik bir hatayla karşılaşırsa ekranınızda bir ileti gösterir; hiçbir şey bir günlüğe yazılmaz veya bir yere gönderilmez.</p>
+        <p>Dosya ve klasör adları kişisel olabilir. Ayar dosyasını veya günlükleri başkalarıyla paylaşmadan önce dikkatli olun.</p>
+
+        <h2 id="transmit">5. Uygulamanın ilettikleri</h2>
+        <p>Desktab kişisel veri iletmez. Hesap sistemi, kendi sunucusu yoktur ve kendi başına ağ bağlantısı kurmaz. Yaptığınız bazı eylemler başka yazılımları devreye sokar; o yazılımların davranışı Desktab’ın denetimi dışındadır:</p>
+        <ul>
+          <li>Bir dosyayı açtığınızda Windows, o dosya türünün varsayılan uygulamasını başlatır. O uygulamanın gizlilik uygulamaları geçerlidir (örneğin bir web kısayolu tarayıcıyı açar).</li>
+          <li>Ağ konumunda bulunan veya bir bulut hizmetiyle eşitlenen (örneğin OneDrive tarafından yönetilen) bir klasörü açarsanız, ağ erişimini Desktab değil, Windows veya eşitleme sağlayıcısı yapar.</li>
+        </ul>
+
+        <h2 id="telemetry">6. Telemetri ve analiz</h2>
+        <p>Uygulama telemetri, kullanım analizi, reklam veya çökme raporlama bileşeni içermez. Desktab’ın kaç kişi tarafından kullanıldığını, hangi özelliklerin kullanıldığını veya klasörlerinizde ne olduğunu bilmesi mümkün değildir.</p>
+
+        <h2 id="microsoft">7. Microsoft Store ve Windows</h2>
+        <p>Desktab, Microsoft Store üzerinden dağıtılır ve Windows’ta çalışır. Microsoft, bu hizmetlerle bağlantılı olarak kendi gizlilik bildirimine ve Windows ayarlarınıza göre veri işler; örneğin:</p>
+        <ul>
+          <li>Uygulamayı indirme, kurma ve güncelleme ile uygulamaya sahip olduğunuzun kaydedilmesi.</li>
+          <li>Windows gizlilik ayarlarınıza bağlı olarak Windows ve Store tarafından toplanan tanılama ve kullanım verileri.</li>
+          <li>Microsoft’un geliştirici panosu aracılığıyla geliştiriciye sunduğu toplu raporlar (edinimler, kullanım ve sağlık özetleri gibi). Bu raporlar Microsoft’tan gelir, uygulamadan gelmez.</li>
+        </ul>
+        <p>Pro, Microsoft Store üzerinden tek seferlik bir uygulama içi satın alma olarak planlanmaktadır; ancak şu anda satın alınabilecek bir şey yoktur ve uygulama şu anda herhangi bir Microsoft Store satın alma veya lisans denetimi kullanmaz. Pro sunulduğunda ödeme ve lisans bilgilerini Microsoft işleyecektir; geliştirici ödeme kartı bilgilerini almayacaktır. Pro yayımlanmadan önce bu politika güncellenecektir.</p>
+        <p>Microsoft’un gizlilik bildirimine <a href="https://privacy.microsoft.com/">privacy.microsoft.com</a> adresinden ulaşabilirsiniz.</p>
+
+        <h2 id="third">8. Üçüncü taraf hizmetler</h2>
+        <p>Uygulama hiçbir üçüncü taraf hizmeti, SDK’sı, reklam ağı veya analiz sağlayıcısı entegre etmez. Desktab ile bağlantılı üçüncü taraflar şunlardır:</p>
+        <ul>
+          <li><strong>Microsoft</strong> — Windows ve Microsoft Store; bölüm 7’de açıklandığı gibi.</li>
+          <li><strong>GitHub</strong> — bu web sitesinin ve herkese açık destek kayıtlarının barındırılması; bölüm 9 ve 10’da açıklandığı gibi.</li>
+        </ul>
+
+        <h2 id="website">9. Bu web sitesi</h2>
+        <p>Bu web sitesi, GitHub Pages üzerinde barındırılan statik sayfalardan oluşur. Çerez, analiz, izleme betiği, reklam, gömülü üçüncü taraf içerik veya harici yazı tipi kullanmaz ve sizden kişisel bilgi istemez.</p>
+        <p>Barındırma sağlayıcısı olarak GitHub, ziyaretinizle ilgili IP adresiniz ve istek ayrıntıları gibi teknik verileri <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Genel Gizlilik Bildirimi</a> kapsamında işleyebilir. Geliştirici bu verileri kimliği belirlenebilir biçimde almaz.</p>
+
+        <h2 id="support">10. Destek talepleri</h2>
+        <p>Destek ve hata bildirimleri, <a href="../../support/tr/">Destek sayfasından</a> bağlantı verilen herkese açık depodaki GitHub Issues üzerinden yürütülür. Bir kayda yazdığınız her şey herkese açıktır, herkes tarafından görülebilir ve GitHub tarafından kendi koşulları ve gizlilik bildirimi kapsamında işlenir. Lütfen herkese açık bir kayda parola, özel dosya, özel saydığınız dosya adı veya yol ya da başka kişisel bilgi eklemeyin. Uygulama raporlara günlük veya tanılama verisi eklemez ve geliştirici sizden ayar dosyanızı istemez.</p>
+        <p>Şu anda yayımlanmış özel bir destek e-posta adresi yoktur. Bir adres eklenirse bu politika ve Destek sayfası güncellenecektir.</p>
+
+        <h2 id="choices">11. Seçenekleriniz ve silme</h2>
+        <ul>
+          <li><strong>Dosyalarınız.</strong> Çalışma alanı klasörleri bilgisayarınızdaki sıradan klasörlerdir. Desktab bunları silmez ve sizin istemediğiniz bir yere taşımaz.</li>
+          <li><strong>Yerel uygulama verileri.</strong> Microsoft Store sürümünü Windows <em>Ayarlar → Uygulamalar</em> üzerinden kaldırmak, yukarıda açıklanan ayar dosyası ve günlükler dahil uygulamanın paket veri klasörünü kaldırır.</li>
+          <li><strong>Geliştiricide bulunan veriler.</strong> Geliştiricide uygulama tarafından toplanmış kişisel veri bulunmaz; dolayısıyla uygulamadan kaynaklanan ve bir sunucuda erişilecek, düzeltilecek veya silinecek bir şey yoktur. Herkese açık bir GitHub kaydına yazdığınız içeriği GitHub’ın kendi araçlarıyla düzenleyebilir veya silebilirsiniz.</li>
+        </ul>
+
+        <h2 id="children">12. Çocuklar</h2>
+        <p>Desktab, çocuklar dahil hiç kimseden kişisel veri toplamaz; sosyal özellik, reklam veya kullanıcılar arası iletişim içermez.</p>
+
+        <h2 id="contact">13. İletişim</h2>
+        <p>Bu politikayla ilgili sorular, <a href="../../support/tr/">Destek sayfasında</a> bağlantısı verilen herkese açık depoda bir kayıt (issue) açılarak sorulabilir. Kayıtlar herkese açık olduğundan lütfen kişisel bilgi eklemeyin ve soruyu genel tutun.</p>
+
+        <h2 id="changes">14. Politikadaki değişiklikler</h2>
+        <p>Uygulamada veya bu web sitesinde bu politikayı etkileyen bir değişiklik olursa, güncellenmiş sürüm bu adreste yeni bir “Son güncelleme” tarihiyle yayımlanır. Bu web sitesinin değişiklik geçmişi, deposunda herkese açık olarak görülebilir.</p>
+
+        <div class="callout">
+          <p><strong>Yürürlük tarihi:</strong> 14 Ekim 2026.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Desktab</div>
+          <p>Masaüstünün özgürlüğü, klasörün düzeni.</p>
+        </div>
+        <nav aria-label="Alt menü">
+          <ul class="footer-nav">
+            <li><a href="../../tr/">Ana Sayfa</a></li>
+            <li><a href="../../tr/#features">Özellikler</a></li>
+            <li><a href="./">Gizlilik Politikası</a></li>
+            <li><a href="../../support/tr/">Destek</a></li>
+            <li><a href="../" lang="en" hreflang="en">English</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="copyright">
+        <p>© 2026 nevzatius. Tüm hakları saklıdır.</p>
+        <p>Desktab henüz Microsoft Store’da yayımlanmamıştır. Microsoft, Windows ve Microsoft Store, Microsoft şirketler grubunun ticari markalarıdır.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nevzatius.github.io/desktab-site/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/tr/"/>
+  </url>
+  <url>
+    <loc>https://nevzatius.github.io/desktab-site/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/tr/"/>
+  </url>
+  <url>
+    <loc>https://nevzatius.github.io/desktab-site/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/privacy/tr/"/>
+  </url>
+  <url>
+    <loc>https://nevzatius.github.io/desktab-site/privacy/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/privacy/tr/"/>
+  </url>
+  <url>
+    <loc>https://nevzatius.github.io/desktab-site/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/support/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/support/tr/"/>
+  </url>
+  <url>
+    <loc>https://nevzatius.github.io/desktab-site/support/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/support/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/support/tr/"/>
+  </url>
+</urlset>
