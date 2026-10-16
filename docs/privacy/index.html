@@ -48,7 +48,7 @@
       <div class="container narrow">
         <h1>Privacy Policy</h1>
         <p>Desktab for Windows and the Desktab website.</p>
-        <p class="meta">Effective date: 14 October 2026 · Last updated: 14 October 2026</p>
+        <p class="meta">Effective date: 14 October 2026 · Last updated: 16 October 2026</p>
       </div>
     </div>
 
@@ -78,9 +78,9 @@
         <h2 id="summary">1. Summary</h2>
         <ul>
           <li>Desktab does not require an account, does not show ads, and contains no analytics, telemetry or crash-reporting code.</li>
-          <li>The application does not make network connections of its own and does not send your files, file names, folder paths or settings to the developer or to anyone else. (Section 5 lists actions that involve other software.)</li>
+          <li>Desktab does not send your files, file names, folder paths or settings to the developer. The Microsoft Store edition uses Windows Microsoft Store APIs for license checks, which may involve communication with Microsoft. Sections 5 and 7 explain this and actions involving other software.</li>
           <li>Your settings and layout are stored only on your PC, in the application’s own data folder.</li>
-          <li>The developer receives only what you choose to send, by email or in a public GitHub issue.</li>
+          <li>Desktab sends no workspace data to the developer. If you contact support, the developer receives what you choose to send, by email or in a public GitHub issue. Microsoft may also provide aggregated reports as described in section 7.</li>
           <li>Microsoft (Windows and the Microsoft Store) and GitHub (this website and public support issues) process some data as separate services. They are described below and are not part of the application itself.</li>
         </ul>
         <p>These statements about the application are based on a review of the application’s source code for the version prepared for the first Microsoft Store release. This is a source-code review; it has not been confirmed by monitoring network traffic. If a later version changes these statements, this policy will be updated before that version is released.</p>
@@ -95,7 +95,7 @@
               <tr><th scope="col">Party</th><th scope="col">Role</th><th scope="col">Data involved</th></tr>
             </thead>
             <tbody>
-              <tr><td>Desktab (on your PC)</td><td>Runs locally as you</td><td>Folders you choose, settings and layout kept on your PC. Nothing is sent out by the application.</td></tr>
+              <tr><td>Desktab (on your PC)</td><td>Runs locally as you</td><td>Folders you choose, settings and layout kept on your PC. These are not sent to the developer. Store license checks use Microsoft APIs (section 7).</td></tr>
               <tr><td>Windows</td><td>Operating system and shell</td><td>Icons and previews, opening files, Recycle Bin, clipboard, drag and drop. Governed by Microsoft’s terms and your Windows settings.</td></tr>
               <tr><td>Microsoft Store</td><td>Distribution, licensing and payments</td><td>Download, updates, license and (in future) purchase records, and Microsoft’s own diagnostics. Governed by Microsoft’s privacy statement.</td></tr>
               <tr><td>Email providers</td><td>Delivery of messages you send to the developer</td><td>Your email address and message, if you write to the developer. Governed by the terms of the providers involved.</td></tr>
@@ -105,7 +105,7 @@
         </div>
 
         <h2 id="access">3. What the app accesses</h2>
-        <p>The application is a desktop program that runs with your normal user permissions. It accesses only what you point it at or ask it to do:</p>
+        <p>The application is a desktop program that runs with your normal user permissions. Its local file and Windows features access the following:</p>
         <ul>
           <li><strong>Folders you choose.</strong> It lists the items in the folders you open as workspaces, using their names and basic attributes (for example, whether an item is a file or a folder), and watches those folders so changes made elsewhere appear automatically. Apart from copying files when you ask it to, the application does not read or index the contents of your files.</li>
           <li><strong>Icons and previews.</strong> Icons and thumbnails are produced by Windows. Windows itself may read parts of a file to create a thumbnail; that processing is done by the operating system, not by Desktab.</li>
@@ -116,6 +116,7 @@
           <li><strong>Background file.</strong> If you choose an image, GIF or video as a background, the application reads that file to display it. It is not copied; only its path is remembered.</li>
           <li><strong>Windows display preferences.</strong> The application reads whether Windows is set to light or dark mode, and may use your Windows display language to pre-select the interface language.</li>
           <li><strong>Keyboard shortcut.</strong> The application registers one global shortcut (Ctrl+Shift+Space) with Windows so it can show or hide its own window. It does not record keystrokes.</li>
+          <li><strong>Store license status.</strong> The Microsoft Store edition checks the app and Pro add-on license status at startup and when you use Restore, as described in section 7.</li>
         </ul>
 
         <h2 id="local">4. What is stored on your PC</h2>
@@ -136,7 +137,7 @@
         <p>File and folder names can be personal. Take care before sharing the settings file or journals with anyone.</p>
 
         <h2 id="transmit">5. What the app transmits</h2>
-        <p>Desktab itself does not transmit personal data. It has no account system, no server of its own, and it makes no network connections on its own. Some actions you take involve other software, and that software’s behavior is outside Desktab’s control:</p>
+        <p>Desktab has no account system or server of its own and does not send your workspace files, file names, folder paths or settings to the developer. The Microsoft Store edition calls Windows Microsoft Store APIs to check licenses; these calls may involve communication with Microsoft. When Pro purchasing is enabled, product information and purchase requests also use Microsoft Store (section 7). Some actions you take involve other software, and that software’s behavior is outside Desktab’s control:</p>
         <ul>
           <li>When you open a file, Windows starts that file type’s default application. That application’s privacy practices apply (for example, a web shortcut opens a browser).</li>
           <li>If you open a folder that is on a network location or is synchronized by a cloud service (for example, a OneDrive-managed folder), Windows or the sync provider performs the network access, not Desktab.</li>
@@ -152,11 +153,11 @@
           <li>Diagnostic and usage data collected by Windows and the Store, depending on your Windows privacy settings.</li>
           <li>Aggregated reports that Microsoft makes available to the developer through its developer dashboard, such as acquisitions, usage and health summaries. These reports come from Microsoft, not from the application.</li>
         </ul>
-        <p>Pro is planned as a one-time in-app purchase through the Microsoft Store, but no purchase is available and the application currently does not use any Microsoft Store purchase or license check. When Pro is introduced, Microsoft will process payment and license information; the developer will not receive payment card details. This policy will be updated before Pro is released.</p>
+        <p>The Microsoft Store edition of Desktab uses Windows Microsoft Store APIs to check the app and Pro add-on license status. Cached license information may be used offline when available. Pro is planned as a one-time in-app purchase. When Pro purchasing is enabled, product information and purchase requests are handled through Microsoft Store. Microsoft processes payment and Store licensing data under its own terms; the Desktab developer does not receive your payment card details. In the initial Free release, Pro purchasing is disabled and the app does not offer a purchase action. License checks are not used to send your workspace files or folder contents to the developer.</p>
         <p>Microsoft’s privacy statement is available at <a href="https://privacy.microsoft.com/">privacy.microsoft.com</a>.</p>
 
         <h2 id="third">8. Third-party services</h2>
-        <p>The application does not integrate any third-party service, SDK, advertising network or analytics provider. The third parties involved in connection with Desktab are:</p>
+        <p>The application contains no advertising, analytics or third-party tracking SDK. The Microsoft Store edition uses the Windows SDK and Microsoft Store APIs for licensing and, when enabled, purchasing, as described in section 7. The third parties involved in connection with Desktab are:</p>
         <ul>
           <li><strong>Microsoft</strong> — Windows and the Microsoft Store, as described in section 7.</li>
           <li><strong>GitHub</strong> — hosting for this website and for the public support issue tracker, as described in sections 9 and 10.</li>
@@ -182,7 +183,7 @@
         </ul>
 
         <h2 id="children">12. Children</h2>
-        <p>Desktab does not collect personal data from anyone, including children, and does not include social features, advertising or communication between users.</p>
+        <p>Desktab does not send personal data from its workspace features to the developer, including for children, and does not include social features, advertising or communication between users. Microsoft Store and Windows data processing is described in section 7.</p>
 
         <h2 id="contact">13. Contact</h2>
         <p>Questions about this policy or about your data can be sent to <a href="mailto:celiknevzatcan7@gmail.com?subject=Desktab%20privacy">celiknevzatcan7@gmail.com</a>.</p>
