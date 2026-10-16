@@ -4,7 +4,8 @@ Official, static, bilingual (English / Turkish) website for **Desktab**, a nativ
 
 This repository contains **only the public website**. It does not contain the Desktab application source code.
 
-- Site: <https://nevzatius.github.io/desktab-site/> (after GitHub Pages is enabled)
+- Site: <https://nevzatius.github.io/desktab-site/>
+- Microsoft Store: <https://apps.microsoft.com/detail/9P05F9J6TJ1R> (Free available; Pro purchasing not available yet)
 - Privacy Policy: <https://nevzatius.github.io/desktab-site/privacy/>
 - Support: <https://nevzatius.github.io/desktab-site/support/>
 
@@ -31,7 +32,7 @@ All internal links are **relative**, so the site works under the project path `/
 
 ## Screenshots
 
-`docs/assets/images/app-{main,nav,dark}-{en,tr}.png` are real captures of a pre-release build of the Desktab app (English and Turkish interface), taken with demo files: all folder and file names are made up and the images are abstract gradients. The test/QA badge was removed from the capture build. Show only features that are part of the planned Free plan (two workspaces, light/dark, static image background); do not add screenshots of Pro-only features until Pro is released. `og-image.png` is the social preview image.
+`docs/assets/images/app-{main,nav,dark}-{en,tr}.png` are real captures of a pre-release build of the Desktab app (English and Turkish interface), taken with demo files: all folder and file names are made up and the images are abstract gradients. The test/QA badge was removed from the capture build. Show only features that are part of Free (two workspaces, light/dark, static image background); do not add screenshots of Pro-only features until Pro is released. `og-image.png` is the social preview image.
 
 ## Contact email
 
@@ -71,7 +72,7 @@ Then open <http://localhost:8080/>. (Opening the files directly with `file://` w
 
 ## Content rules
 
-- Do not state that Desktab is downloadable until a real Microsoft Store URL is confirmed. Then add that URL (and only that) to the home pages and the Support page.
-- Do not display a Pro price until it is final. Free and Pro are shown as **planned, unreleased** features until they actually ship.
+- Desktab Free is available at the verified Microsoft Store URL above. Keep that URL as the only download destination on the home and Support pages.
+- Do not display a Pro price until it is final. Pro remains **planned, unreleased** and unavailable to purchase until it actually ships.
 - The Privacy Policy must be re-checked against the application whenever the application's data handling changes.
 - No analytics, trackers, or third-party embeds.

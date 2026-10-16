@@ -203,11 +203,11 @@ a:hover { color: var(--navy-700); }
   line-height: 1.3;
   text-decoration: none;
 }
-.btn-primary-static {
+.btn-primary {
   background: var(--white);
   color: var(--navy-900);
-  cursor: default;
 }
+.btn-primary:hover { background: #dbe7fb; color: var(--navy-900); }
 .btn-secondary { border-color: rgba(255, 255, 255, 0.45); color: var(--white); }
 .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); color: var(--white); }
 .btn-light { background: var(--navy-800); color: var(--white); }
@@ -363,6 +363,7 @@ section h2 {
 .cta-band { background: var(--navy-900); color: var(--white); text-align: center; padding: 56px 0; }
 .cta-band h2 { color: var(--white); }
 .cta-band p { max-width: 36em; margin: 0 auto 22px; color: #c3d1ea; }
+.cta-band p a { color: inherit; }
 
 /* ---------- Document pages (privacy, support) ---------- */
 
