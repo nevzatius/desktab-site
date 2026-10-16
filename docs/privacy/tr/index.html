@@ -105,7 +105,7 @@
         </div>
 
         <h2 id="access">3. Uygulamanın eriştikleri</h2>
-        <p>Uygulama, normal kullanıcı izinlerinizle çalışan bir masaüstü programıdır. Yerel dosya ve Windows özellikleri şunlara erişir:</p>
+        <p>Uygulama, normal kullanıcı izinlerinizle çalışan bir masaüstü programıdır ve şunlara erişir:</p>
         <ul>
           <li><strong>Seçtiğiniz klasörler.</strong> Çalışma alanı olarak açtığınız klasörlerdeki öğeleri adları ve temel özellikleriyle (örneğin bir öğenin dosya mı klasör mü olduğu) listeler ve başka yerde yapılan değişiklikler otomatik görünsün diye bu klasörleri izler. Siz istediğinizde dosyaları kopyalamak dışında, uygulama dosyalarınızın içeriğini okumaz veya dizinlemez.</li>
           <li><strong>Simgeler ve önizlemeler.</strong> Simgeleri ve küçük resimleri Windows üretir. Windows küçük resim oluşturmak için bir dosyanın bir kısmını okuyabilir; bu işlemi Desktab değil, işletim sistemi yapar.</li>
@@ -116,7 +116,7 @@
           <li><strong>Arka plan dosyası.</strong> Arka plan olarak bir görsel, GIF veya video seçerseniz uygulama, göstermek için bu dosyayı okur. Dosya kopyalanmaz; yalnızca yolu hatırlanır.</li>
           <li><strong>Windows görünüm tercihleri.</strong> Uygulama, Windows’un açık veya koyu modda olduğunu okur ve arayüz dilini önceden seçmek için Windows görüntüleme dilinizi kullanabilir.</li>
           <li><strong>Klavye kısayolu.</strong> Uygulama, kendi penceresini göstermek veya gizlemek için Windows’a tek bir genel kısayol (Ctrl+Shift+Space) kaydeder. Tuş vuruşlarını kaydetmez.</li>
-          <li><strong>Store lisans durumu.</strong> Microsoft Store sürümü, bölüm 7’de açıklandığı gibi açılışta ve Geri Yükle eylemini kullandığınızda uygulama ve Pro eklentisi lisans durumunu kontrol eder.</li>
+          <li><strong>Store lisans durumu.</strong> Microsoft Store sürümü, bölüm 7’de açıklandığı gibi açılışta ve “Satın almaları geri yükle”yi seçtiğinizde uygulama ve Pro eklentisi lisans durumunu kontrol eder.</li>
         </ul>
 
         <h2 id="local">4. Bilgisayarınızda saklananlar</h2>
@@ -137,7 +137,7 @@
         <p>Dosya ve klasör adları kişisel olabilir. Ayar dosyasını veya günlükleri başkalarıyla paylaşmadan önce dikkatli olun.</p>
 
         <h2 id="transmit">5. Uygulamanın ilettikleri</h2>
-        <p>Desktab’ın hesap sistemi veya kendi sunucusu yoktur; çalışma alanı dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı geliştiriciye göndermez. Microsoft Store sürümü, lisans kontrolü için Windows’un Microsoft Store API’lerini çağırır; bu çağrılar Microsoft ile iletişim içerebilir. Pro satın alma etkinleştirildiğinde ürün bilgileri ve satın alma istekleri de Microsoft Store üzerinden yürütülür (bölüm 7). Yaptığınız bazı eylemler başka yazılımları devreye sokar; o yazılımların davranışı Desktab’ın denetimi dışındadır:</p>
+        <p>Desktab’ın hesap sistemi veya kendi sunucusu yoktur; çalışma alanı dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı geliştiriciye göndermez. Microsoft Store sürümü, lisans kontrolü için Windows’un Microsoft Store API’lerini çağırır; bu çağrılar Microsoft ile iletişim içerebilir. Pro satın alma etkinleştirildiğinde (ilk ücretsiz sürümde etkin değildir) ürün bilgileri ve satın alma istekleri de Microsoft Store üzerinden yürütülür (bölüm 7). Yaptığınız bazı eylemler başka yazılımları devreye sokar; o yazılımların davranışı Desktab’ın denetimi dışındadır:</p>
         <ul>
           <li>Bir dosyayı açtığınızda Windows, o dosya türünün varsayılan uygulamasını başlatır. O uygulamanın gizlilik uygulamaları geçerlidir (örneğin bir web kısayolu tarayıcıyı açar).</li>
           <li>Ağ konumunda bulunan veya bir bulut hizmetiyle eşitlenen (örneğin OneDrive tarafından yönetilen) bir klasörü açarsanız, ağ erişimini Desktab değil, Windows veya eşitleme sağlayıcısı yapar.</li>
@@ -153,7 +153,8 @@
           <li>Windows gizlilik ayarlarınıza bağlı olarak Windows ve Store tarafından toplanan tanılama ve kullanım verileri.</li>
           <li>Microsoft’un geliştirici panosu aracılığıyla geliştiriciye sunduğu toplu raporlar (edinimler, kullanım ve sağlık özetleri gibi). Bu raporlar Microsoft’tan gelir, uygulamadan gelmez.</li>
         </ul>
-        <p>Desktab’ın Microsoft Store sürümü, uygulama ve Pro eklentisi lisans durumunu Windows’un Microsoft Store API’leriyle kontrol eder. Kullanılabilir olduğunda cihazdaki önbellekli lisans bilgileri çevrimdışı kullanılabilir. Pro, tek seferlik bir uygulama içi satın alma olarak planlanmaktadır. Pro satın alma etkinleştirildiğinde ürün bilgilerini alma ve satın alma işlemleri Microsoft Store üzerinden yürütülür. Ödeme ve Store lisans verilerini Microsoft kendi koşulları kapsamında işler; Desktab geliştiricisi ödeme kartı bilgilerinizi almaz. İlk Free sürümünde Pro satın alma etkin değildir ve uygulama satın alma eylemi sunmaz. Lisans kontrolü, klasör ve dosyalarınızı geliştiriciye göndermek için kullanılmaz.</p>
+        <p>Desktab’ın Microsoft Store sürümü, uygulama ve Pro eklentisi lisans durumunu açılışta ve “Satın almaları geri yükle”yi seçtiğinizde Windows’un Microsoft Store API’leriyle kontrol eder. Çevrimdışıyken Windows, cihazınızda önbelleğe aldığı lisans bilgileriyle yanıt verebilir. Desktab lisans veya sahiplik bilgisini kendi ayar dosyasına kaydetmez ve dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı bu API’lere aktarmaz.</p>
+        <p>Pro, tek seferlik bir uygulama içi satın alma olarak planlanmaktadır. İlk ücretsiz sürümde Pro satın alma etkin değildir ve uygulama satın alma eylemi sunmaz. Pro satın alma etkinleştirildiğinde ürün bilgilerini alma ve satın alma işlemleri Microsoft Store üzerinden yürütülür. Ödeme ve Store lisans verilerini Microsoft kendi koşulları kapsamında işler; Desktab geliştiricisi ödeme kartı bilgilerinizi almaz. Pro satın alma etkinleştirilmeden önce bu politika gözden geçirilecek ve gerekirse güncellenecektir.</p>
         <p>Microsoft’un gizlilik bildirimine <a href="https://privacy.microsoft.com/">privacy.microsoft.com</a> adresinden ulaşabilirsiniz.</p>
 
         <h2 id="third">8. Üçüncü taraf hizmetler</h2>
@@ -183,7 +184,7 @@
         </ul>
 
         <h2 id="children">12. Çocuklar</h2>
-        <p>Desktab, çocuklar dahil kullanıcıların çalışma alanı özelliklerindeki kişisel verileri geliştiriciye göndermez; sosyal özellik, reklam veya kullanıcılar arası iletişim içermez. Microsoft Store ve Windows’un veri işlemesi bölüm 7’de açıklanmıştır.</p>
+        <p>Uygulama, çocuklar dahil hiçbir kullanıcıdan geliştiriciye kişisel veri göndermez; sosyal özellik, reklam veya kullanıcılar arası iletişim içermez. Microsoft’un Windows ve Microsoft Store ile bağlantılı olarak işlediği veriler bölüm 7’de açıklanmıştır.</p>
 
         <h2 id="contact">13. İletişim</h2>
         <p>Bu politikayla veya verilerinizle ilgili sorular <a href="mailto:celiknevzatcan7@gmail.com?subject=Desktab%20gizlilik">celiknevzatcan7@gmail.com</a> adresine gönderilebilir.</p>
