@@ -26,7 +26,7 @@ docs/                     <- published by GitHub Pages
 scripts/set-contact-email.ps1   changes the contact email everywhere
 ```
 
-No framework, no build step, no JavaScript, no external requests (system fonts only), no cookies, no analytics.
+No framework, no build step, no external requests (system fonts only), no cookies, no analytics. The only JavaScript is the interactive demo (`docs/assets/demo.js` + `demo.css`, section `#demo` on the EN/TR home pages): it runs fully in the browser, keeps state in memory only, and sends/stores nothing.
 
 All internal links are **relative**, so the site works under the project path `/desktab-site/`, under a custom domain, and from a local preview. Only `<link rel="canonical">`, `hreflang`, Open Graph URLs, `sitemap.xml` and `404.html` use the absolute `https://nevzatius.github.io/desktab-site/` address; if the site moves to a custom domain, replace that prefix in those places.
 
