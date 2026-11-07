@@ -22,7 +22,7 @@
 
 .dz-bar { display: flex; align-items: center; gap: 8px; padding: 8px 10px; flex-wrap: wrap; }
 .dz-app { display: inline-flex; align-items: center; gap: 8px; margin-right: 4px; font-weight: 600; min-width: 0; }
-.dz-logo { width: 18px; height: 18px; border-radius: 5px; background: linear-gradient(135deg, #4aa3ff, #1f6fe0); flex: none; }
+.dz-logo { width: 20px; height: 20px; border-radius: 5px; background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%233b7de0'/><stop offset='1' stop-color='%230b1b33'/></linearGradient></defs><rect width='64' height='64' rx='15' fill='url(%23g)'/><path d='M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z' fill='%23fff'/><rect x='18' y='29' width='8' height='8' rx='2.2' fill='%233b7de0'/><rect x='29' y='35' width='8' height='8' rx='2.2' fill='%231b3a66'/><rect x='39' y='28.5' width='8' height='8' rx='2.2' fill='%238db4f0'/></svg>") center / contain no-repeat; flex: none; }
 .dz-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 11em; }
 .dz-btn {
   display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid var(--w-bd); border-radius: var(--r-btn);
