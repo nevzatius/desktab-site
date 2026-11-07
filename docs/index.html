@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Desktab">
   <meta property="og:title" content="Desktab — The freedom of a desktop. The organization of a folder.">
-  <meta property="og:description" content="A native Windows app that turns real folders into desktop-style workspaces. Free is now available on Microsoft Store.">
+  <meta property="og:description" content="A native Windows app that turns real folders into desktop-style workspaces. Free to download from Microsoft Store, with an optional one-time Pro upgrade.">
   <meta property="og:url" content="https://nevzatius.github.io/desktab-site/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="tr_TR">
@@ -22,8 +22,9 @@
   <meta name="theme-color" content="#eef1f6">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=20261107-studio">
-  <link rel="stylesheet" href="assets/demo.css?v=20261107-studio">
+  <script src="assets/theme.js?v=20261107-theme"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261107-theme">
+  <link rel="stylesheet" href="assets/demo.css?v=20261107-theme">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,6 +44,7 @@
           <span lang="en" aria-current="true">EN</span>
           <a href="tr/" lang="tr" hreflang="tr" aria-label="Türkçe">TR</a>
         </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark theme"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
@@ -59,7 +61,7 @@
             <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Download Free from Microsoft Store</a>
             <a class="btn btn-secondary" href="#features">Explore Features</a>
           </div>
-          <p class="status-note">Desktab Free is now available for Windows 10 and 11 (x64). Pro is not available to buy yet.</p>
+          <p class="status-note">Desktab is available for Windows 10 and 11 (x64). Free to download, with an optional one-time Pro upgrade inside the app.</p>
         </div>
 
         <div class="hero-stage">
@@ -98,8 +100,10 @@
     <!-- C — Features -->
     <section id="features" class="alt" aria-labelledby="features-title">
       <div class="container">
-        <h2 id="features-title">What Desktab does</h2>
-        <p class="section-intro">A native Windows application that works directly on the folders you already have.</p>
+        <div class="features-head">
+          <h2 id="features-title">What Desktab does</h2>
+          <p class="section-intro">A native Windows application that works directly on the folders you already have.</p>
+        </div>
         <ul class="cards">
           <li class="card">
             <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 10h18M8 5v5"/></svg></span>
@@ -172,7 +176,7 @@
     <section id="plans" aria-labelledby="plans-title">
       <div class="container">
         <h2 id="plans-title">Free and Pro</h2>
-        <p class="section-intro">Free is available now on Microsoft Store. Pro is planned and is not available to buy yet; its features may change before release.</p>
+        <p class="section-intro">Free is available now on Microsoft Store. Pro is a one-time purchase made from inside the app.</p>
         <div class="plans">
           <article class="plan" aria-labelledby="free-title">
             <h3 id="free-title">Free <span class="badge">Available now</span></h3>
@@ -192,8 +196,8 @@
             </ul>
           </article>
           <article class="plan pro" aria-labelledby="pro-title">
-            <h3 id="pro-title">Pro <span class="badge">Planned</span></h3>
-            <p class="sub">Coming Soon. Not available to buy yet.</p>
+            <h3 id="pro-title">Pro <span class="badge">In-app purchase</span></h3>
+            <p class="sub">One-time purchase. No subscription.</p>
             <p class="includes">All Free features, plus:</p>
             <ul>
               <li>Unlimited workspaces</li>
@@ -204,14 +208,14 @@
             </ul>
           </article>
         </div>
-        <p class="plan-note">Pro is planned as a one-time purchase within the same Microsoft Store app. These features are planned and not released; pricing has not been decided and Pro cannot be purchased yet.</p>
+        <p class="plan-note">Pro is bought once, from inside the Desktab app, and is processed by Microsoft Store; the price is shown there before you confirm. If you reinstall or move to a new PC, choose “Restore purchases” in the app.</p>
       </div>
     </section>
 
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title">Desktab Free is now available</h2>
-        <p>Download Desktab from Microsoft Store and organize your folders your way. Questions or feedback? <a href="support/">Visit Support</a>.</p>
+        <h2 id="cta-title">Get Desktab from Microsoft Store</h2>
+        <p>Download Desktab for free and organize your folders your way; upgrade to Pro from inside the app whenever you like. Questions or feedback? <a href="support/">Visit Support</a>.</p>
         <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Download Free from Microsoft Store</a>
       </div>
     </section>
@@ -236,7 +240,7 @@
       </div>
       <div class="copyright">
         <p>© 2026 nevzatius. All rights reserved.</p>
-        <p>Desktab Free is available on Microsoft Store. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+        <p>Desktab is available on Microsoft Store. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
       </div>
     </div>
   </footer>

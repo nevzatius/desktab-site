@@ -21,7 +21,8 @@
   <meta name="theme-color" content="#eef1f6">
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/styles.css?v=20261107-studio">
+  <script src="../assets/theme.js?v=20261107-theme"></script>
+  <link rel="stylesheet" href="../assets/styles.css?v=20261107-theme">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,6 +41,7 @@
           <span lang="en" aria-current="true">EN</span>
           <a href="tr/" lang="tr" hreflang="tr" aria-label="Türkçe">TR</a>
         </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark theme"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
@@ -49,7 +51,7 @@
       <div class="container narrow">
         <h1>Privacy Policy</h1>
         <p>Desktab for Windows and the Desktab website.</p>
-        <p class="meta">Effective date: 14 October 2026 · Last updated: 16 October 2026</p>
+        <p class="meta">Effective date: 14 October 2026 · Last updated: 7 November 2026</p>
       </div>
     </div>
 
@@ -138,7 +140,7 @@
         <p>File and folder names can be personal. Take care before sharing the settings file or journals with anyone.</p>
 
         <h2 id="transmit">5. What the app transmits</h2>
-        <p>Desktab has no account system or server of its own and does not send your workspace files, file names, folder paths or settings to the developer. The Microsoft Store edition calls the Microsoft Store APIs in Windows to check licenses; these calls may involve communication with Microsoft. When Pro purchasing is enabled (it is not enabled in the initial Free release), product information and purchase requests also use Microsoft Store (section 7). Some actions you take involve other software, and that software’s behavior is outside Desktab’s control:</p>
+        <p>Desktab has no account system or server of its own and does not send your workspace files, file names, folder paths or settings to the developer. The Microsoft Store edition calls the Microsoft Store APIs in Windows to check licenses; these calls may involve communication with Microsoft. Product information and Pro purchase requests also use Microsoft Store (section 7). Some actions you take involve other software, and that software’s behavior is outside Desktab’s control:</p>
         <ul>
           <li>When you open a file, Windows starts that file type’s default application. That application’s privacy practices apply (for example, a web shortcut opens a browser).</li>
           <li>If you open a folder that is on a network location or is synchronized by a cloud service (for example, a OneDrive-managed folder), Windows or the sync provider performs the network access, not Desktab.</li>
@@ -155,7 +157,7 @@
           <li>Aggregated reports that Microsoft makes available to the developer through its developer dashboard, such as acquisitions, usage and health summaries. These reports come from Microsoft, not from the application.</li>
         </ul>
         <p>The Microsoft Store edition of Desktab uses the Microsoft Store APIs in Windows to check the app and Pro add-on license status, at startup and when you choose “Restore purchases”. When you are offline, Windows may answer from license information it has cached on your device. Desktab does not save license or ownership information in its own settings file, and it does not pass your files, file names, folder paths or settings to these APIs.</p>
-        <p>Pro is planned as a one-time in-app purchase. In the initial Free release, Pro purchasing is disabled and the app does not offer a purchase action. When Pro purchasing is enabled, product information and purchase requests are handled through Microsoft Store. Microsoft processes payment and Store licensing data under its own terms; the Desktab developer does not receive your payment card details. This policy will be reviewed, and updated if needed, before Pro purchasing is enabled.</p>
+        <p>Pro is a one-time in-app purchase. Product information and purchase requests are handled through Microsoft Store. Microsoft processes payment and Store licensing data under its own terms; the Desktab developer does not receive your payment card details.</p>
         <p>Microsoft’s privacy statement is available at <a href="https://privacy.microsoft.com/">privacy.microsoft.com</a>.</p>
 
         <h2 id="third">8. Third-party services</h2>
@@ -167,7 +169,7 @@
         </ul>
 
         <h2 id="website">9. This website</h2>
-        <p>This website is a set of static pages hosted on GitHub Pages. The pages themselves do not use cookies, analytics, tracking scripts, advertising, embedded third-party content, or external fonts, and they do not ask you for personal information. The developer has not enabled any visitor analytics for this website. The home pages include a small interactive demo written in JavaScript that runs entirely in your browser; it does not send, store or read any data.</p>
+        <p>This website is a set of static pages hosted on GitHub Pages. The pages themselves do not use cookies, analytics, tracking scripts, advertising, embedded third-party content, or external fonts, and they do not ask you for personal information. The developer has not enabled any visitor analytics for this website. The home pages include a small interactive demo written in JavaScript that runs entirely in your browser; it does not send, store or read any data. If you use the light/dark theme switch, your choice is saved only in your browser’s local storage on your device (one value, “desktab-theme”); it is never sent anywhere and you can clear it at any time through your browser settings.</p>
         <p>As the hosting provider, GitHub may process technical data about your visit, such as your IP address and request details, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
 
         <h2 id="support">10. Support inquiries</h2>

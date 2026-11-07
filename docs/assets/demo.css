@@ -103,21 +103,21 @@
 /* Hint + panel */
 .dz-keys { margin: 12px 0 0; color: var(--gray-600); font-size: 0.88rem; }
 .dz-panel { margin-top: 22px; padding: 22px; border: 1px solid var(--gray-200); border-radius: var(--radius); background: var(--white); }
-.dz-panel h3 { margin: 0 0 14px; font-size: 1.15rem; color: var(--navy-900); }
+.dz-panel h3 { margin: 0 0 14px; font-size: 1.15rem; color: var(--ink); }
 .dz-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px 24px; }
 .dz-glabel { margin-bottom: 7px; color: var(--gray-700); font-size: 0.85rem; font-weight: 600; }
 .dz-seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--gray-300); border-radius: 9px; overflow: hidden; background: var(--gray-100); }
 .dz-seg button { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 0; border-right: 1px solid var(--gray-300); background: transparent; color: var(--gray-900); font: inherit; font-size: 0.92rem; cursor: pointer; }
 .dz-seg button:last-child { border-right: 0; }
-.dz-seg button[aria-checked="true"] { background: var(--navy-800); color: #fff; }
+.dz-seg button[aria-checked="true"] { background: var(--seg-on); color: #fff; }
 .dz-seg button[aria-disabled="true"] { color: var(--gray-600); }
 .dz-seg button:hover:not([aria-checked="true"]) { background: var(--blue-100); }
-.dz-pro { display: inline-flex; align-items: center; gap: 3px; padding: 1px 7px 1px 5px; border-radius: 999px; background: var(--blue-100); color: var(--navy-800); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.dz-pro { display: inline-flex; align-items: center; gap: 3px; padding: 1px 7px 1px 5px; border-radius: 999px; background: var(--blue-100); color: var(--ink-2); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
 .dz-pro svg { width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .dz-swatches { display: flex; gap: 10px; }
 .dz-sw { width: 42px; height: 32px; padding: 0; border: 2px solid var(--gray-300); border-radius: 8px; cursor: pointer; }
-.dz-sw[aria-checked="true"] { border-color: var(--navy-800); box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--navy-800); }
-.dz-reset { margin-top: 20px; padding: 8px 16px; border: 1px solid var(--gray-300); border-radius: var(--radius-sm); background: var(--white); color: var(--navy-800); font: inherit; font-weight: 600; cursor: pointer; }
+.dz-sw[aria-checked="true"] { border-color: var(--seg-on); box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--seg-on); }
+.dz-reset { margin-top: 20px; padding: 8px 16px; border: 1px solid var(--gray-300); border-radius: var(--radius-sm); background: var(--white); color: var(--ink-2); font: inherit; font-weight: 600; cursor: pointer; }
 .dz-reset:hover { background: var(--gray-100); }
 .dz-note { margin: 14px 0 0; color: var(--gray-600); font-size: 0.88rem; }
 

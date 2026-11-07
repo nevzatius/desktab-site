@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Desktab">
   <meta property="og:title" content="Desktab — Masaüstünün özgürlüğü, klasörün düzeni.">
-  <meta property="og:description" content="Gerçek klasörlerinizi masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows uygulaması. Ücretsiz sürüm şimdi Microsoft Store’da.">
+  <meta property="og:description" content="Gerçek klasörlerinizi masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows uygulaması. Microsoft Store’dan ücretsiz indirin; isteğe bağlı tek seferlik Pro yükseltmesi var.">
   <meta property="og:url" content="https://nevzatius.github.io/desktab-site/tr/">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:locale:alternate" content="en_US">
@@ -22,8 +22,9 @@
   <meta name="theme-color" content="#eef1f6">
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/styles.css?v=20261107-studio">
-  <link rel="stylesheet" href="../assets/demo.css?v=20261107-studio">
+  <script src="../assets/theme.js?v=20261107-theme"></script>
+  <link rel="stylesheet" href="../assets/styles.css?v=20261107-theme">
+  <link rel="stylesheet" href="../assets/demo.css?v=20261107-theme">
 </head>
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
@@ -43,6 +44,7 @@
           <a href="../" lang="en" hreflang="en" aria-label="English">EN</a>
           <span lang="tr" aria-current="true">TR</span>
         </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Koyu temaya geç"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
@@ -59,7 +61,7 @@
             <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store’dan Ücretsiz İndir</a>
             <a class="btn btn-secondary" href="#features">Özellikleri Keşfet</a>
           </div>
-          <p class="status-note">Desktab’ın ücretsiz sürümü Windows 10 ve 11 (x64) için yayımlandı. Pro henüz satın alınamaz.</p>
+          <p class="status-note">Desktab Windows 10 ve 11 (x64) için yayımlandı. Ücretsiz indirilir; isteğe bağlı Pro, uygulama içinden tek seferlik satın alınır.</p>
         </div>
 
         <div class="hero-stage">
@@ -98,8 +100,10 @@
     <!-- C — Özellikler -->
     <section id="features" class="alt" aria-labelledby="features-title">
       <div class="container">
-        <h2 id="features-title">Desktab ne yapar?</h2>
-        <p class="section-intro">Zaten sahip olduğunuz klasörler üzerinde doğrudan çalışan yerel bir Windows uygulaması.</p>
+        <div class="features-head">
+          <h2 id="features-title">Desktab ne yapar?</h2>
+          <p class="section-intro">Zaten sahip olduğunuz klasörler üzerinde doğrudan çalışan yerel bir Windows uygulaması.</p>
+        </div>
         <ul class="cards">
           <li class="card">
             <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 10h18M8 5v5"/></svg></span>
@@ -172,7 +176,7 @@
     <section id="plans" aria-labelledby="plans-title">
       <div class="container">
         <h2 id="plans-title">Ücretsiz ve Pro</h2>
-        <p class="section-intro">Ücretsiz sürüm şimdi Microsoft Store’da. Pro planlanıyor ve henüz satın alınamaz; özellikleri yayından önce değişebilir.</p>
+        <p class="section-intro">Ücretsiz sürüm şimdi Microsoft Store’da. Pro, uygulamanın içinden tek seferlik satın alınır.</p>
         <div class="plans">
           <article class="plan" aria-labelledby="free-title">
             <h3 id="free-title">Ücretsiz <span class="badge">Yayımlandı</span></h3>
@@ -192,8 +196,8 @@
             </ul>
           </article>
           <article class="plan pro" aria-labelledby="pro-title">
-            <h3 id="pro-title">Pro <span class="badge">Planlanıyor</span></h3>
-            <p class="sub">Yakında. Henüz satın alınamaz.</p>
+            <h3 id="pro-title">Pro <span class="badge">Uygulama içi satın alma</span></h3>
+            <p class="sub">Tek seferlik satın alma. Abonelik yok.</p>
             <p class="includes">Tüm Ücretsiz özellikler ve ayrıca:</p>
             <ul>
               <li>Sınırsız çalışma alanı</li>
@@ -204,14 +208,14 @@
             </ul>
           </article>
         </div>
-        <p class="plan-note">Pro, aynı Microsoft Store uygulaması içinde tek seferlik bir satın alma olarak planlanıyor. Bu özellikler planlanmıştır ve yayımlanmamıştır; fiyat henüz belirlenmedi ve Pro şu anda satın alınamaz.</p>
+        <p class="plan-note">Pro bir kez, Desktab uygulamasının içinden satın alınır ve Microsoft Store tarafından işlenir; fiyat, onaylamadan önce orada gösterilir. Yeniden kurulum yaparsanız ya da yeni bir bilgisayara geçerseniz uygulamada “Satın almaları geri yükle”yi seçin.</p>
       </div>
     </section>
 
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title">Desktab’ın ücretsiz sürümü yayımlandı</h2>
-        <p>Desktab’ı Microsoft Store’dan indirin, klasörlerinizi kendi düzeninize göre kullanın. Soru ve geri bildirimleriniz için <a href="../support/tr/">destek sayfasını</a> ziyaret edin.</p>
+        <h2 id="cta-title">Desktab’ı Microsoft Store’dan edinin</h2>
+        <p>Desktab’ı ücretsiz indirin, klasörlerinizi kendi düzeninize göre kullanın; dilediğinizde uygulamanın içinden Pro’ya geçin. Soru ve geri bildirimleriniz için <a href="../support/tr/">destek sayfasını</a> ziyaret edin.</p>
         <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store’dan Ücretsiz İndir</a>
       </div>
     </section>
@@ -236,7 +240,7 @@
       </div>
       <div class="copyright">
         <p>© 2026 nevzatius. Tüm hakları saklıdır.</p>
-        <p>Desktab’ın ücretsiz sürümü Microsoft Store’da yayımlandı. Microsoft, Windows ve Microsoft Store, Microsoft şirketler grubunun ticari markalarıdır.</p>
+        <p>Desktab Microsoft Store’da yayımlandı. Microsoft, Windows ve Microsoft Store, Microsoft şirketler grubunun ticari markalarıdır.</p>
       </div>
     </div>
   </footer>

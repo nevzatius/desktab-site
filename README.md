@@ -5,7 +5,7 @@ Official, static, bilingual (English / Turkish) website for **Desktab**, a nativ
 This repository contains **only the public website**. It does not contain the Desktab application source code.
 
 - Site: <https://nevzatius.github.io/desktab-site/>
-- Microsoft Store: <https://apps.microsoft.com/detail/9P05F9J6TJ1R> (Free available; Pro purchasing not available yet)
+- Microsoft Store: <https://apps.microsoft.com/detail/9P05F9J6TJ1R> (Free to download; Pro is a one-time in-app purchase)
 - Privacy Policy: <https://nevzatius.github.io/desktab-site/privacy/>
 - Support: <https://nevzatius.github.io/desktab-site/support/>
 
@@ -74,6 +74,6 @@ Then open <http://localhost:8080/>. (Opening the files directly with `file://` w
 ## Content rules
 
 - Desktab Free is available at the verified Microsoft Store URL above. Keep that URL as the only download destination on the home and Support pages.
-- Do not display a Pro price until it is final. Pro remains **planned, unreleased** and unavailable to purchase until it actually ships.
+- Pro is live as a one-time in-app purchase. Do not display a Pro price on the site (the Store shows the current price in the app); describe it only as a one-time purchase made inside the app.
 - The Privacy Policy must be re-checked against the application whenever the application's data handling changes.
 - No analytics, trackers, or third-party embeds.

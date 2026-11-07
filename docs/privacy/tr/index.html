@@ -21,7 +21,8 @@
   <meta name="theme-color" content="#eef1f6">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
   <link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/styles.css?v=20261107-studio">
+  <script src="../../assets/theme.js?v=20261107-theme"></script>
+  <link rel="stylesheet" href="../../assets/styles.css?v=20261107-theme">
 </head>
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
@@ -40,6 +41,7 @@
           <a href="../" lang="en" hreflang="en" aria-label="English">EN</a>
           <span lang="tr" aria-current="true">TR</span>
         </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Koyu temaya geç"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
@@ -49,7 +51,7 @@
       <div class="container narrow">
         <h1>Gizlilik Politikası</h1>
         <p>Windows için Desktab ve Desktab web sitesi.</p>
-        <p class="meta">Yürürlük tarihi: 14 Ekim 2026 · Son güncelleme: 16 Ekim 2026</p>
+        <p class="meta">Yürürlük tarihi: 14 Ekim 2026 · Son güncelleme: 7 Kasım 2026</p>
       </div>
     </div>
 
@@ -98,7 +100,7 @@
             <tbody>
               <tr><td>Desktab (bilgisayarınızda)</td><td>Sizin kullanıcı hesabınızla yerelde çalışır</td><td>Seçtiğiniz klasörler, bilgisayarınızda tutulan ayarlar ve yerleşim. Bunlar geliştiriciye gönderilmez. Store lisans kontrolleri Microsoft API’lerini kullanır (bölüm 7).</td></tr>
               <tr><td>Windows</td><td>İşletim sistemi ve kabuk</td><td>Simgeler ve önizlemeler, dosyaları açma, Geri Dönüşüm Kutusu, pano, sürükle-bırak. Microsoft’un koşullarına ve Windows ayarlarınıza tabidir.</td></tr>
-              <tr><td>Microsoft Store</td><td>Dağıtım, lisanslama ve ödemeler</td><td>İndirme, güncellemeler, lisans ve (ileride) satın alma kayıtları ile Microsoft’un kendi tanılama verileri. Microsoft’un gizlilik bildirimine tabidir.</td></tr>
+              <tr><td>Microsoft Store</td><td>Dağıtım, lisanslama ve ödemeler</td><td>İndirme, güncellemeler, lisans ve satın alma kayıtları ile Microsoft’un kendi tanılama verileri. Microsoft’un gizlilik bildirimine tabidir.</td></tr>
               <tr><td>E-posta sağlayıcıları</td><td>Geliştiriciye gönderdiğiniz iletilerin iletimi</td><td>Geliştiriciye yazarsanız e-posta adresiniz ve iletiniz. İlgili sağlayıcıların koşullarına tabidir.</td></tr>
               <tr><td>GitHub</td><td>Web sitesi barındırma ve herkese açık sorun izleyici</td><td>Bu siteyi yüklediğinizde oluşan teknik ziyaret verileri; herkese açık bir kayda yazdığınız her şey.</td></tr>
             </tbody>
@@ -138,7 +140,7 @@
         <p>Dosya ve klasör adları kişisel olabilir. Ayar dosyasını veya günlükleri başkalarıyla paylaşmadan önce dikkatli olun.</p>
 
         <h2 id="transmit">5. Uygulamanın ilettikleri</h2>
-        <p>Desktab’ın hesap sistemi veya kendi sunucusu yoktur; çalışma alanı dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı geliştiriciye göndermez. Microsoft Store sürümü, lisans kontrolü için Windows’un Microsoft Store API’lerini çağırır; bu çağrılar Microsoft ile iletişim içerebilir. Pro satın alma etkinleştirildiğinde (ilk ücretsiz sürümde etkin değildir) ürün bilgileri ve satın alma istekleri de Microsoft Store üzerinden yürütülür (bölüm 7). Yaptığınız bazı eylemler başka yazılımları devreye sokar; o yazılımların davranışı Desktab’ın denetimi dışındadır:</p>
+        <p>Desktab’ın hesap sistemi veya kendi sunucusu yoktur; çalışma alanı dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı geliştiriciye göndermez. Microsoft Store sürümü, lisans kontrolü için Windows’un Microsoft Store API’lerini çağırır; bu çağrılar Microsoft ile iletişim içerebilir. Ürün bilgileri ve Pro satın alma istekleri de Microsoft Store üzerinden yürütülür (bölüm 7). Yaptığınız bazı eylemler başka yazılımları devreye sokar; o yazılımların davranışı Desktab’ın denetimi dışındadır:</p>
         <ul>
           <li>Bir dosyayı açtığınızda Windows, o dosya türünün varsayılan uygulamasını başlatır. O uygulamanın gizlilik uygulamaları geçerlidir (örneğin bir web kısayolu tarayıcıyı açar).</li>
           <li>Ağ konumunda bulunan veya bir bulut hizmetiyle eşitlenen (örneğin OneDrive tarafından yönetilen) bir klasörü açarsanız, ağ erişimini Desktab değil, Windows veya eşitleme sağlayıcısı yapar.</li>
@@ -155,11 +157,11 @@
           <li>Microsoft’un geliştirici panosu aracılığıyla geliştiriciye sunduğu toplu raporlar (edinimler, kullanım ve sağlık özetleri gibi). Bu raporlar Microsoft’tan gelir, uygulamadan gelmez.</li>
         </ul>
         <p>Desktab’ın Microsoft Store sürümü, uygulama ve Pro eklentisi lisans durumunu açılışta ve “Satın almaları geri yükle”yi seçtiğinizde Windows’un Microsoft Store API’leriyle kontrol eder. Çevrimdışıyken Windows, cihazınızda önbelleğe aldığı lisans bilgileriyle yanıt verebilir. Desktab lisans veya sahiplik bilgisini kendi ayar dosyasına kaydetmez ve dosyalarınızı, dosya adlarınızı, klasör yollarınızı veya ayarlarınızı bu API’lere aktarmaz.</p>
-        <p>Pro, tek seferlik bir uygulama içi satın alma olarak planlanmaktadır. İlk ücretsiz sürümde Pro satın alma etkin değildir ve uygulama satın alma eylemi sunmaz. Pro satın alma etkinleştirildiğinde ürün bilgilerini alma ve satın alma işlemleri Microsoft Store üzerinden yürütülür. Ödeme ve Store lisans verilerini Microsoft kendi koşulları kapsamında işler; Desktab geliştiricisi ödeme kartı bilgilerinizi almaz. Pro satın alma etkinleştirilmeden önce bu politika gözden geçirilecek ve gerekirse güncellenecektir.</p>
+        <p>Pro, tek seferlik bir uygulama içi satın almadır. Ürün bilgilerini alma ve satın alma işlemleri Microsoft Store üzerinden yürütülür. Ödeme ve Store lisans verilerini Microsoft kendi koşulları kapsamında işler; Desktab geliştiricisi ödeme kartı bilgilerinizi almaz.</p>
         <p>Microsoft’un gizlilik bildirimine <a href="https://privacy.microsoft.com/">privacy.microsoft.com</a> adresinden ulaşabilirsiniz.</p>
 
         <h2 id="third">8. Üçüncü taraf hizmetler</h2>
-        <p>Uygulama reklam, analiz veya üçüncü taraf izleme SDK’sı içermez. Microsoft Store sürümü, bölüm 7’de açıklandığı gibi lisanslama ve etkinleştirildiğinde satın alma için Windows SDK’sını ve Microsoft Store API’lerini kullanır. Desktab ile bağlantılı üçüncü taraflar şunlardır:</p>
+        <p>Uygulama reklam, analiz veya üçüncü taraf izleme SDK’sı içermez. Microsoft Store sürümü, bölüm 7’de açıklandığı gibi lisanslama ve satın alma için Windows SDK’sını ve Microsoft Store API’lerini kullanır. Desktab ile bağlantılı üçüncü taraflar şunlardır:</p>
         <ul>
           <li><strong>Microsoft</strong> — Windows ve Microsoft Store; bölüm 7’de açıklandığı gibi.</li>
           <li><strong>GitHub</strong> — bu web sitesinin ve herkese açık destek kayıtlarının barındırılması; bölüm 9 ve 10’da açıklandığı gibi.</li>
@@ -167,7 +169,7 @@
         </ul>
 
         <h2 id="website">9. Bu web sitesi</h2>
-        <p>Bu web sitesi, GitHub Pages üzerinde barındırılan statik sayfalardan oluşur. Sayfaların kendisi çerez, analiz, izleme betiği, reklam, gömülü üçüncü taraf içerik veya harici yazı tipi kullanmaz ve sizden kişisel bilgi istemez. Geliştirici bu web sitesi için herhangi bir ziyaretçi analizi etkinleştirmemiştir. Ana sayfalar, tamamen tarayıcınızda çalışan ve herhangi bir veri göndermeyen, saklamayan veya okumayan, JavaScript ile yazılmış küçük bir etkileşimli demo içerir.</p>
+        <p>Bu web sitesi, GitHub Pages üzerinde barındırılan statik sayfalardan oluşur. Sayfaların kendisi çerez, analiz, izleme betiği, reklam, gömülü üçüncü taraf içerik veya harici yazı tipi kullanmaz ve sizden kişisel bilgi istemez. Geliştirici bu web sitesi için herhangi bir ziyaretçi analizi etkinleştirmemiştir. Ana sayfalar, tamamen tarayıcınızda çalışan ve herhangi bir veri göndermeyen, saklamayan veya okumayan, JavaScript ile yazılmış küçük bir etkileşimli demo içerir. Açık/koyu tema anahtarını kullanırsanız seçiminiz yalnızca cihazınızdaki tarayıcının yerel depolamasında (tek bir değer, “desktab-theme”) saklanır; hiçbir yere gönderilmez ve tarayıcı ayarlarından istediğiniz zaman silebilirsiniz.</p>
         <p>Barındırma sağlayıcısı olarak GitHub, ziyaretinizle ilgili IP adresiniz ve istek ayrıntıları gibi teknik verileri <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Genel Gizlilik Bildirimi</a> kapsamında işleyebilir.</p>
 
         <h2 id="support">10. Destek talepleri</h2>
