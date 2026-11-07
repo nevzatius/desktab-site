@@ -20,13 +20,14 @@ docs/                     <- published by GitHub Pages
   support/index.html      Support (EN)        /support/
   support/tr/index.html   Support (TR)        /support/tr/
   assets/styles.css       the only stylesheet
+  assets/fonts/           self-hosted Bricolage Grotesque (variable, OFL)
   assets/images/          favicon and social preview image
   404.html, robots.txt, sitemap.xml, .nojekyll
 .github/ISSUE_TEMPLATE/   public bug-report and feedback forms
 scripts/set-contact-email.ps1   changes the contact email everywhere
 ```
 
-No framework, no build step, no external requests (system fonts only), no cookies, no analytics. The only JavaScript is the interactive demo (`docs/assets/demo.js` + `demo.css`, section `#demo` on the EN/TR home pages): it runs fully in the browser, keeps state in memory only, and sends/stores nothing.
+No framework, no build step, no external requests (self-hosted display font, system UI font for body text), no cookies, no analytics. The only JavaScript is the interactive demo (`docs/assets/demo.js` + `demo.css`, section `#demo` on the EN/TR home pages): it runs fully in the browser, keeps state in memory only, and sends/stores nothing.
 
 All internal links are **relative**, so the site works under the project path `/desktab-site/`, under a custom domain, and from a local preview. Only `<link rel="canonical">`, `hreflang`, Open Graph URLs, `sitemap.xml` and `404.html` use the absolute `https://nevzatius.github.io/desktab-site/` address; if the site moves to a custom domain, replace that prefix in those places.
 
