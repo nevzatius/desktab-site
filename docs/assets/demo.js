@@ -34,6 +34,7 @@
     rename: ['Rename', 'Yeniden adlandır'],
     del: ['Delete (to Recycle Bin)', 'Sil (Geri Dönüşüm Kutusu’na)'],
     movedTo: ['Moved “%a” into “%b”.', '“%a”, “%b” içine taşındı.'],
+    movedWs: ['Moved “%a” to workspace “%b”.', '“%a”, “%b” çalışma alanına taşındı.'],
     movedUp: ['Moved “%a” to “%b”.', '“%a”, “%b” konumuna taşındı.'],
     recycled: ['“%a” moved to the Recycle Bin. (In the app, deleted items go to the Windows Recycle Bin.)', '“%a” Geri Dönüşüm Kutusu’na taşındı. (Uygulamada silinen öğeler Windows Geri Dönüşüm Kutusu’na gider.)'],
     undo: ['Undo', 'Geri al'],
@@ -450,7 +451,8 @@
       drag.n.style.left = x + 'px'; drag.n.style.top = y + 'px';
       var under = document.elementsFromPoint(e.clientX, e.clientY), tgt = null;
       for (var k = 0; k < under.length && !tgt; k++) {
-        var cand = under[k].closest('.dz-ic.is-folder, .dz-crumb');
+        var cand = under[k].closest('.dz-ic.is-folder, .dz-crumb, .dz-tab[data-w]');
+        if (cand && cand.classList.contains('dz-tab') && cand.getAttribute('data-w') === active.id) cand = null;
         if (cand && cand !== drag.n) tgt = cand;
       }
       if (tgt !== drag.target) {
@@ -470,6 +472,9 @@
         if (d.target && d.target.classList.contains('is-folder')) {
           var f = find(d.target.getAttribute('data-id'));
           if (f && moveInto(d.it, f)) return;
+        } else if (d.target && d.target.classList.contains('dz-tab')) {
+          var tw = ws.filter(function (x) { return x.id === d.target.getAttribute('data-w'); })[0], l2 = cur(), i2 = l2.indexOf(d.it);
+          if (tw && i2 >= 0) { l2.splice(i2, 1); delete d.it.cx; delete d.it.cy; tw.items.push(d.it); ensureLayout(tw.items); selId = null; renderIcons(); toast(fmt(t('movedWs'), d.it.name, tw.name)); return; }
         } else if (d.target && d.target.classList.contains('dz-crumb')) {
           var lvl = parseInt(d.target.getAttribute('data-level'), 10), s = active.stack;
           if (lvl < s.length) {
