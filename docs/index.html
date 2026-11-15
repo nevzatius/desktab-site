@@ -23,7 +23,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <script src="assets/theme.js?v=20261107-theme"></script>
-  <link rel="stylesheet" href="assets/styles.css?v=20261107-theme">
+  <link rel="stylesheet" href="assets/styles.css?v=20261116-new">
   <link rel="stylesheet" href="assets/demo.css?v=20261107-theme">
 </head>
 <body>
@@ -37,6 +37,7 @@
           <li><a href="./" aria-current="page">Home</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#demo">Try the demo</a></li>
+          <li><a href="#whats-new">What’s new</a></li>
           <li><a href="privacy/">Privacy Policy</a></li>
           <li><a href="support/">Support</a></li>
         </ul>
@@ -81,7 +82,7 @@
 
 
     <!-- Highlights -->
-    <section class="stats" aria-label="Highlights"><div class="container"><ul><li><strong>27</strong><span>downloads from Microsoft Store</span></li><li><strong>15</strong><span>countries</span></li><li><strong>5</strong><span>interface languages</span></li><li><strong>0</strong><span>accounts, ads or telemetry</span></li></ul><p class="stats-note">Microsoft Store figures as of November 2026.</p></div></section>
+    <section class="stats" aria-label="Highlights"><div class="container"><ul><li><strong>27</strong><span>downloads from Microsoft Store</span></li><li><strong>15</strong><span>countries</span></li><li><strong>10</strong><span>interface languages</span></li><li><strong>0</strong><span>accounts, ads or telemetry</span></li></ul><p class="stats-note">Microsoft Store figures as of November 2026.</p></div></section>
 
     <!-- B — The problem -->
     <section aria-labelledby="problem-title">
@@ -128,7 +129,7 @@
           <li class="card">
             <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/></svg></span>
             <h3>Personalization</h3>
-            <p>Light or dark, Modern or Classic, rounded or square corners, and your own backgrounds. Available in five interface languages.</p>
+            <p>Light or dark, Modern or Classic, rounded or square corners, and your own backgrounds. Available in ten interface languages.</p>
           </li>
           <li class="card">
             <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9"/></svg></span>
@@ -192,7 +193,7 @@
               <li>Rounded / Square window corners</li>
               <li>Opaque panel</li>
               <li>Solid, gradient and static image backgrounds</li>
-              <li>Five interface languages</li>
+              <li>Ten interface languages</li>
             </ul>
           </article>
           <article class="plan pro" aria-labelledby="pro-title">
@@ -209,6 +210,39 @@
           </article>
         </div>
         <p class="plan-note">Pro is bought once, from inside the Desktab app, and is processed by Microsoft Store; the price is shown there before you confirm. If you reinstall or move to a new PC, choose “Restore purchases” in the app.</p>
+      </div>
+    </section>
+
+    <!-- What's new / coming soon -->
+    <section id="whats-new" class="alt" aria-labelledby="new-title">
+      <div class="container">
+        <h2 id="new-title">What’s new and what’s next</h2>
+        <p class="section-intro">Desktab keeps improving. Here is what the latest update added and what is being built next.</p>
+        <div class="plans">
+          <article class="plan" aria-labelledby="v160-title">
+            <h3 id="v160-title">Version 1.6.0 <span class="badge">Available now</span></h3>
+            <p class="sub">Released on November 14, 2026.</p>
+            <ul>
+              <li><strong>Ten interface languages.</strong> Spanish, Italian, Simplified Chinese, Korean and Japanese join Turkish, English, German, Russian and Polish.</li>
+              <li><strong>Switch workspaces from the keyboard.</strong> <kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> move to the next or previous workspace; <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>9</kbd> jump straight to one.</li>
+              <li><strong>Shortcuts at your fingertips.</strong> <kbd>F1</kbd> lists every shortcut, and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> brings Desktab to the front from anywhere.</li>
+              <li><strong>Fixes.</strong> The Save button on the Personalize screen works, and the scroll position stays in place while you change settings.</li>
+            </ul>
+          </article>
+          <article class="plan pro soon" aria-labelledby="v170-title">
+            <h3 id="v170-title">Encrypted workspaces <span class="badge">In development</span></h3>
+            <p class="sub">Planned for version 1.7.0. No release date yet.</p>
+            <p class="includes">Planned:</p>
+            <ul>
+              <li>Turn a workspace folder into an encrypted vault. Your files are stored encrypted on disk.</li>
+              <li>Unlock it with a PIN. The PIN is tied to your PC, and you receive a recovery code when the vault is created.</li>
+              <li>Safe conversion: existing files are encrypted and checked first. Originals are removed only after that, and only with your confirmation.</li>
+              <li>Export a file to open it in another app, and preview images and text inside Desktab.</li>
+              <li>Creating an encrypted workspace is planned as a Pro feature; opening an existing vault will always stay possible.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="plan-note">Encrypted workspaces are in development and not released. Details may change before release, and no release date has been set.</p>
       </div>
     </section>
 

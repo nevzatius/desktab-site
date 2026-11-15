@@ -610,6 +610,11 @@ section h2 {
 .cta-band .btn-primary:hover { background: #dfe9fb; color: #0f1a2d; box-shadow: none; }
 .cta-band :focus-visible, .site-footer :focus-visible { outline-color: var(--sky); }
 
+/* What's new */
+kbd { padding: 1px 6px; border: 1px solid var(--gray-300); border-bottom-width: 2px; border-radius: 5px; background: var(--gray-100); color: var(--gray-900); font-family: var(--mono); font-size: 0.82em; white-space: nowrap; }
+.plan.soon li::before { left: 7px; top: 1.2em; width: 7px; height: 7px; border: 0; border-radius: 50%; background: var(--blue-300); transform: none; }
+.plan li strong { color: inherit; }
+
 /* ---------- Document pages (privacy, support) ---------- */
 
 .page-head {
