@@ -1,283 +1,622 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Desktab — Masaüstünün özgürlüğü, klasörün düzeni.</title>
-  <meta name="description" content="Desktab, gerçek klasörlerinizi serbestçe yerleştirilmiş simgelerle masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows uygulamasıdır. Microsoft Store’dan ücretsiz indirin.">
+  <title>Desktab — Klasörleriniz. Alanınız. Sizin düzeniniz.</title>
+  <meta name="description" content="Desktab, gerçek klasörlerinizi serbestçe yerleştirilmiş simgelerle masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows masaüstü düzenleme uygulamasıdır. Microsoft Store’dan ücretsiz indirin.">
   <link rel="canonical" href="https://nevzatius.github.io/desktab-site/tr/">
   <link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/">
   <link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/tr/">
   <link rel="alternate" hreflang="x-default" href="https://nevzatius.github.io/desktab-site/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Desktab">
-  <meta property="og:title" content="Desktab — Masaüstünün özgürlüğü, klasörün düzeni.">
-  <meta property="og:description" content="Gerçek klasörlerinizi masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows uygulaması. Microsoft Store’dan ücretsiz indirin; isteğe bağlı tek seferlik Pro yükseltmesi var.">
+  <meta property="og:title" content="Desktab — Klasörleriniz. Alanınız. Sizin düzeniniz.">
+  <meta property="og:description" content="Masaüstünün özgürlüğü, klasörün düzeni. Gerçek klasörlerinizi masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows uygulaması. Microsoft Store’da yayımlandı.">
   <meta property="og:url" content="https://nevzatius.github.io/desktab-site/tr/">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:image" content="https://nevzatius.github.io/desktab-site/assets/images/og-image.png">
-  <meta property="og:image:alt" content="Desktab yazı logosu ve slogan: The freedom of a desktop. The organization of a folder.">
+  <meta property="og:image:alt" content="Windows için Desktab: Masaüstünün özgürlüğü, klasörün düzeni.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#eef1f6">
+  <meta name="theme-color" content="#0B0D12">
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <script src="../assets/theme.js?v=20261107-theme"></script>
-  <link rel="stylesheet" href="../assets/styles.css?v=20261116-new">
-  <link rel="stylesheet" href="../assets/demo.css?v=20261107-theme">
+  <script src="../assets/theme.js?v=20261116-v2"></script>
+  <link rel="stylesheet" href="../assets/styles.css?v=20261116-v2">
+  <link rel="stylesheet" href="../assets/demo.css?v=20261116-v2">
 </head>
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
 
+  <!-- A. Navigation -->
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="./" aria-label="Desktab — ana sayfa"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>Desktab</a>
-      <nav class="site-nav" aria-label="Ana menü">
+      <a class="brand" href="./" aria-label="Desktab — ana sayfa">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+        <span>Desktab</span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
         <ul>
-          <li><a href="./" aria-current="page">Ana Sayfa</a></li>
+          <li><a href="#showcase">Görünüm</a></li>
           <li><a href="#features">Özellikler</a></li>
-          <li><a href="#demo">Demoyu dene</a></li>
+          <li><a href="#demo">Etkileşimli Demo</a></li>
+          <li><a href="#plans">Ücretsiz ve Pro</a></li>
           <li><a href="#whats-new">Yenilikler</a></li>
-          <li><a href="../privacy/tr/">Gizlilik Politikası</a></li>
           <li><a href="../support/tr/">Destek</a></li>
         </ul>
-        <div class="lang-switch" role="group" aria-label="Dil">
-          <a href="../" lang="en" hreflang="en" aria-label="English">EN</a>
-          <span lang="tr" aria-current="true">TR</span>
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Dil">
+            <a href="../" lang="en" hreflang="en" aria-label="English">EN</a>
+            <span lang="tr" aria-current="true">TR</span>
+          </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="true" aria-label="Açık temaya geç">
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+          </button>
+          <a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">İndir</a>
         </div>
-          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Koyu temaya geç"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- A — Hero -->
+    <!-- B. Hero Section -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <div>
-          <p class="eyebrow">Windows 10 ve 11 için</p>
-          <h1 id="hero-title" class="tagline"><span class="sr-only">Desktab. </span><span>Masaüstünün özgürlüğü,</span> <span>klasörün düzeni.</span></h1>
-          <p class="lead">Desktab, seçtiğiniz gerçek klasörleri masaüstü benzeri çalışma alanlarına dönüştürür. Dosya ve klasör simgelerini istediğiniz yere yerleştirin, birden çok çalışma alanını yan yana tutun ve sıradan Windows dosyalarıyla çalışmaya devam edin.</p>
+        <div class="hero-top">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <strong>Microsoft Store’da Yayımlandı</strong>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>Windows 10 ve 11 (x64)</span>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>v1.6.0</span>
+          </p>
+          <h1 id="hero-title"><span class="sr-only">Desktab — </span><span class="nw">Klasörleriniz.</span> <span class="nw">Alanınız.</span> <span class="nw">Sizin düzeniniz.</span></h1>
+          <p class="hero-subtitle">Masaüstünün özgürlüğü. Klasörün düzeni.</p>
+          <p class="lead">Desktab, seçtiğiniz gerçek Windows klasörlerini esnek ve masaüstü benzeri çalışma alanlarına dönüştürür. Dosya, klasör ve kısayol simgelerini istediğiniz yere yerleştirin, birden çok çalışma alanını sekmeler halinde yan yana açık tutun ve sıradan Windows dosyalarıyla doğrudan çalışmaya devam edin.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store’dan Ücretsiz İndir</a>
+            <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1.5 2.3 7.3 1.5v5.8H1.5V2.3zm6.6-.9L14.5.5v6.8H8.1V1.4zM1.5 8.1h5.8v5.8l-5.8-.8V8.1zm6.6 0h6.4v6.9l-6.4-.9V8.1z"/></svg>
+              <span>Microsoft Store’dan Ücretsiz İndir</span>
+            </a>
             <a class="btn btn-secondary" href="#features">Özellikleri Keşfet</a>
+            <a class="btn btn-ghost" href="#demo">Etkileşimli Demoyu Dene</a>
           </div>
-          <p class="status-note">Desktab Windows 10 ve 11 (x64) için yayımlandı. Ücretsiz indirilir; isteğe bağlı Pro, uygulama içinden tek seferlik satın alınır.</p>
+          <ul class="hero-meta" aria-label="Ürün öne çıkanları">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Windows 10 ve 11 (64 bit)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Ücretsiz indirme · Uygulama içi tek seferlik Pro seçeneği</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Hesap, reklam veya telemetri yok</span>
+            </li>
+          </ul>
         </div>
 
         <div class="hero-stage">
-          <div class="desk-icons" aria-hidden="true">
-            <span class="desk-icon folder"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg></span>
-            <span class="desk-icon img"><svg viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="4.5" width="17" height="15" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="m4 17 5-4.5 3.5 3 3-2.5 4.5 4"/></svg></span>
-            <span class="desk-icon"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 3.5h6.5L18 8v11a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5a1.5 1.5 0 0 1 1-1.5z"/><path d="M13 3.5V8h5M9 12.5h6M9 16h4"/></svg></span>
-            <span class="desk-icon folder"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg></span>
-          </div>
           <figure class="shot">
-          <div class="shot-frame"><a class="shot-link" href="../assets/images/app-main-tr.png" aria-label="Ekran görüntüsünü tam boyutta aç"><img src="../assets/images/app-main-tr.png" width="1280" height="720" alt="Desktab'ta Proje Atlas çalışma alanı: mavi arka plan üzerinde serbestçe yerleştirilmiş dosya ve klasör simgeleri; üstte iki çalışma alanı sekmesi ve akıllı görünüm düğmeleri." fetchpriority="high"></a></div>
-          <figcaption>Desktab'ın yayın öncesi sürümü. Gösterilen tüm dosyalar demo amaçlıdır.</figcaption>
-        </figure>
+            <div class="shot-frame">
+              <a class="shot-link" href="../assets/images/app-main-tr.png" aria-label="Desktab ana çalışma alanı ekran görüntüsünü tam boyutta aç">
+                <img src="../assets/images/app-main-tr.png" width="1280" height="720" alt="Desktab'ta Proje Atlas çalışma alanı: mavi arka plan üzerinde serbestçe yerleştirilmiş dosya ve klasör simgeleri; üstte iki çalışma alanı sekmesi ve akıllı görünüm düğmeleri." fetchpriority="high">
+              </a>
+            </div>
+            <figcaption class="shot-caption-bar">
+              <span>Serbestçe yerleştirilmiş demo dosyaları ve akıllı görünüm filtreleriyle gerçek Desktab arayüzü (<strong>Proje Atlas</strong> çalışma alanı).</span>
+              <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Büyütmek için tıklayın</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-
-    <!-- Öne çıkanlar -->
-    <section class="stats" aria-label="Öne çıkanlar"><div class="container"><ul><li><strong>27</strong><span>Microsoft Store indirmesi</span></li><li><strong>15</strong><span>ülke</span></li><li><strong>10</strong><span>arayüz dili</span></li><li><strong>0</strong><span>hesap, reklam veya telemetri</span></li></ul><p class="stats-note">Microsoft Store verileri, Kasım 2026 itibarıyla.</p></div></section>
-
-    <!-- B — Sorun -->
+    <!-- Core Concept / Why Desktab -->
     <section aria-labelledby="problem-title">
       <div class="container">
-        <h2 id="problem-title">Nadiren bir araya gelen iki iyi fikir</h2>
-        <div class="problem">
-          <div>
-            <p>Pek çok Windows kullanıcısının masaüstü, dağınık dosyalar ve kısayollarla dolar. Hızlı ve görseldir, ama kalabalıklaşır ve düzenli tutması zorlaşır.</p>
-            <p>Klasörler ise gerçek bir düzen sağlar. Fakat bir masaüstünün sunduğu serbest yerleştirme deneyimini, yani her şeyi tam istediğiniz yere koymayı sunmaz.</p>
+        <div class="value-split">
+          <div class="value-copy">
+            <span class="section-kicker">Neden Desktab?</span>
+            <h2 id="problem-title">Nadiren bir araya gelen iki iyi fikir</h2>
+            <p>Pek çok Windows kullanıcısı, görsel ve hızlı olduğu için aktif dosyaları ve kısayolları masaüstüne bırakır. Ancak zamanla tek bir masaüstü kalabalıklaşır ve projeleri birbirinden ayırmak zorlaşır.</p>
+            <p>Geleneksel klasörler ise gerçek bir düzen ve hiyerarşi sağlar; fakat dosyalarınızı sabit listelere ve ızgaralara hapsederek bir masaüstünün sunduğu serbest yerleştirme özgürlüğünü ortadan kaldırır.</p>
           </div>
-          <p class="highlight">Desktab bu iki yaklaşımı birleştirir: masaüstünün özgürlüğü, klasörün düzeni.</p>
+          <div class="value-callout">
+            <p class="value-callout-title">Gerçek Windows klasörlerinde masaüstü özgürlüğü</p>
+            <p>Desktab bu iki yaklaşımı birleştirir: bilgisayarınızdaki herhangi bir klasörü kendine ait bir masaüstü alanı olarak açın, simgeleri istediğiniz gibi gruplayın ve sekmelerle çalışma alanları arasında geçiş yapın.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- C — Özellikler -->
-    <section id="features" class="alt" aria-labelledby="features-title">
+    <!-- C. Product Showcase -->
+    <section id="showcase" class="alt" aria-labelledby="showcase-title">
       <div class="container">
-        <div class="features-head">
-          <h2 id="features-title">Desktab ne yapar?</h2>
-          <p class="section-intro">Zaten sahip olduğunuz klasörler üzerinde doğrudan çalışan yerel bir Windows uygulaması.</p>
+        <div class="section-header">
+          <span class="section-kicker">Ürün Görünümü</span>
+          <h2 id="showcase-title">Odaklı masaüstü düzeni için tasarlandı</h2>
+          <p class="section-intro">Desktab’ın sekmeli klasör çalışma alanlarını, klasör içi gezinmeyi ve görsel kişiselleştirmeyi yerel bir Windows arayüzünde nasıl birleştirdiğini inceleyin.</p>
         </div>
-        <ul class="cards">
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 10h18M8 5v5"/></svg></span>
+
+        <div class="showcase-tabs" role="tablist" aria-label="Uygulama görünümleri" data-showcase-tabs>
+          <button type="button" role="tab" class="showcase-tab is-active" id="tab-workspaces" aria-selected="true" aria-controls="panel-workspaces" tabindex="0" data-showcase-tab="workspaces">
+            <span class="showcase-tab-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M9 4v5"/></svg>
+              <span>Çoklu Çalışma Alanı ve Akıllı Görünümler</span>
+            </span>
+            <span class="showcase-tab-desc">Proje klasörlerini sekme olarak açın, simgeleri serbestçe dizin ve dosya türüne göre anında filtreleyin.</span>
+          </button>
+
+          <button type="button" role="tab" class="showcase-tab" id="tab-navigation" aria-selected="false" aria-controls="panel-navigation" tabindex="-1" data-showcase-tab="navigation">
+            <span class="showcase-tab-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><path d="M9 14h6m-2.5-2.5L15 14l-2.5 2.5"/></svg>
+              <span>Klasör İçi Gezinme</span>
+            </span>
+            <span class="showcase-tab-desc">Aynı pencereden çıkmadan Geri, İleri, Yukarı düğmeleri ve yol çubuğuyla alt klasörlerde gezinin.</span>
+          </button>
+
+          <button type="button" role="tab" class="showcase-tab" id="tab-personalize" aria-selected="false" aria-controls="panel-personalize" tabindex="-1" data-showcase-tab="personalize">
+            <span class="showcase-tab-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/></svg>
+              <span>Kişiselleştirme ve Koyu Tema</span>
+            </span>
+            <span class="showcase-tab-desc">Açık veya Koyu tema, Modern veya Klasik görünüm ve her çalışma alanı için ayrı arka planlar seçin.</span>
+          </button>
+        </div>
+
+        <div class="showcase-panels">
+          <div class="showcase-panel is-active" id="panel-workspaces" role="tabpanel" aria-labelledby="tab-workspaces" data-showcase-panel="workspaces">
+            <figure class="shot">
+              <div class="shot-frame">
+                <a class="shot-link" href="../assets/images/app-main-tr.png" aria-label="Çoklu çalışma alanları ve akıllı görünümler ekran görüntüsünü tam boyutta aç">
+                  <img src="../assets/images/app-main-tr.png" width="1280" height="720" alt="Desktab'ta Proje Atlas çalışma alanı: serbest yerleştirilmiş simgeler, çalışma alanı sekmeleri, arama kutusu ve akıllı görünüm filtreleri." loading="lazy" decoding="async">
+                </a>
+              </div>
+              <figcaption class="shot-caption-bar">
+                <span><strong>Çalışma alanı sekmeleri ve serbest yerleşim.</strong> Gerçek klasörleri yan yana açın, dosyaları istediğiniz yere yerleştirin ve Tümü, Sık Kullanılanlar, Belgeler, PDF, Görseller veya Klasörler olarak filtreleyin.</span>
+                <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Büyütmek için tıklayın</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="showcase-panel" id="panel-navigation" role="tabpanel" aria-labelledby="tab-navigation" data-showcase-panel="navigation" hidden>
+            <figure class="shot">
+              <div class="shot-frame">
+                <a class="shot-link" href="../assets/images/app-nav-tr.png" aria-label="Klasör içi gezinme ekran görüntüsünü tam boyutta aç">
+                  <img src="../assets/images/app-nav-tr.png" width="1280" height="720" alt="Desktab'ta Proje Atlas'ın Görseller alt klasörü: üstte yol çubuğu ile geri, ileri ve yukarı düğmeleri, altında altı görsel küçük resmi." loading="lazy" decoding="async">
+                </a>
+              </div>
+              <figcaption class="shot-caption-bar">
+                <span><strong>Klasör içi gezinme.</strong> Ayrı pencereler açmadan alt klasörlere girip üst klasörlere dönün; yol çubuğu nerede olduğunuzu her an gösterir.</span>
+                <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Büyütmek için tıklayın</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="showcase-panel" id="panel-personalize" role="tabpanel" aria-labelledby="tab-personalize" data-showcase-panel="personalize" hidden>
+            <figure class="shot">
+              <div class="shot-frame">
+                <a class="shot-link" href="../assets/images/app-dark-tr.png" aria-label="Koyu temada Desktab ekran görüntüsünü tam boyutta aç">
+                  <img src="../assets/images/app-dark-tr.png" width="1280" height="720" alt="Desktab koyu temada: Tasarım adlı ikinci çalışma alanı sekmesi, mor statik görsel arka plan ve serbestçe yerleştirilmiş simgeler." loading="lazy" decoding="async">
+                </a>
+              </div>
+              <figcaption class="shot-caption-bar">
+                <span><strong>Koyu tema ve özel arka planlar.</strong> Koyu tema ve statik görsel duvar kâğıdı kullanan ikinci bir çalışma alanı (“Tasarım”).</span>
+                <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Büyütmek için tıklayın</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ul class="showcase-pillars" aria-label="Temel iş akışı sütunları">
+          <li>
+            <strong>Çoklu çalışma alanı</strong>
+            <span>Sekmelerle veya <kbd>Ctrl</kbd>+<kbd>Tab</kbd> ve <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>9</kbd> ile geçiş yapın.</span>
+          </li>
+          <li>
+            <strong>Serbest simge yerleşimi</strong>
+            <span>Öğeleri tuvalde istediğiniz yere koyun; her çalışma alanı kendi düzenini hatırlar.</span>
+          </li>
+          <li>
+            <strong>Dosya ve klasör düzeni</strong>
+            <span>Kategorilere göre filtreleyin, sık kullanılanları görün, anında arayın ve alt klasörlerde gezinin.</span>
+          </li>
+          <li>
+            <strong>Kişiselleştirme</strong>
+            <span>Açık/Koyu tema, Modern/Klasik stil, pencere köşesi seçenekleri ve özel arka planlar.</span>
+          </li>
+          <li>
+            <strong>Windows entegrasyonu</strong>
+            <span>Gezgin ile sürükle-bırak, ortak pano, varsayılan uygulamalar ve Geri Dönüşüm Kutusu güvencesi.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- D. Features -->
+    <section id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Özellikler</span>
+          <h2 id="features-title">Gerçek klasörlerinizi düzenlemek için gereken her şey</h2>
+          <p class="section-intro">Zaten sahip olduğunuz klasörler üzerinde doğrudan çalışan, özel veritabanı veya bulut zorunluluğu olmayan yerel bir Windows uygulaması.</p>
+        </div>
+
+        <ul class="features-grid">
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <rect x="14" y="15" width="54" height="14" rx="7" fill="#3B82F6"/>
+                <rect x="74" y="15" width="46" height="14" rx="7" fill="#1E2534"/>
+                <circle cx="131" cy="22" r="7" fill="#1E2534"/>
+                <path d="M128 22h6M131 19v6" stroke="#929BAA" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="6" y1="35" x2="214" y2="35" stroke="#252C38"/>
+                <rect x="20" y="43" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+                <rect x="52" y="45" width="14" height="16" rx="2" fill="#5B9CFF" opacity="0.85"/>
+                <rect x="86" y="43" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+              </svg>
+            </div>
             <h3>Masaüstü benzeri çalışma alanları</h3>
-            <p>Herhangi bir klasörü çalışma alanı olarak açın; dosya ve klasörlerini bir arka plan üzerinde simge olarak görün. Birden çok çalışma alanı sekmelerle elinizin altında.</p>
+            <p>Herhangi bir klasörü çalışma alanı olarak açın; dosya ve klasörlerini özelleştirilebilir bir arka plan üzerinde simge olarak görün ve sekmelerle yönetin.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v18M3 12h18"/><path d="m9 6 3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></span>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <circle cx="34" cy="26" r="1.5" fill="#252C38"/><circle cx="74" cy="26" r="1.5" fill="#252C38"/><circle cx="114" cy="26" r="1.5" fill="#252C38"/><circle cx="154" cy="26" r="1.5" fill="#252C38"/><circle cx="194" cy="26" r="1.5" fill="#252C38"/>
+                <circle cx="34" cy="52" r="1.5" fill="#252C38"/><circle cx="74" cy="52" r="1.5" fill="#252C38"/><circle cx="114" cy="52" r="1.5" fill="#252C38"/><circle cx="154" cy="52" r="1.5" fill="#252C38"/><circle cx="194" cy="52" r="1.5" fill="#252C38"/>
+                <rect x="24" y="18" width="20" height="16" rx="3" fill="#F0B13A"/>
+                <rect x="82" y="38" width="20" height="16" rx="3" fill="#1E2534" stroke="#5B9CFF" stroke-dasharray="2 2"/>
+                <path d="M106 44c16-12 28-14 44-10" stroke="#5B9CFF" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="154" y="22" width="22" height="18" rx="3.5" fill="#3B82F6"/>
+              </svg>
+            </div>
             <h3>Serbest simge yerleşimi</h3>
-            <p>Simgeleri size mantıklı gelen yere sürükleyin. Her çalışma alanı kendi yerleşimini hatırlar.</p>
+            <p>Simgeleri size mantıklı gelen yere sürükleyin. Her çalışma alanı kendi simge koordinatlarını oturumlar arasında bağımsız olarak hatırlar.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><path d="M9 14h6m-2.5-2.5L15 14l-2.5 2.5"/></svg></span>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <rect x="16" y="18" width="18" height="18" rx="4" fill="#1E2534"/>
+                <path d="m27 23-4 4 4 4" stroke="#929BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="38" y="18" width="18" height="18" rx="4" fill="#1E2534"/>
+                <path d="M47 31v-8m-3 3 3-3 3 3" stroke="#929BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="64" y="18" width="58" height="18" rx="4" fill="#1E2534"/>
+                <rect x="70" y="25" width="46" height="4" rx="2" fill="#929BAA"/>
+                <path d="m128 24 3 3-3 3" stroke="#687385" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="136" y="18" width="52" height="18" rx="4" fill="#2563EB"/>
+                <rect x="143" y="25" width="38" height="4" rx="2" fill="#F4F6FA"/>
+                <line x1="6" y1="44" x2="214" y2="44" stroke="#252C38"/>
+                <rect x="20" y="51" width="22" height="11" rx="2" fill="#5B9CFF" opacity="0.6"/>
+                <rect x="50" y="51" width="22" height="11" rx="2" fill="#F0B13A" opacity="0.8"/>
+                <rect x="80" y="51" width="22" height="11" rx="2" fill="#5B9CFF" opacity="0.6"/>
+              </svg>
+            </div>
             <h3>Klasör içi gezinme</h3>
-            <p>Pencereden çıkmadan alt klasörlere girip geri dönün; yol çubuğu nerede olduğunuzu gösterir.</p>
+            <p>Pencereden çıkmadan Geri, İleri ve Yukarı düğmeleriyle alt klasörlere girip geri dönün; etkileşimli yol çubuğu nerede olduğunuzu gösterir.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h14m-3-3 3 3-3 3M20 16H6m3-3-3 3 3 3"/></svg></span>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="14" y="14" width="76" height="48" rx="5" fill="#131720" stroke="#252C38"/>
+                <rect x="22" y="22" width="28" height="5" rx="2" fill="#687385"/>
+                <rect x="22" y="33" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+                <rect x="130" y="14" width="76" height="48" rx="5" fill="#131720" stroke="#5B9CFF"/>
+                <rect x="138" y="22" width="28" height="5" rx="2" fill="#5B9CFF"/>
+                <rect x="166" y="35" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+                <path d="M96 32h26m-5-4 5 4-5 4M124 46H98m5-4-5 4 5 4" stroke="#5B9CFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <h3>Windows Gezgini entegrasyonu</h3>
             <p>Gezgin ile Desktab arasında sürükle-bırak yapın, ortak panoyu kullanın; dosyaları yeniden adlandırın, kopyalayın veya taşıyın. Silinen öğeler Geri Dönüşüm Kutusu’na gider.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/></svg></span>
-            <h3>Kişiselleştirme</h3>
-            <p>Açık veya koyu, Modern veya Klasik, yuvarlak veya köşeli pencere ve kendi arka planlarınız. On arayüz dilinde kullanılabilir.</p>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="14" y="12" width="90" height="52" rx="6" fill="#EEF2F7" stroke="#CBD5E1"/>
+                <rect x="22" y="20" width="28" height="8" rx="4" fill="#2563EB"/>
+                <rect x="22" y="34" width="14" height="12" rx="2" fill="#F0B13A"/>
+                <rect x="44" y="34" width="14" height="12" rx="2" fill="#3B82F6"/>
+                <rect x="116" y="12" width="90" height="52" rx="6" fill="#151926" stroke="#5B9CFF"/>
+                <rect x="124" y="20" width="28" height="8" rx="4" fill="#5B9CFF"/>
+                <rect x="124" y="34" width="14" height="12" rx="2" fill="#F0B13A"/>
+                <rect x="146" y="34" width="14" height="12" rx="2" fill="#8B5CF6"/>
+              </svg>
+            </div>
+            <h3>Kişiselleştirme ve 10 dil</h3>
+            <p>Açık veya Koyu tema, Modern veya Klasik görünüm, yuvarlak veya köşeli pencere köşeleri ve kendi arka planlarınız. On arayüz dilinde kullanılabilir.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9"/></svg></span>
-            <h3>Hafif tasarım</h3>
-            <p>.NET üzerinde yerel bir C# / WPF uygulaması. Hesap, reklam ve telemetri yok; Windows ile birlikte başlamaz, tepsi simgesi ve arka plan hizmeti yoktur.</p>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <rect x="20" y="22" width="54" height="32" rx="5" fill="#181D28" stroke="#252C38"/>
+                <text x="47" y="42" text-anchor="middle" fill="#5B9CFF" font-family="Consolas, monospace" font-size="11" font-weight="700">.NET</text>
+                <path d="M88 46h28l8-18 8 24 6-12h58" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="196" cy="40" r="3.5" fill="#34D399"/>
+              </svg>
+            </div>
+            <h3>Hafif ve yerel mimari</h3>
+            <p>.NET üzerinde yerel bir C# / WPF uygulaması. Windows ile otomatik başlamaz, tepsi simgesi ve arka plan hizmeti yoktur; <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> ile her yerden öne gelir.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="gallery" aria-labelledby="gallery-title">
-      <div class="container">
-        <h2 id="gallery-title">Çalışırken görün</h2>
-        <p class="section-intro">Demo dosyalarıyla, yayın öncesi bir sürümden alınan ekran görüntüleri.</p>
-        <ul class="gallery-grid">
-          <li>
-            <figure class="shot">
-              <div class="shot-frame"><a class="shot-link" href="../assets/images/app-nav-tr.png" aria-label="Ekran görüntüsünü tam boyutta aç"><img src="../assets/images/app-nav-tr.png" width="1280" height="720" alt="Desktab'ta Proje Atlas'ın Görseller alt klasörü: üstte yol çubuğu ile geri, ileri ve yukarı düğmeleri, altında altı görsel küçük resmi." loading="lazy" decoding="async"></a></div>
-              <figcaption><strong>Klasör içi gezinme.</strong> Alt klasörlere girip geri dönün; yol çubuğu nerede olduğunuzu gösterir.</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure class="shot">
-              <div class="shot-frame"><a class="shot-link" href="../assets/images/app-dark-tr.png" aria-label="Ekran görüntüsünü tam boyutta aç"><img src="../assets/images/app-dark-tr.png" width="1280" height="720" alt="Desktab koyu temada: Tasarım adlı ikinci çalışma alanı sekmesi, mor statik görsel arka plan ve serbestçe yerleştirilmiş simgeler." loading="lazy" decoding="async"></a></div>
-              <figcaption><strong>Koyu tema ve kendi arka planınız.</strong> Statik görsel duvar kâğıdıyla ikinci bir çalışma alanı.</figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Etkileşimli demo -->
+    <!-- E. Interactive Demo -->
     <section id="demo" class="alt" aria-labelledby="demo-title">
       <div class="container">
-        <h2 id="demo-title">Kendiniz deneyin</h2>
-        <p class="section-intro">Desktab penceresinin sadeleştirilmiş bir hâli, doğrudan tarayıcınızda çalışır. Simgeleri istediğiniz yere sürükleyin, bir dosyayı klasörün ya da başka bir çalışma alanı sekmesinin üzerine bırakın, klasörleri açın, arka plana sağ tıklayın ve görünümü değiştirin.</p>
+        <div class="section-header">
+          <span class="section-kicker">Etkileşimli Demo</span>
+          <h2 id="demo-title">Çalışma alanı deneyimini tarayıcınızda deneyin</h2>
+          <p class="section-intro">Desktab penceresinin sadeleştirilmiş bir simülasyonunu doğrudan burada test edin. Simgeleri istediğiniz yere sürükleyin, bir dosyayı klasörün ya da başka bir sekmenin üzerine bırakın ve görünümü özelleştirin.</p>
+        </div>
+
+        <ul class="demo-hints" aria-label="Demoda deneyebilecekleriniz">
+          <li><strong>Simgeleri sürükleyip</strong> istediğiniz yere bırakın</li>
+          <li><strong>Klasöre çift tıklayarak</strong> içine girin</li>
+          <li><strong>Bir dosyayı</strong> klasörün veya “Tasarım” sekmesinin üzerine bırakın</li>
+          <li><strong>Arka plana veya simgeye</strong> sağ tıklayın</li>
+          <li><strong>Kişiselleştir</strong> panelinden tema ve görünümü değiştirin</li>
+        </ul>
+
         <div id="dz" class="dz"><noscript><p class="dz-note">Etkileşimli demo için JavaScript gerekir. Yukarıdaki ekran görüntüleri gerçek uygulamayı gösterir.</p></noscript></div>
         <p class="dz-note">Açıklama amaçlı, sadeleştirilmiş bir simülasyondur: tamamen tarayıcınızda çalışır, yaptığınız hiçbir şey kaydedilmez veya bir yere gönderilmez ve bazı ayrıntılar gerçek uygulamadan farklıdır. Pro’ya ait özellikler işaretlidir. <a href="#plans">Ücretsiz ve Pro</a> bölümüne bakın.</p>
       </div>
     </section>
 
-
-    <!-- E — Ücretsiz ve Pro -->
+    <!-- F. Free vs Pro -->
     <section id="plans" aria-labelledby="plans-title">
       <div class="container">
-        <h2 id="plans-title">Ücretsiz ve Pro</h2>
-        <p class="section-intro">Ücretsiz sürüm şimdi Microsoft Store’da. Pro, uygulamanın içinden tek seferlik satın alınır.</p>
-        <div class="plans">
-          <article class="plan" aria-labelledby="free-title">
-            <h3 id="free-title">Ücretsiz <span class="badge">Yayımlandı</span></h3>
-            <p class="sub">Günlük düzen için ihtiyacınız olan her şey.</p>
-            <ul>
+        <div class="section-header">
+          <span class="section-kicker">Sürümler ve Lisanslama</span>
+          <h2 id="plans-title">Ücretsiz ve Pro</h2>
+          <p class="section-intro">Ücretsiz sürüm şimdi Microsoft Store’da. Pro, abonelik olmadan doğrudan uygulamanın içinden tek seferlik satın alınan isteğe bağlı bir yükseltmedir.</p>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card" aria-labelledby="free-title">
+            <div class="plan-head">
+              <div class="plan-title-row">
+                <h3 id="free-title">Ücretsiz</h3>
+                <span class="badge">Yayımlandı</span>
+              </div>
+              <p class="plan-sub">Günlük klasör düzeniniz için ihtiyacınız olan her şey.</p>
+            </div>
+            <p class="plan-includes">Ücretsiz sürümde bulunanlar:</p>
+            <ul class="plan-list">
               <li>En fazla 2 çalışma alanı</li>
-              <li>Temel dosya yönetimi</li>
-              <li>Gezinme</li>
-              <li>Çalışma alanı sıralama</li>
+              <li>Temel dosya yönetimi (açma, yeni klasör, yeniden adlandırma, kopyalama, taşıma, Geri Dönüşüm Kutusu)</li>
+              <li>Klasör içi gezinme ve yol çubuğu</li>
+              <li>Çalışma alanı sıralama ve klavyeyle geçiş</li>
+              <li>Akıllı filtre görünümleri ve anında dosya arama</li>
               <li>Açık / Koyu tema</li>
-              <li>Modern / Klasik arayüz</li>
+              <li>Modern / Klasik arayüz stili</li>
               <li>Başlık çubuğu kimlik ayarları</li>
               <li>Yuvarlak / Köşeli pencere köşeleri</li>
               <li>Opak panel</li>
               <li>Düz renk, gradyan ve statik görsel arka plan</li>
               <li>On arayüz dili</li>
             </ul>
+            <div class="plan-footer">
+              <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store’dan Ücretsiz İndir</a>
+            </div>
           </article>
-          <article class="plan pro" aria-labelledby="pro-title">
-            <h3 id="pro-title">Pro <span class="badge">Uygulama içi satın alma</span></h3>
-            <p class="sub">Tek seferlik satın alma. Abonelik yok.</p>
-            <p class="includes">Tüm Ücretsiz özellikler ve ayrıca:</p>
-            <ul>
-              <li>Sınırsız çalışma alanı</li>
-              <li>Yarı saydam panel</li>
-              <li>Saydam panel</li>
-              <li>Animasyonlu GIF duvar kâğıtları</li>
-              <li>Video duvar kâğıtları</li>
+
+          <article class="plan-card pro" aria-labelledby="pro-title">
+            <div class="plan-head">
+              <div class="plan-title-row">
+                <h3 id="pro-title">Pro</h3>
+                <span class="badge badge-accent">Uygulama içi tek seferlik satın alma</span>
+              </div>
+              <p class="plan-sub">Bir kez satın alın, süresiz kullanın. Abonelik yok.</p>
+            </div>
+            <p class="plan-includes">Tüm Ücretsiz özellikler ve ayrıca:</p>
+            <ul class="plan-list">
+              <li>Tüm aktif klasör ve projeleriniz için <strong>sınırsız çalışma alanı</strong></li>
+              <li><strong>Yarı saydam panel</strong> görünümü</li>
+              <li><strong>Saydam panel</strong> görünümü</li>
+              <li><strong>Animasyonlu GIF duvar kâğıtları</strong></li>
+              <li><strong>Video duvar kâğıtları</strong> (yerel MP4 / H.264 desteği)</li>
             </ul>
+            <div class="plan-footer">
+              <p class="plan-footer-note">Pro, Desktab uygulamasının içinden satın alınır ve Microsoft Store tarafından güvenli biçimde işlenir; fiyat, onaylamadan önce orada gösterilir.</p>
+            </div>
           </article>
         </div>
-        <p class="plan-note">Pro bir kez, Desktab uygulamasının içinden satın alınır ve Microsoft Store tarafından işlenir; fiyat, onaylamadan önce orada gösterilir. Yeniden kurulum yaparsanız ya da yeni bir bilgisayara geçerseniz uygulamada “Satın almaları geri yükle”yi seçin.</p>
+
+        <p class="plan-note"><strong>Microsoft Store lisanslaması:</strong> Pro lisansı Microsoft Store hesabınıza bağlanır. Yeniden kurulum yaparsanız ya da yeni bir bilgisayara geçerseniz uygulamada “Satın almaları geri yükle”yi seçmeniz yeterlidir.</p>
       </div>
     </section>
 
-    <!-- Yenilikler / yakında -->
-    <section id="whats-new" class="alt" aria-labelledby="new-title">
+    <!-- G. Privacy and Trust -->
+    <section id="privacy-trust" class="alt" aria-labelledby="trust-title">
       <div class="container">
-        <h2 id="new-title">Yenilikler ve sıradaki özellikler</h2>
-        <p class="section-intro">Desktab gelişmeye devam ediyor. Son güncellemenin getirdikleri ve sırada olanlar burada.</p>
-        <div class="plans">
-          <article class="plan" aria-labelledby="v160-title">
-            <h3 id="v160-title">Sürüm 1.6.0 <span class="badge">Yayında</span></h3>
-            <p class="sub">14 Kasım 2026’da yayınlandı.</p>
-            <ul>
-              <li><strong>On arayüz dili.</strong> İspanyolca, İtalyanca, Basitleştirilmiş Çince, Korece ve Japonca; Türkçe, İngilizce, Almanca, Rusça ve Lehçe’ye katıldı.</li>
-              <li><strong>Çalışma alanları arasında klavyeyle geçiş.</strong> <kbd>Ctrl</kbd>+<kbd>Tab</kbd> ve <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> sonraki veya önceki çalışma alanına geçer; <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>9</kbd> doğrudan birine götürür.</li>
-              <li><strong>Kısayollar elinizin altında.</strong> <kbd>F1</kbd> tüm kısayolları listeler, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> Desktab’ı her yerden öne getirir.</li>
-              <li><strong>Düzeltmeler.</strong> Kişiselleştir ekranındaki Kaydet düğmesi çalışıyor ve ayar değiştirirken kaydırma konumu yerinde kalıyor.</li>
-            </ul>
-          </article>
-          <article class="plan pro soon" aria-labelledby="v170-title">
-            <h3 id="v170-title">Şifreli alan <span class="badge">Geliştiriliyor</span></h3>
-            <p class="sub">Sürüm 1.7.0 için planlanıyor. Henüz yayın tarihi yok.</p>
-            <p class="includes">Planlananlar:</p>
-            <ul>
-              <li>Bir çalışma alanının klasörünü şifreli bir kasaya dönüştürün. Dosyalarınız diskte şifreli olarak saklanır.</li>
-              <li>Kasayı PIN ile açın. PIN bu bilgisayara bağlıdır ve kasa oluşturulurken bir kurtarma kodu verilir.</li>
-              <li>Güvenli geçiş: mevcut dosyalar önce şifrelenir ve kontrol edilir. Orijinaller ancak bundan sonra ve yalnızca sizin onayınızla kaldırılır.</li>
-              <li>Bir dosyayı başka bir uygulamada açmak için dışarı aktarın; resim ve metinleri Desktab içinde önizleyin.</li>
-              <li>Şifreli alan oluşturmak Pro özelliği olarak planlanıyor; mevcut bir kasayı açmak her zaman mümkün kalacak.</li>
-            </ul>
-          </article>
+        <div class="section-header">
+          <span class="section-kicker">Gizlilik ve Güvenilirlik</span>
+          <h2 id="trust-title">Dosyalarınız bilgisayarınızda kalır</h2>
+          <p class="section-intro">Desktab bilgisayarınıza ve gizliliğinize saygı duyacak şekilde geliştirildi. Aşağıdaki her özellik belgelendirmemizde ve Gizlilik Politikamızda doğrulanabilir.</p>
         </div>
-        <p class="plan-note">Şifreli alan geliştirme aşamasındadır ve yayınlanmamıştır. Ayrıntılar yayına kadar değişebilir; yayın tarihi belirlenmemiştir.</p>
+
+        <ul class="trust-grid">
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>Hesap gerekmez</h3>
+            <p>Microsoft Store’dan kurun ve hemen kullanmaya başlayın. Desktab’ta kayıt olma adımı, kullanıcı hesabı veya geliştirici sunucusu yoktur.</p>
+          </li>
+
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg>
+            </span>
+            <h3>Reklam yok</h3>
+            <p>Çalışma alanınız bir reklam panosu değil, üretkenlik aracıdır. Desktab hiçbir reklam SDK’sı veya tanıtım penceresi içermez.</p>
+          </li>
+
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <h3>Telemetri yok</h3>
+            <p>Uygulama analiz, kullanım izleme veya çökme raporlama kodu içermez. Dosyalarınız, dosya adlarınız, klasör yollarınız ve yerleşiminiz geliştiriciye gönderilmez.</p>
+          </li>
+
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>
+            </span>
+            <h3>Sıradan Windows klasörleri</h3>
+            <p>Çalışma alanları doğrudan diskinizdeki normal klasörleri gösterir. Simge konumları yalnızca bilgisayarınızda saklanır ve silinen öğeler Geri Dönüşüm Kutusu’na gider.</p>
+          </li>
+        </ul>
+
+        <div class="trust-bar">
+          <p><strong>Tam şeffaflık:</strong> Uygulamanın bilgisayarınızda nelere eriştiğini, yerel ayarların nerede tutulduğunu ve Microsoft Store lisanslamasının nasıl çalıştığını ayrıntılarıyla okuyun.</p>
+          <a class="btn btn-secondary btn-sm" href="../privacy/tr/">Gizlilik Politikasını Oku</a>
+        </div>
       </div>
     </section>
 
+    <!-- H. What's New -->
+    <section id="whats-new" aria-labelledby="new-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Sürüm Notları ve Yol Haritası</span>
+          <h2 id="new-title">Yenilikler ve sıradaki özellikler</h2>
+          <p class="section-intro">Desktab düzenli olarak geliştiriliyor. Son Microsoft Store güncellemesinin getirdikleri ve şu anda üzerinde çalışılan özellikler burada.</p>
+        </div>
+
+        <div class="changelog-grid">
+          <article class="changelog-card" aria-labelledby="v160-title">
+            <div class="changelog-meta">
+              <div>
+                <h3 id="v160-title">Sürüm 1.6.0</h3>
+                <span class="changelog-date">14 Kasım 2026’da yayınlandı</span>
+              </div>
+              <span class="badge">Yayında</span>
+            </div>
+            <ul class="changelog-list">
+              <li><strong>On arayüz dili.</strong> İspanyolca, İtalyanca, Basitleştirilmiş Çince, Korece ve Japonca; Türkçe, İngilizce, Almanca, Rusça ve Lehçe’ye katıldı.</li>
+              <li><strong>Çalışma alanları arasında klavyeyle geçiş.</strong> <kbd>Ctrl</kbd>+<kbd>Tab</kbd> ve <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> sonraki veya önceki çalışma alanına geçer; <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>9</kbd> doğrudan bir sekmeye götürür.</li>
+              <li><strong>Kısayollar elinizin altında.</strong> <kbd>F1</kbd> tüm kısayolları listeler, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> Desktab’ı her yerden öne getirir.</li>
+              <li><strong>Kişiselleştir ekranı düzeltmeleri.</strong> Kişiselleştir ekranındaki Kaydet düğmesi sorunsuz çalışıyor ve ayar değiştirirken kaydırma konumu korunuyor.</li>
+            </ul>
+          </article>
+
+          <article class="changelog-card upcoming" aria-labelledby="v170-title">
+            <div class="changelog-meta">
+              <div>
+                <h3 id="v170-title">Şifreli Çalışma Alanları</h3>
+                <span class="changelog-date">Sürüm 1.7.0 için planlanıyor · Henüz yayın tarihi yok</span>
+              </div>
+              <span class="badge badge-amber">Geliştiriliyor</span>
+            </div>
+            <ul class="changelog-list">
+              <li><strong>Şifreli klasör kasaları.</strong> Bir çalışma alanının klasörünü şifreli bir kasaya dönüştürün; dosyalarınız diskte şifreli olarak saklanır.</li>
+              <li><strong>Yerel PIN ve kurtarma kodu.</strong> Kasayı bu bilgisayara bağlı bir PIN ile açın; kasa oluşturulurken bir kurtarma kodu verilir.</li>
+              <li><strong>Doğrulanmış güvenli geçiş.</strong> Mevcut dosyalar önce şifrelenir ve kontrol edilir; orijinaller ancak bundan sonra ve yalnızca sizin onayınızla kaldırılır.</li>
+              <li><strong>Yerleşik önizleme ve dışa aktarma.</strong> Resim ve metinleri Desktab içinde önizleyin ya da bir dosyayı başka bir uygulamada açmak için dışarı aktarın.</li>
+              <li><strong>Erişim güvencesi.</strong> Şifreli alan oluşturmak Pro özelliği olarak planlanıyor; mevcut bir kasayı açmak her zaman mümkün kalacak.</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="plan-note">Şifreli çalışma alanları geliştirme aşamasındadır ve henüz yayınlanmamıştır. Ayrıntılar yayına kadar değişebilir; yayın tarihi belirlenmemiştir.</p>
+      </div>
+    </section>
+
+    <!-- Closing CTA Band -->
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title">Desktab’ı Microsoft Store’dan edinin</h2>
-        <p>Desktab’ı ücretsiz indirin, klasörlerinizi kendi düzeninize göre kullanın; dilediğinizde uygulamanın içinden Pro’ya geçin. Soru ve geri bildirimleriniz için <a href="../support/tr/">destek sayfasını</a> ziyaret edin.</p>
-        <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store’dan Ücretsiz İndir</a>
+        <div class="cta-box">
+          <div class="cta-copy">
+            <h2 id="cta-title">Desktab’ı Microsoft Store’dan edinin</h2>
+            <p>Desktab’ı Windows 10 ve 11 için ücretsiz indirin, gerçek klasörlerinizi kendi düzeninize göre kullanın; sınırsız çalışma alanına ihtiyaç duyduğunuzda uygulama içinden Pro’ya geçin.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1.5 2.3 7.3 1.5v5.8H1.5V2.3zm6.6-.9L14.5.5v6.8H8.1V1.4zM1.5 8.1h5.8v5.8l-5.8-.8V8.1zm6.6 0h6.4v6.9l-6.4-.9V8.1z"/></svg>
+              <span>Microsoft Store’dan Ücretsiz İndir</span>
+            </a>
+            <a class="btn btn-secondary" href="../support/tr/">Destek Sayfası</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- I. Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Desktab</div>
-          <p>Masaüstünün özgürlüğü, klasörün düzeni.</p>
+        <div class="footer-about">
+          <a class="footer-brand" href="./">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg-f)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+            <span>Desktab</span>
+          </a>
+          <p>Gerçek klasörlerinizi esnek, masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows masaüstü düzenleme uygulaması.</p>
+          <span class="footer-version">Sürüm 1.6.0 · Windows 10 ve 11 (x64)</span>
         </div>
-        <nav aria-label="Alt menü">
-          <ul class="footer-nav">
-            <li><a href="./">Ana Sayfa</a></li>
+
+        <div class="footer-col">
+          <h3>Ürün</h3>
+          <ul class="footer-links">
+            <li><a href="#showcase">Ürün Görünümü</a></li>
             <li><a href="#features">Özellikler</a></li>
-            <li><a href="../privacy/tr/">Gizlilik Politikası</a></li>
-            <li><a href="../support/tr/">Destek</a></li>
-            <li><a href="../" lang="en" hreflang="en">English</a></li>
+            <li><a href="#demo">Etkileşimli Demo</a></li>
+            <li><a href="#plans">Ücretsiz ve Pro</a></li>
+            <li><a href="#whats-new">Yenilikler</a></li>
           </ul>
-        </nav>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kaynaklar ve Yasal</h3>
+          <ul class="footer-links">
+            <li><a href="../support/tr/">Destek ve Sorun Giderme</a></li>
+            <li><a href="../privacy/tr/">Gizlilik Politikası</a></li>
+            <li><a href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site">GitHub Deposu</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site/issues">Sorun Bildir (Issues)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Dil</h3>
+          <ul class="footer-links">
+            <li><a href="../" lang="en" hreflang="en">English (EN)</a></li>
+            <li><a href="./" lang="tr" aria-current="page">Türkçe (TR)</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="copyright">
+
+      <div class="footer-bottom">
         <p>© 2026 nevzatius. Tüm hakları saklıdır.</p>
         <p>Desktab Microsoft Store’da yayımlandı. Microsoft, Windows ve Microsoft Store, Microsoft şirketler grubunun ticari markalarıdır.</p>
       </div>
     </div>
   </footer>
+
   <script src="../assets/demo.js?v=20261107-demo" defer></script>
+  <script src="../assets/lightbox.js?v=20261116" defer></script>
 </body>
 </html>

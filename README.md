@@ -19,21 +19,25 @@ docs/                     <- published by GitHub Pages
   privacy/tr/index.html   Privacy (TR)        /privacy/tr/
   support/index.html      Support (EN)        /support/
   support/tr/index.html   Support (TR)        /support/tr/
-  assets/styles.css       the only stylesheet
+  assets/styles.css       site stylesheet
+  assets/demo.css         interactive demo stylesheet
+  assets/theme.js         theme switcher, mobile menu, and showcase tabs
+  assets/demo.js          interactive browser demo (home pages)
+  assets/lightbox.js      screenshot lightbox dialog (home pages)
   assets/fonts/           self-hosted Bricolage Grotesque (variable, OFL)
-  assets/images/          favicon and social preview image
+  assets/images/          favicon, social preview, and app screenshots
   404.html, robots.txt, sitemap.xml, .nojekyll
 .github/ISSUE_TEMPLATE/   public bug-report and feedback forms
 scripts/set-contact-email.ps1   changes the contact email everywhere
 ```
 
-No framework, no build step, no external requests (self-hosted display font, system UI font for body text), no cookies, no analytics. The only JavaScript is the interactive demo (`docs/assets/demo.js` + `demo.css`, section `#demo` on the EN/TR home pages): it runs fully in the browser, keeps state in memory only, and sends/stores nothing.
+No framework, no build step, no external requests (self-hosted display font, system UI font for body text), no cookies, no analytics. JavaScript on the site is limited to `theme.js` (saves only `desktab-theme` in `localStorage` when toggled), `lightbox.js` (screenshot viewer), and the interactive demo (`docs/assets/demo.js` + `demo.css`, section `#demo` on the EN/TR home pages, which runs fully in the browser, keeps state in memory only, and sends/stores nothing).
 
 All internal links are **relative**, so the site works under the project path `/desktab-site/`, under a custom domain, and from a local preview. Only `<link rel="canonical">`, `hreflang`, Open Graph URLs, `sitemap.xml` and `404.html` use the absolute `https://nevzatius.github.io/desktab-site/` address; if the site moves to a custom domain, replace that prefix in those places.
 
 ## Screenshots
 
-`docs/assets/images/app-{main,nav,dark}-{en,tr}.png` are real captures of a pre-release build of the Desktab app (English and Turkish interface), taken with demo files: all folder and file names are made up and the images are abstract gradients. The test/QA badge was removed from the capture build. Show only features that are part of Free (two workspaces, light/dark, static image background); do not add screenshots of Pro-only features until Pro is released. `og-image.png` is the social preview image.
+`docs/assets/images/app-{main,nav,dark}-{en,tr}.png` are real captures of the Desktab app (English and Turkish interface), taken with demo files: all folder and file names are made up and the images are abstract gradients. They show Free features (two workspaces, internal subfolder navigation, light/dark themes, and a static image background). `og-image.png` is the social preview image.
 
 ## Contact email
 

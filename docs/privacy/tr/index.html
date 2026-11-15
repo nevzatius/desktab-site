@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,31 +17,49 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:image" content="https://nevzatius.github.io/desktab-site/assets/images/og-image.png">
-  <meta property="og:image:alt" content="Desktab yazı logosu ve slogan: The freedom of a desktop. The organization of a folder.">
-  <meta name="theme-color" content="#eef1f6">
+  <meta property="og:image:alt" content="Windows için Desktab: Masaüstünün özgürlüğü, klasörün düzeni.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0B0D12">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
   <link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <script src="../../assets/theme.js?v=20261107-theme"></script>
-  <link rel="stylesheet" href="../../assets/styles.css?v=20261107-theme">
+  <script src="../../assets/theme.js?v=20261116-v2"></script>
+  <link rel="stylesheet" href="../../assets/styles.css?v=20261116-v2">
 </head>
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="../../tr/" aria-label="Desktab — ana sayfa"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>Desktab</a>
-      <nav class="site-nav" aria-label="Ana menü">
+      <a class="brand" href="../../tr/" aria-label="Desktab — ana sayfa">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+        <span>Desktab</span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
         <ul>
           <li><a href="../../tr/">Ana Sayfa</a></li>
           <li><a href="../../tr/#features">Özellikler</a></li>
+          <li><a href="../../tr/#demo">Etkileşimli Demo</a></li>
+          <li><a href="../../tr/#plans">Ücretsiz ve Pro</a></li>
           <li><a href="./" aria-current="page">Gizlilik Politikası</a></li>
           <li><a href="../../support/tr/">Destek</a></li>
         </ul>
-        <div class="lang-switch" role="group" aria-label="Dil">
-          <a href="../" lang="en" hreflang="en" aria-label="English">EN</a>
-          <span lang="tr" aria-current="true">TR</span>
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Dil">
+            <a href="../" lang="en" hreflang="en" aria-label="English">EN</a>
+            <span lang="tr" aria-current="true">TR</span>
+          </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="true" aria-label="Açık temaya geç">
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+          </button>
+          <a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">İndir</a>
         </div>
-          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Koyu temaya geç"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
@@ -89,7 +107,7 @@
         <p>Uygulamaya ilişkin bu ifadeler, ilk Microsoft Store sürümü için hazırlanan sürümün kaynak kodunun incelenmesine dayanır. Bu bir kaynak kodu incelemesidir; ağ trafiği izlenerek doğrulanmamıştır. Sonraki bir sürüm bu ifadeleri değiştirirse, o sürüm yayımlanmadan önce bu politika güncellenecektir.</p>
 
         <h2 id="who">2. Bu politikanın kapsamı</h2>
-        <p>Bu politika (a) Windows için Desktab uygulamasını ve (b) <code>nevzatius.github.io/desktab-site</code> adresindeki bu web sitesini kapsar. Desktab’ın yayıncısı, bireysel bir geliştirici olan <strong>nevzatius</strong>’tur. Desktab’ın ücretsiz sürümü Microsoft Store’da herkese açık olarak yayımlanmıştır.</p>
+        <p>Bu politika (a) Windows için Desktab uygulamasını ve (b) <code>nevzatius.github.io/desktab-site</code> adresindeki bu web sitesini kapsar. Desktab’ın yayıncısı, bireysel bir geliştirici olan <strong>nevzatius</strong>’tur. Desktab Microsoft Store’da herkese açık olarak yayımlanmıştır.</p>
 
         <h3>Kim neyi işler?</h3>
         <div class="table-wrap">
@@ -206,23 +224,49 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Desktab</div>
-          <p>Masaüstünün özgürlüğü, klasörün düzeni.</p>
+        <div class="footer-about">
+          <a class="footer-brand" href="../../tr/">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg-f)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+            <span>Desktab</span>
+          </a>
+          <p>Gerçek klasörlerinizi esnek, masaüstü benzeri çalışma alanlarına dönüştüren yerel bir Windows masaüstü düzenleme uygulaması.</p>
+          <span class="footer-version">Sürüm 1.6.0 · Windows 10 ve 11 (x64)</span>
         </div>
-        <nav aria-label="Alt menü">
-          <ul class="footer-nav">
-            <li><a href="../../tr/">Ana Sayfa</a></li>
+
+        <div class="footer-col">
+          <h3>Ürün</h3>
+          <ul class="footer-links">
+            <li><a href="../../tr/#showcase">Ürün Görünümü</a></li>
             <li><a href="../../tr/#features">Özellikler</a></li>
-            <li><a href="./">Gizlilik Politikası</a></li>
-            <li><a href="../../support/tr/">Destek</a></li>
-            <li><a href="../" lang="en" hreflang="en">English</a></li>
+            <li><a href="../../tr/#demo">Etkileşimli Demo</a></li>
+            <li><a href="../../tr/#plans">Ücretsiz ve Pro</a></li>
+            <li><a href="../../tr/#whats-new">Yenilikler</a></li>
           </ul>
-        </nav>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kaynaklar ve Yasal</h3>
+          <ul class="footer-links">
+            <li><a href="../../support/tr/">Destek ve Sorun Giderme</a></li>
+            <li><a href="./" aria-current="page">Gizlilik Politikası</a></li>
+            <li><a href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site">GitHub Deposu</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site/issues">Sorun Bildir (Issues)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Dil</h3>
+          <ul class="footer-links">
+            <li><a href="../" lang="en" hreflang="en">English (EN)</a></li>
+            <li><a href="./" lang="tr" aria-current="page">Türkçe (TR)</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="copyright">
+
+      <div class="footer-bottom">
         <p>© 2026 nevzatius. Tüm hakları saklıdır.</p>
-        <p>Desktab’ın ücretsiz sürümü Microsoft Store’da yayımlandı. Microsoft, Windows ve Microsoft Store, Microsoft şirketler grubunun ticari markalarıdır.</p>
+        <p>Desktab Microsoft Store’da yayımlandı. Microsoft, Windows ve Microsoft Store, Microsoft şirketler grubunun ticari markalarıdır.</p>
       </div>
     </div>
   </footer>

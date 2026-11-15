@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,31 +17,49 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="tr_TR">
   <meta property="og:image" content="https://nevzatius.github.io/desktab-site/assets/images/og-image.png">
-  <meta property="og:image:alt" content="Desktab wordmark with the tagline: The freedom of a desktop. The organization of a folder.">
-  <meta name="theme-color" content="#eef1f6">
+  <meta property="og:image:alt" content="Desktab for Windows: The freedom of a desktop. The organization of a folder.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0B0D12">
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <script src="../assets/theme.js?v=20261107-theme"></script>
-  <link rel="stylesheet" href="../assets/styles.css?v=20261107-theme">
+  <script src="../assets/theme.js?v=20261116-v2"></script>
+  <link rel="stylesheet" href="../assets/styles.css?v=20261116-v2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="../" aria-label="Desktab — home"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>Desktab</a>
-      <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="../" aria-label="Desktab — home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+        <span>Desktab</span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="../">Home</a></li>
           <li><a href="../#features">Features</a></li>
+          <li><a href="../#demo">Interactive Demo</a></li>
+          <li><a href="../#plans">Free vs Pro</a></li>
           <li><a href="./" aria-current="page">Privacy Policy</a></li>
           <li><a href="../support/">Support</a></li>
         </ul>
-        <div class="lang-switch" role="group" aria-label="Language">
-          <span lang="en" aria-current="true">EN</span>
-          <a href="tr/" lang="tr" hreflang="tr" aria-label="Türkçe">TR</a>
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <span lang="en" aria-current="true">EN</span>
+            <a href="tr/" lang="tr" hreflang="tr" aria-label="Türkçe">TR</a>
+          </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="true" aria-label="Switch to light theme">
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+          </button>
+          <a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Download</a>
         </div>
-          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark theme"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
@@ -89,7 +107,7 @@
         <p>These statements about the application are based on a review of the application’s source code for the version prepared for the first Microsoft Store release. This is a source-code review; it has not been confirmed by monitoring network traffic. If a later version changes these statements, this policy will be updated before that version is released.</p>
 
         <h2 id="who">2. Who this policy covers</h2>
-        <p>This policy covers (a) the Desktab application for Windows and (b) this website at <code>nevzatius.github.io/desktab-site</code>. The publisher of Desktab is <strong>nevzatius</strong>, an individual developer. Desktab Free is publicly available on Microsoft Store.</p>
+        <p>This policy covers (a) the Desktab application for Windows and (b) this website at <code>nevzatius.github.io/desktab-site</code>. The publisher of Desktab is <strong>nevzatius</strong>, an individual developer. Desktab is publicly available on Microsoft Store.</p>
 
         <h3>Who processes what</h3>
         <div class="table-wrap">
@@ -100,7 +118,7 @@
             <tbody>
               <tr><td>Desktab (on your PC)</td><td>Runs locally as you</td><td>Folders you choose, settings and layout kept on your PC. These are not sent to the developer. Store license checks use Microsoft APIs (section 7).</td></tr>
               <tr><td>Windows</td><td>Operating system and shell</td><td>Icons and previews, opening files, Recycle Bin, clipboard, drag and drop. Governed by Microsoft’s terms and your Windows settings.</td></tr>
-              <tr><td>Microsoft Store</td><td>Distribution, licensing and payments</td><td>Download, updates, license and (in future) purchase records, and Microsoft’s own diagnostics. Governed by Microsoft’s privacy statement.</td></tr>
+              <tr><td>Microsoft Store</td><td>Distribution, licensing and payments</td><td>Download, updates, license and purchase records, and Microsoft’s own diagnostics. Governed by Microsoft’s privacy statement.</td></tr>
               <tr><td>Email providers</td><td>Delivery of messages you send to the developer</td><td>Your email address and message, if you write to the developer. Governed by the terms of the providers involved.</td></tr>
               <tr><td>GitHub</td><td>Website hosting and public issue tracker</td><td>Technical visit data when you load this site; anything you post in a public issue.</td></tr>
             </tbody>
@@ -161,7 +179,7 @@
         <p>Microsoft’s privacy statement is available at <a href="https://privacy.microsoft.com/">privacy.microsoft.com</a>.</p>
 
         <h2 id="third">8. Third-party services</h2>
-        <p>The application contains no advertising, analytics or third-party tracking SDK. The Microsoft Store edition uses the Windows SDK and Microsoft Store APIs for licensing and, when enabled, purchasing, as described in section 7. The third parties involved in connection with Desktab are:</p>
+        <p>The application contains no advertising, analytics or third-party tracking SDK. The Microsoft Store edition uses the Windows SDK and Microsoft Store APIs for licensing and purchasing, as described in section 7. The third parties involved in connection with Desktab are:</p>
         <ul>
           <li><strong>Microsoft</strong> — Windows and the Microsoft Store, as described in section 7.</li>
           <li><strong>GitHub</strong> — hosting for this website and for the public support issue tracker, as described in sections 9 and 10.</li>
@@ -206,23 +224,49 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Desktab</div>
-          <p>The freedom of a desktop. The organization of a folder.</p>
+        <div class="footer-about">
+          <a class="footer-brand" href="../">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg-f)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+            <span>Desktab</span>
+          </a>
+          <p>A native Windows desktop organization application that turns real folders into flexible, desktop-style workspaces.</p>
+          <span class="footer-version">Version 1.6.0 · Windows 10 &amp; 11 (x64)</span>
         </div>
-        <nav aria-label="Footer">
-          <ul class="footer-nav">
-            <li><a href="../">Home</a></li>
+
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul class="footer-links">
+            <li><a href="../#showcase">Product Showcase</a></li>
             <li><a href="../#features">Features</a></li>
-            <li><a href="./">Privacy Policy</a></li>
-            <li><a href="../support/">Support</a></li>
-            <li><a href="tr/" lang="tr" hreflang="tr">Türkçe</a></li>
+            <li><a href="../#demo">Interactive Demo</a></li>
+            <li><a href="../#plans">Free vs Pro</a></li>
+            <li><a href="../#whats-new">What’s New</a></li>
           </ul>
-        </nav>
+        </div>
+
+        <div class="footer-col">
+          <h3>Resources &amp; Legal</h3>
+          <ul class="footer-links">
+            <li><a href="../support/">Support &amp; Troubleshooting</a></li>
+            <li><a href="./" aria-current="page">Privacy Policy</a></li>
+            <li><a href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site">GitHub Repository</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site/issues">Report an Issue</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Language</h3>
+          <ul class="footer-links">
+            <li><a href="./" lang="en" aria-current="page">English (EN)</a></li>
+            <li><a href="tr/" lang="tr" hreflang="tr">Türkçe (TR)</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="copyright">
+
+      <div class="footer-bottom">
         <p>© 2026 nevzatius. All rights reserved.</p>
-        <p>Desktab Free is available on Microsoft Store. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+        <p>Desktab is available on Microsoft Store. Microsoft, Windows, and Microsoft Store are trademarks of the Microsoft group of companies.</p>
       </div>
     </div>
   </footer>

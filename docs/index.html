@@ -1,283 +1,622 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Desktab — The freedom of a desktop. The organization of a folder.</title>
-  <meta name="description" content="Desktab is a native Windows app that turns real folders into desktop-style workspaces with freely positioned icons. Download Free from Microsoft Store.">
+  <title>Desktab — Your folders. Your space. Your way.</title>
+  <meta name="description" content="Desktab is a native Windows desktop organization app that turns real folders into flexible, desktop-style workspaces with freely positioned icons. Download Free from Microsoft Store.">
   <link rel="canonical" href="https://nevzatius.github.io/desktab-site/">
   <link rel="alternate" hreflang="en" href="https://nevzatius.github.io/desktab-site/">
   <link rel="alternate" hreflang="tr" href="https://nevzatius.github.io/desktab-site/tr/">
   <link rel="alternate" hreflang="x-default" href="https://nevzatius.github.io/desktab-site/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Desktab">
-  <meta property="og:title" content="Desktab — The freedom of a desktop. The organization of a folder.">
-  <meta property="og:description" content="A native Windows app that turns real folders into desktop-style workspaces. Free to download from Microsoft Store, with an optional one-time Pro upgrade.">
+  <meta property="og:title" content="Desktab — Your folders. Your space. Your way.">
+  <meta property="og:description" content="The freedom of a desktop. The organization of a folder. A native Windows app that turns real folders into desktop-style workspaces. Available on Microsoft Store.">
   <meta property="og:url" content="https://nevzatius.github.io/desktab-site/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="tr_TR">
   <meta property="og:image" content="https://nevzatius.github.io/desktab-site/assets/images/og-image.png">
-  <meta property="og:image:alt" content="Desktab wordmark with the tagline: The freedom of a desktop. The organization of a folder.">
+  <meta property="og:image:alt" content="Desktab for Windows: The freedom of a desktop. The organization of a folder.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#eef1f6">
+  <meta name="theme-color" content="#0B0D12">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <script src="assets/theme.js?v=20261107-theme"></script>
-  <link rel="stylesheet" href="assets/styles.css?v=20261116-new">
-  <link rel="stylesheet" href="assets/demo.css?v=20261107-theme">
+  <script src="assets/theme.js?v=20261116-v2"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261116-v2">
+  <link rel="stylesheet" href="assets/demo.css?v=20261116-v2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- A. Navigation -->
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="./" aria-label="Desktab — home"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>Desktab</a>
-      <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="./" aria-label="Desktab — home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+        <span>Desktab</span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
-          <li><a href="./" aria-current="page">Home</a></li>
+          <li><a href="#showcase">Showcase</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#demo">Try the demo</a></li>
-          <li><a href="#whats-new">What’s new</a></li>
-          <li><a href="privacy/">Privacy Policy</a></li>
+          <li><a href="#demo">Interactive Demo</a></li>
+          <li><a href="#plans">Free vs Pro</a></li>
+          <li><a href="#whats-new">What’s New</a></li>
           <li><a href="support/">Support</a></li>
         </ul>
-        <div class="lang-switch" role="group" aria-label="Language">
-          <span lang="en" aria-current="true">EN</span>
-          <a href="tr/" lang="tr" hreflang="tr" aria-label="Türkçe">TR</a>
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <span lang="en" aria-current="true">EN</span>
+            <a href="tr/" lang="tr" hreflang="tr" aria-label="Türkçe">TR</a>
+          </div>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="true" aria-label="Switch to light theme">
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+          </button>
+          <a class="btn btn-primary btn-sm" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Download</a>
         </div>
-          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark theme"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- A — Hero -->
+    <!-- B. Hero Section -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <div>
-          <p class="eyebrow">For Windows 10 &amp; 11</p>
-          <h1 id="hero-title" class="tagline"><span class="sr-only">Desktab. </span><span>The freedom of a desktop.</span> <span>The organization of a folder.</span></h1>
-          <p class="lead">Desktab turns the real folders you choose into desktop-style workspaces. Place file and folder icons wherever you like, keep several workspaces side by side, and keep working with ordinary Windows files.</p>
+        <div class="hero-top">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <strong>Available on Microsoft Store</strong>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>Windows 10 &amp; 11 (x64)</span>
+            <span class="eyebrow-sep" aria-hidden="true">·</span>
+            <span>v1.6.0</span>
+          </p>
+          <h1 id="hero-title"><span class="sr-only">Desktab — </span><span class="nw">Your folders.</span> <span class="nw">Your space.</span> <span class="nw">Your way.</span></h1>
+          <p class="hero-subtitle">The freedom of a desktop. The organization of a folder.</p>
+          <p class="lead">Desktab turns the real Windows folders you choose into flexible, desktop-style workspaces. Place file, folder, and shortcut icons wherever you like, keep multiple workspaces open side by side as tabs, and work directly with ordinary Windows files.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Download Free from Microsoft Store</a>
+            <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1.5 2.3 7.3 1.5v5.8H1.5V2.3zm6.6-.9L14.5.5v6.8H8.1V1.4zM1.5 8.1h5.8v5.8l-5.8-.8V8.1zm6.6 0h6.4v6.9l-6.4-.9V8.1z"/></svg>
+              <span>Download Free from Microsoft Store</span>
+            </a>
             <a class="btn btn-secondary" href="#features">Explore Features</a>
+            <a class="btn btn-ghost" href="#demo">Try Interactive Demo</a>
           </div>
-          <p class="status-note">Desktab is available for Windows 10 and 11 (x64). Free to download, with an optional one-time Pro upgrade inside the app.</p>
+          <ul class="hero-meta" aria-label="Product highlights">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Windows 10 &amp; 11 (64-bit)</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Free download · Optional one-time Pro upgrade in app</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Zero accounts, ads, or telemetry</span>
+            </li>
+          </ul>
         </div>
 
         <div class="hero-stage">
-          <div class="desk-icons" aria-hidden="true">
-            <span class="desk-icon folder"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg></span>
-            <span class="desk-icon img"><svg viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="4.5" width="17" height="15" rx="3"/><circle cx="9" cy="10" r="1.6"/><path d="m4 17 5-4.5 3.5 3 3-2.5 4.5 4"/></svg></span>
-            <span class="desk-icon"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 3.5h6.5L18 8v11a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5a1.5 1.5 0 0 1 1-1.5z"/><path d="M13 3.5V8h5M9 12.5h6M9 16h4"/></svg></span>
-            <span class="desk-icon folder"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg></span>
-          </div>
           <figure class="shot">
-          <div class="shot-frame"><a class="shot-link" href="assets/images/app-main-en.png" aria-label="Open full-size screenshot"><img src="assets/images/app-main-en.png" width="1280" height="720" alt="Desktab showing the Project Atlas workspace: file and folder icons placed freely on a blue background, with two workspace tabs and smart-view buttons above." fetchpriority="high"></a></div>
-          <figcaption>Pre-release build of Desktab. All files shown are demo files.</figcaption>
-        </figure>
+            <div class="shot-frame">
+              <a class="shot-link" href="assets/images/app-main-en.png" aria-label="Open full-size screenshot of the Desktab main workspace">
+                <img src="assets/images/app-main-en.png" width="1280" height="720" alt="Desktab showing the Project Atlas workspace: file and folder icons placed freely on a blue background, with two workspace tabs and smart-view filter buttons above." fetchpriority="high">
+              </a>
+            </div>
+            <figcaption class="shot-caption-bar">
+              <span>Actual Desktab interface showing the <strong>Project Atlas</strong> workspace with freely arranged demo files and smart-view filters.</span>
+              <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Click screenshot to enlarge</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-
-    <!-- Highlights -->
-    <section class="stats" aria-label="Highlights"><div class="container"><ul><li><strong>27</strong><span>downloads from Microsoft Store</span></li><li><strong>15</strong><span>countries</span></li><li><strong>10</strong><span>interface languages</span></li><li><strong>0</strong><span>accounts, ads or telemetry</span></li></ul><p class="stats-note">Microsoft Store figures as of November 2026.</p></div></section>
-
-    <!-- B — The problem -->
+    <!-- Core Concept / Why Desktab -->
     <section aria-labelledby="problem-title">
       <div class="container">
-        <h2 id="problem-title">Two good ideas that rarely meet</h2>
-        <div class="problem">
-          <div>
-            <p>Many Windows users end up with files and shortcuts scattered across the desktop. It is quick and visual, but it gets crowded and hard to keep tidy.</p>
-            <p>Traditional folders give you real organization. What they do not offer is the free-placement experience of a desktop: putting things exactly where you want them.</p>
+        <div class="value-split">
+          <div class="value-copy">
+            <span class="section-kicker">Why Desktab</span>
+            <h2 id="problem-title">Two good ideas that rarely meet</h2>
+            <p>Many Windows users keep active files and shortcuts on the desktop because spatial arrangement is fast and visual. Over time, a single desktop becomes crowded and hard to keep organized across projects.</p>
+            <p>Traditional folders provide clean hierarchy and structure, but lock your files into rigid lists and grids—removing the ability to group and place items spatially where you expect to find them.</p>
           </div>
-          <p class="highlight">Desktab brings these two approaches together: the organization of a folder, with the freedom of a desktop.</p>
+          <div class="value-callout">
+            <p class="value-callout-title">Spatial freedom inside real Windows folders</p>
+            <p>Desktab bridges both worlds: open any folder on your PC as a dedicated desktop canvas, arrange icons freely per project, and switch between workspaces in tabs—while your files stay in standard Windows folders.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- C — Features -->
-    <section id="features" class="alt" aria-labelledby="features-title">
+    <!-- C. Product Showcase -->
+    <section id="showcase" class="alt" aria-labelledby="showcase-title">
       <div class="container">
-        <div class="features-head">
-          <h2 id="features-title">What Desktab does</h2>
-          <p class="section-intro">A native Windows application that works directly on the folders you already have.</p>
+        <div class="section-header">
+          <span class="section-kicker">Product Showcase</span>
+          <h2 id="showcase-title">Built for focused desktop organization</h2>
+          <p class="section-intro">Explore how Desktab combines multi-tabbed folder workspaces, internal navigation, and visual customization in a native Windows interface.</p>
         </div>
-        <ul class="cards">
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 10h18M8 5v5"/></svg></span>
+
+        <div class="showcase-tabs" role="tablist" aria-label="Application views" data-showcase-tabs>
+          <button type="button" role="tab" class="showcase-tab is-active" id="tab-workspaces" aria-selected="true" aria-controls="panel-workspaces" tabindex="0" data-showcase-tab="workspaces">
+            <span class="showcase-tab-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M9 4v5"/></svg>
+              <span>Multiple Workspaces &amp; Smart Views</span>
+            </span>
+            <span class="showcase-tab-desc">Keep project folders open as tabs, position icons anywhere, and filter by file type or frequency.</span>
+          </button>
+
+          <button type="button" role="tab" class="showcase-tab" id="tab-navigation" aria-selected="false" aria-controls="panel-navigation" tabindex="-1" data-showcase-tab="navigation">
+            <span class="showcase-tab-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><path d="M9 14h6m-2.5-2.5L15 14l-2.5 2.5"/></svg>
+              <span>Internal Folder Navigation</span>
+            </span>
+            <span class="showcase-tab-desc">Step into subfolders and back inside the same window with Back, Forward, Up, and breadcrumb controls.</span>
+          </button>
+
+          <button type="button" role="tab" class="showcase-tab" id="tab-personalize" aria-selected="false" aria-controls="panel-personalize" tabindex="-1" data-showcase-tab="personalize">
+            <span class="showcase-tab-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/></svg>
+              <span>Personalization &amp; Dark Theme</span>
+            </span>
+            <span class="showcase-tab-desc">Switch between Light and Dark themes, Modern or Classic styles, and set distinct backgrounds per workspace.</span>
+          </button>
+        </div>
+
+        <div class="showcase-panels">
+          <div class="showcase-panel is-active" id="panel-workspaces" role="tabpanel" aria-labelledby="tab-workspaces" data-showcase-panel="workspaces">
+            <figure class="shot">
+              <div class="shot-frame">
+                <a class="shot-link" href="assets/images/app-main-en.png" aria-label="Open full-size screenshot of multiple workspaces and smart views">
+                  <img src="assets/images/app-main-en.png" width="1280" height="720" alt="Desktab showing the Project Atlas workspace with freely placed icons, workspace tabs, search box, and smart-view filters." loading="lazy" decoding="async">
+                </a>
+              </div>
+              <figcaption class="shot-caption-bar">
+                <span><strong>Workspace tabs &amp; free layout.</strong> Open real folders side by side, arrange files spatially, and filter by All, Frequently used, Documents, PDF, Images, or Folders.</span>
+                <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Click to enlarge</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="showcase-panel" id="panel-navigation" role="tabpanel" aria-labelledby="tab-navigation" data-showcase-panel="navigation" hidden>
+            <figure class="shot">
+              <div class="shot-frame">
+                <a class="shot-link" href="assets/images/app-nav-en.png" aria-label="Open full-size screenshot of internal folder navigation">
+                  <img src="assets/images/app-nav-en.png" width="1280" height="720" alt="Desktab inside the Images subfolder of Project Atlas, with a path bar and back, forward and up buttons above six image thumbnails." loading="lazy" decoding="async">
+                </a>
+              </div>
+              <figcaption class="shot-caption-bar">
+                <span><strong>Internal folder navigation.</strong> Browse into subfolders and return up levels without opening separate windows, with full path breadcrumbs.</span>
+                <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Click to enlarge</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="showcase-panel" id="panel-personalize" role="tabpanel" aria-labelledby="tab-personalize" data-showcase-panel="personalize" hidden>
+            <figure class="shot">
+              <div class="shot-frame">
+                <a class="shot-link" href="assets/images/app-dark-en.png" aria-label="Open full-size screenshot of Desktab in dark theme">
+                  <img src="assets/images/app-dark-en.png" width="1280" height="720" alt="Desktab in dark theme on a second workspace tab called Design, with a purple static image background and freely placed icons." loading="lazy" decoding="async">
+                </a>
+              </div>
+              <figcaption class="shot-caption-bar">
+                <span><strong>Dark theme &amp; custom backgrounds.</strong> A second workspace tab (“Design”) using dark mode and a static image wallpaper.</span>
+                <span class="shot-zoom-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Click to enlarge</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ul class="showcase-pillars" aria-label="Core workflow pillars">
+          <li>
+            <strong>Multiple workspaces</strong>
+            <span>Switch folders via tabs or <kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>9</kbd>.</span>
+          </li>
+          <li>
+            <strong>Free icon positioning</strong>
+            <span>Place items anywhere on the canvas; each workspace remembers its coordinates.</span>
+          </li>
+          <li>
+            <strong>File &amp; folder organization</strong>
+            <span>Filter by category, view frequent items, search instantly, and navigate subfolders.</span>
+          </li>
+          <li>
+            <strong>Personalization</strong>
+            <span>Light/Dark themes, Modern/Classic styles, window corner options, and custom backgrounds.</span>
+          </li>
+          <li>
+            <strong>Windows integration</strong>
+            <span>Explorer drag-and-drop, shared clipboard, default apps, and Recycle Bin protection.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- D. Features -->
+    <section id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Capabilities</span>
+          <h2 id="features-title">Everything needed to organize real folders</h2>
+          <p class="section-intro">A native Windows application that works directly on the folders you already have—without proprietary databases or cloud lock-in.</p>
+        </div>
+
+        <ul class="features-grid">
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <rect x="14" y="15" width="54" height="14" rx="7" fill="#3B82F6"/>
+                <rect x="74" y="15" width="46" height="14" rx="7" fill="#1E2534"/>
+                <circle cx="131" cy="22" r="7" fill="#1E2534"/>
+                <path d="M128 22h6M131 19v6" stroke="#929BAA" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="6" y1="35" x2="214" y2="35" stroke="#252C38"/>
+                <rect x="20" y="43" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+                <rect x="52" y="45" width="14" height="16" rx="2" fill="#5B9CFF" opacity="0.85"/>
+                <rect x="86" y="43" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+              </svg>
+            </div>
             <h3>Desktop-like workspaces</h3>
-            <p>Open any folder as a workspace and see its files and folders as icons on a background, with several workspaces available as tabs.</p>
+            <p>Open any folder as a visual workspace and view its files and subfolders as icons on a customizable canvas, with multiple workspaces accessible as tabs.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v18M3 12h18"/><path d="m9 6 3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></span>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <circle cx="34" cy="26" r="1.5" fill="#252C38"/><circle cx="74" cy="26" r="1.5" fill="#252C38"/><circle cx="114" cy="26" r="1.5" fill="#252C38"/><circle cx="154" cy="26" r="1.5" fill="#252C38"/><circle cx="194" cy="26" r="1.5" fill="#252C38"/>
+                <circle cx="34" cy="52" r="1.5" fill="#252C38"/><circle cx="74" cy="52" r="1.5" fill="#252C38"/><circle cx="114" cy="52" r="1.5" fill="#252C38"/><circle cx="154" cy="52" r="1.5" fill="#252C38"/><circle cx="194" cy="52" r="1.5" fill="#252C38"/>
+                <rect x="24" y="18" width="20" height="16" rx="3" fill="#F0B13A"/>
+                <rect x="82" y="38" width="20" height="16" rx="3" fill="#1E2534" stroke="#5B9CFF" stroke-dasharray="2 2"/>
+                <path d="M106 44c16-12 28-14 44-10" stroke="#5B9CFF" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="154" y="22" width="22" height="18" rx="3.5" fill="#3B82F6"/>
+              </svg>
+            </div>
             <h3>Free icon positioning</h3>
-            <p>Drag icons wherever they make sense to you. Each workspace remembers its own layout.</p>
+            <p>Drag icons wherever they make sense to you. Each workspace independently remembers its exact icon positions across sessions.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><path d="M9 14h6m-2.5-2.5L15 14l-2.5 2.5"/></svg></span>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <rect x="16" y="18" width="18" height="18" rx="4" fill="#1E2534"/>
+                <path d="m27 23-4 4 4 4" stroke="#929BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="38" y="18" width="18" height="18" rx="4" fill="#1E2534"/>
+                <path d="M47 31v-8m-3 3 3-3 3 3" stroke="#929BAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="64" y="18" width="58" height="18" rx="4" fill="#1E2534"/>
+                <rect x="70" y="25" width="46" height="4" rx="2" fill="#929BAA"/>
+                <path d="m128 24 3 3-3 3" stroke="#687385" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="136" y="18" width="52" height="18" rx="4" fill="#2563EB"/>
+                <rect x="143" y="25" width="38" height="4" rx="2" fill="#F4F6FA"/>
+                <line x1="6" y1="44" x2="214" y2="44" stroke="#252C38"/>
+                <rect x="20" y="51" width="22" height="11" rx="2" fill="#5B9CFF" opacity="0.6"/>
+                <rect x="50" y="51" width="22" height="11" rx="2" fill="#F0B13A" opacity="0.8"/>
+                <rect x="80" y="51" width="22" height="11" rx="2" fill="#5B9CFF" opacity="0.6"/>
+              </svg>
+            </div>
             <h3>Internal folder navigation</h3>
-            <p>Move into subfolders and back without leaving the window, with a path bar that shows where you are.</p>
+            <p>Move into subfolders and back without leaving the window, using Back, Forward, Up, and an interactive path bar that shows where you are.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h14m-3-3 3 3-3 3M20 16H6m3-3-3 3 3 3"/></svg></span>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="14" y="14" width="76" height="48" rx="5" fill="#131720" stroke="#252C38"/>
+                <rect x="22" y="22" width="28" height="5" rx="2" fill="#687385"/>
+                <rect x="22" y="33" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+                <rect x="130" y="14" width="76" height="48" rx="5" fill="#131720" stroke="#5B9CFF"/>
+                <rect x="138" y="22" width="28" height="5" rx="2" fill="#5B9CFF"/>
+                <rect x="166" y="35" width="16" height="14" rx="2.5" fill="#F0B13A"/>
+                <path d="M96 32h26m-5-4 5 4-5 4M124 46H98m5-4-5 4 5 4" stroke="#5B9CFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <h3>Windows Explorer integration</h3>
-            <p>Drag and drop files between Explorer and Desktab, use the shared clipboard, and rename, copy or move files. Deleted items go to the Recycle Bin.</p>
+            <p>Drag and drop files between Explorer and Desktab, use the shared Windows clipboard, and rename, copy, or move items. Deleted items go safely to the Recycle Bin.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1" fill="currentColor"/><circle cx="10.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7.5" r="1" fill="currentColor"/></svg></span>
-            <h3>Personalization</h3>
-            <p>Light or dark, Modern or Classic, rounded or square corners, and your own backgrounds. Available in ten interface languages.</p>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="14" y="12" width="90" height="52" rx="6" fill="#EEF2F7" stroke="#CBD5E1"/>
+                <rect x="22" y="20" width="28" height="8" rx="4" fill="#2563EB"/>
+                <rect x="22" y="34" width="14" height="12" rx="2" fill="#F0B13A"/>
+                <rect x="44" y="34" width="14" height="12" rx="2" fill="#3B82F6"/>
+                <rect x="116" y="12" width="90" height="52" rx="6" fill="#151926" stroke="#5B9CFF"/>
+                <rect x="124" y="20" width="28" height="8" rx="4" fill="#5B9CFF"/>
+                <rect x="124" y="34" width="14" height="12" rx="2" fill="#F0B13A"/>
+                <rect x="146" y="34" width="14" height="12" rx="2" fill="#8B5CF6"/>
+              </svg>
+            </div>
+            <h3>Personalization &amp; 10 languages</h3>
+            <p>Choose Light or Dark theme, Modern or Classic style, rounded or square window corners, and custom backgrounds—with ten built-in interface languages.</p>
           </li>
-          <li class="card">
-            <span class="icon-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9"/></svg></span>
+
+          <li class="feature-card">
+            <div class="feature-preview" aria-hidden="true">
+              <svg viewBox="0 0 220 76" fill="none">
+                <rect x="6" y="8" width="208" height="60" rx="6" fill="#131720" stroke="#252C38"/>
+                <rect x="20" y="22" width="54" height="32" rx="5" fill="#181D28" stroke="#252C38"/>
+                <text x="47" y="42" text-anchor="middle" fill="#5B9CFF" font-family="Consolas, monospace" font-size="11" font-weight="700">.NET</text>
+                <path d="M88 46h28l8-18 8 24 6-12h58" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="196" cy="40" r="3.5" fill="#34D399"/>
+              </svg>
+            </div>
             <h3>Lightweight by design</h3>
-            <p>A native C# / WPF app on .NET. No account, no ads, no telemetry; it does not start with Windows and has no tray icon or background service.</p>
+            <p>A native C# / WPF application on .NET. Does not start automatically with Windows, adds no tray icon or background service, and summons anytime with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="gallery" aria-labelledby="gallery-title">
-      <div class="container">
-        <h2 id="gallery-title">See it in action</h2>
-        <p class="section-intro">Screenshots from a pre-release build, using demo files.</p>
-        <ul class="gallery-grid">
-          <li>
-            <figure class="shot">
-              <div class="shot-frame"><a class="shot-link" href="assets/images/app-nav-en.png" aria-label="Open full-size screenshot"><img src="assets/images/app-nav-en.png" width="1280" height="720" alt="Desktab inside the Images subfolder of Project Atlas, with a path bar and back, forward and up buttons above six image thumbnails." loading="lazy" decoding="async"></a></div>
-              <figcaption><strong>Folder navigation.</strong> Move into subfolders and back, with a path bar showing where you are.</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure class="shot">
-              <div class="shot-frame"><a class="shot-link" href="assets/images/app-dark-en.png" aria-label="Open full-size screenshot"><img src="assets/images/app-dark-en.png" width="1280" height="720" alt="Desktab in dark theme on a second workspace tab called Design, with a purple static image background and freely placed icons." loading="lazy" decoding="async"></a></div>
-              <figcaption><strong>Dark theme and your own background.</strong> A second workspace with a static image wallpaper.</figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Interactive demo -->
+    <!-- E. Interactive Demo -->
     <section id="demo" class="alt" aria-labelledby="demo-title">
       <div class="container">
-        <h2 id="demo-title">Try it yourself</h2>
-        <p class="section-intro">A simplified Desktab window that runs right here in your browser. Drag icons anywhere, drop a file onto a folder or onto another workspace tab, open folders, right-click the background, and change the look.</p>
-        <div id="dz" class="dz"><noscript><p class="dz-note">The interactive demo needs JavaScript. The screenshots above show the real app.</p></noscript></div>
-        <p class="dz-note">A simplified simulation for illustration: it runs entirely in your browser, nothing is saved or sent anywhere, and some details differ from the real app. Features that belong to Pro are marked. See <a href="#plans">Free and Pro</a>.</p>
+        <div class="section-header">
+          <span class="section-kicker">Interactive Demo</span>
+          <h2 id="demo-title">Try the workspace experience in your browser</h2>
+          <p class="section-intro">Test a simplified simulation of Desktab right here. Drag icons freely, drop a file onto a folder or workspace tab, open subfolders, right-click the canvas, and customize the look.</p>
+        </div>
+
+        <ul class="demo-hints" aria-label="Things to try in the demo">
+          <li><strong>Drag icons</strong> anywhere on the canvas</li>
+          <li><strong>Double-click a folder</strong> to navigate inside</li>
+          <li><strong>Drop a file</strong> onto a folder or the “Design” tab</li>
+          <li><strong>Right-click</strong> an icon or the background</li>
+          <li><strong>Personalize</strong> theme, style, corners &amp; wallpaper below</li>
+        </ul>
+
+        <div id="dz" class="dz"><noscript><p class="dz-note">The interactive demo requires JavaScript. The screenshots above show the real application.</p></noscript></div>
+        <p class="dz-note">A simplified browser simulation for illustration: state lives in memory only, nothing is saved or sent anywhere, and some details differ from the native Windows app. Pro capabilities are badged. See <a href="#plans">Free vs Pro</a>.</p>
       </div>
     </section>
 
-
-    <!-- E — Free and Pro -->
+    <!-- F. Free vs Pro -->
     <section id="plans" aria-labelledby="plans-title">
       <div class="container">
-        <h2 id="plans-title">Free and Pro</h2>
-        <p class="section-intro">Free is available now on Microsoft Store. Pro is a one-time purchase made from inside the app.</p>
-        <div class="plans">
-          <article class="plan" aria-labelledby="free-title">
-            <h3 id="free-title">Free <span class="badge">Available now</span></h3>
-            <p class="sub">Everything you need for everyday organizing.</p>
-            <ul>
+        <div class="section-header">
+          <span class="section-kicker">Editions &amp; Licensing</span>
+          <h2 id="plans-title">Free vs Pro</h2>
+          <p class="section-intro">Desktab Free is available now on Microsoft Store. Pro is an optional one-time upgrade purchased directly inside the app—with no subscription.</p>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card" aria-labelledby="free-title">
+            <div class="plan-head">
+              <div class="plan-title-row">
+                <h3 id="free-title">Free</h3>
+                <span class="badge">Available now</span>
+              </div>
+              <p class="plan-sub">Everything you need for everyday folder organization on Windows.</p>
+            </div>
+            <p class="plan-includes">Included in Free:</p>
+            <ul class="plan-list">
               <li>Up to 2 workspaces</li>
-              <li>Basic file management</li>
-              <li>Navigation</li>
-              <li>Workspace ordering</li>
-              <li>Light / Dark</li>
-              <li>Modern / Classic</li>
+              <li>Basic file management (open, new folder, rename, copy, move, Recycle Bin)</li>
+              <li>Internal subfolder navigation &amp; breadcrumb path bar</li>
+              <li>Workspace tab ordering &amp; keyboard switching</li>
+              <li>Smart filter views &amp; instant file search</li>
+              <li>Light / Dark themes</li>
+              <li>Modern / Classic interface styles</li>
               <li>Titlebar identity settings</li>
               <li>Rounded / Square window corners</li>
               <li>Opaque panel</li>
-              <li>Solid, gradient and static image backgrounds</li>
+              <li>Solid color, gradient, and static image backgrounds</li>
               <li>Ten interface languages</li>
             </ul>
+            <div class="plan-footer">
+              <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Download Free from Microsoft Store</a>
+            </div>
           </article>
-          <article class="plan pro" aria-labelledby="pro-title">
-            <h3 id="pro-title">Pro <span class="badge">In-app purchase</span></h3>
-            <p class="sub">One-time purchase. No subscription.</p>
-            <p class="includes">All Free features, plus:</p>
-            <ul>
-              <li>Unlimited workspaces</li>
-              <li>Semi-transparent panel</li>
-              <li>Transparent panel</li>
-              <li>Animated GIF wallpapers</li>
-              <li>Video wallpapers</li>
+
+          <article class="plan-card pro" aria-labelledby="pro-title">
+            <div class="plan-head">
+              <div class="plan-title-row">
+                <h3 id="pro-title">Pro</h3>
+                <span class="badge badge-accent">One-time in-app purchase</span>
+              </div>
+              <p class="plan-sub">Pay once, own forever. No recurring subscription.</p>
+            </div>
+            <p class="plan-includes">All Free features, plus:</p>
+            <ul class="plan-list">
+              <li><strong>Unlimited workspaces</strong> for all your active folders and projects</li>
+              <li><strong>Semi-transparent panel</strong> appearance</li>
+              <li><strong>Transparent panel</strong> appearance</li>
+              <li><strong>Animated GIF wallpapers</strong></li>
+              <li><strong>Video wallpapers</strong> (local MP4 / H.264 support)</li>
             </ul>
+            <div class="plan-footer">
+              <p class="plan-footer-note">Pro is unlocked from inside the Desktab application and processed securely by Microsoft Store, where your regional price is displayed before confirmation.</p>
+            </div>
           </article>
         </div>
-        <p class="plan-note">Pro is bought once, from inside the Desktab app, and is processed by Microsoft Store; the price is shown there before you confirm. If you reinstall or move to a new PC, choose “Restore purchases” in the app.</p>
+
+        <p class="plan-note"><strong>Microsoft Store licensing:</strong> Pro is tied to your Microsoft Store account. If you reinstall Windows or move to a new PC, simply choose “Restore purchases” inside the Desktab app.</p>
       </div>
     </section>
 
-    <!-- What's new / coming soon -->
-    <section id="whats-new" class="alt" aria-labelledby="new-title">
+    <!-- G. Privacy and Trust -->
+    <section id="privacy-trust" class="alt" aria-labelledby="trust-title">
       <div class="container">
-        <h2 id="new-title">What’s new and what’s next</h2>
-        <p class="section-intro">Desktab keeps improving. Here is what the latest update added and what is being built next.</p>
-        <div class="plans">
-          <article class="plan" aria-labelledby="v160-title">
-            <h3 id="v160-title">Version 1.6.0 <span class="badge">Available now</span></h3>
-            <p class="sub">Released on November 14, 2026.</p>
-            <ul>
-              <li><strong>Ten interface languages.</strong> Spanish, Italian, Simplified Chinese, Korean and Japanese join Turkish, English, German, Russian and Polish.</li>
-              <li><strong>Switch workspaces from the keyboard.</strong> <kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> move to the next or previous workspace; <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>9</kbd> jump straight to one.</li>
-              <li><strong>Shortcuts at your fingertips.</strong> <kbd>F1</kbd> lists every shortcut, and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> brings Desktab to the front from anywhere.</li>
-              <li><strong>Fixes.</strong> The Save button on the Personalize screen works, and the scroll position stays in place while you change settings.</li>
-            </ul>
-          </article>
-          <article class="plan pro soon" aria-labelledby="v170-title">
-            <h3 id="v170-title">Encrypted workspaces <span class="badge">In development</span></h3>
-            <p class="sub">Planned for version 1.7.0. No release date yet.</p>
-            <p class="includes">Planned:</p>
-            <ul>
-              <li>Turn a workspace folder into an encrypted vault. Your files are stored encrypted on disk.</li>
-              <li>Unlock it with a PIN. The PIN is tied to your PC, and you receive a recovery code when the vault is created.</li>
-              <li>Safe conversion: existing files are encrypted and checked first. Originals are removed only after that, and only with your confirmation.</li>
-              <li>Export a file to open it in another app, and preview images and text inside Desktab.</li>
-              <li>Creating an encrypted workspace is planned as a Pro feature; opening an existing vault will always stay possible.</li>
-            </ul>
-          </article>
+        <div class="section-header">
+          <span class="section-kicker">Privacy &amp; Reliability</span>
+          <h2 id="trust-title">Your files stay on your PC</h2>
+          <p class="section-intro">Desktab is built to respect your machine and your privacy. Every claim below is verifiable in our documentation and Privacy Policy.</p>
         </div>
-        <p class="plan-note">Encrypted workspaces are in development and not released. Details may change before release, and no release date has been set.</p>
+
+        <ul class="trust-grid">
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>No account required</h3>
+            <p>Install from Microsoft Store and start organizing immediately. Desktab has no sign-up flow, user accounts, or developer servers.</p>
+          </li>
+
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg>
+            </span>
+            <h3>No advertisements</h3>
+            <p>Your desktop workspace is a productivity tool, not an ad surface. Desktab contains zero advertising SDKs or promotional banners.</p>
+          </li>
+
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <h3>No telemetry</h3>
+            <p>The app contains no analytics, usage tracking, or crash-reporting code. Your files, file names, folder paths, and layouts are never sent to the developer.</p>
+          </li>
+
+          <li class="trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>
+            </span>
+            <h3>Ordinary Windows folders</h3>
+            <p>Workspaces point directly to normal folders on your drive. Layout coordinates are saved locally in your app data folder, and deleted items go to the Recycle Bin.</p>
+          </li>
+        </ul>
+
+        <div class="trust-bar">
+          <p><strong>Full transparency:</strong> Read exactly what the app accesses on your PC, where local settings are stored, and how Microsoft Store licensing works.</p>
+          <a class="btn btn-secondary btn-sm" href="privacy/">Read the Privacy Policy</a>
+        </div>
       </div>
     </section>
 
+    <!-- H. What's New -->
+    <section id="whats-new" aria-labelledby="new-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Release Notes &amp; Roadmap</span>
+          <h2 id="new-title">What’s new and what’s next</h2>
+          <p class="section-intro">Desktab is actively maintained. Here is what shipped in the latest Microsoft Store release and what is currently in development.</p>
+        </div>
+
+        <div class="changelog-grid">
+          <article class="changelog-card" aria-labelledby="v160-title">
+            <div class="changelog-meta">
+              <div>
+                <h3 id="v160-title">Version 1.6.0</h3>
+                <span class="changelog-date">Released November 14, 2026</span>
+              </div>
+              <span class="badge">Available now</span>
+            </div>
+            <ul class="changelog-list">
+              <li><strong>Ten interface languages.</strong> Spanish, Italian, Simplified Chinese, Korean, and Japanese join Turkish, English, German, Russian, and Polish.</li>
+              <li><strong>Keyboard workspace switching.</strong> <kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> cycle to the next or previous workspace; <kbd>Ctrl</kbd>+<kbd>1</kbd>…<kbd>9</kbd> jump directly to a tab.</li>
+              <li><strong>Shortcuts at your fingertips.</strong> <kbd>F1</kbd> lists every keyboard shortcut, and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> brings Desktab to the front from anywhere in Windows.</li>
+              <li><strong>Personalize screen fixes.</strong> The Save button on the Personalize screen works reliably, and scroll position is preserved while adjusting settings.</li>
+            </ul>
+          </article>
+
+          <article class="changelog-card upcoming" aria-labelledby="v170-title">
+            <div class="changelog-meta">
+              <div>
+                <h3 id="v170-title">Encrypted Workspaces</h3>
+                <span class="changelog-date">Planned for Version 1.7.0 · No release date yet</span>
+              </div>
+              <span class="badge badge-amber">In development</span>
+            </div>
+            <ul class="changelog-list">
+              <li><strong>Encrypted folder vaults.</strong> Convert a workspace folder into an encrypted vault so files are stored encrypted on disk.</li>
+              <li><strong>Local PIN &amp; recovery code.</strong> Unlock with a PIN tied to your PC, with a recovery code generated when the vault is created.</li>
+              <li><strong>Verified safe conversion.</strong> Existing files are encrypted and verified first; originals are removed only afterward and only with your confirmation.</li>
+              <li><strong>Built-in preview &amp; export.</strong> Preview images and text inside Desktab, or export a file to open in another application.</li>
+              <li><strong>Fair access guarantee.</strong> Creating an encrypted workspace is planned as a Pro feature; opening an existing vault will always stay possible.</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="plan-note">Encrypted workspaces are currently in development and not yet released. Implementation details may change before release, and no release date has been set.</p>
+      </div>
+    </section>
+
+    <!-- Closing CTA Band -->
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title">Get Desktab from Microsoft Store</h2>
-        <p>Download Desktab for free and organize your folders your way; upgrade to Pro from inside the app whenever you like. Questions or feedback? <a href="support/">Visit Support</a>.</p>
-        <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Download Free from Microsoft Store</a>
+        <div class="cta-box">
+          <div class="cta-copy">
+            <h2 id="cta-title">Get Desktab from Microsoft Store</h2>
+            <p>Download Desktab for free on Windows 10 and 11, organize your real folders your way, and upgrade to Pro inside the app whenever you need unlimited workspaces.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1.5 2.3 7.3 1.5v5.8H1.5V2.3zm6.6-.9L14.5.5v6.8H8.1V1.4zM1.5 8.1h5.8v5.8l-5.8-.8V8.1zm6.6 0h6.4v6.9l-6.4-.9V8.1z"/></svg>
+              <span>Download Free from Microsoft Store</span>
+            </a>
+            <a class="btn btn-secondary" href="support/">Contact Support</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- I. Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-brand">Desktab</div>
-          <p>The freedom of a desktop. The organization of a folder.</p>
+        <div class="footer-about">
+          <a class="footer-brand" href="./">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="dt-bg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b7de0"/><stop offset="1" stop-color="#0b1b33"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#dt-bg-f)"/><path d="M13 22a4 4 0 0 1 4-4h11l4.5 5H47a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4z" fill="#fff"/><rect x="18" y="29" width="8" height="8" rx="2.2" fill="#3b7de0"/><rect x="29" y="35" width="8" height="8" rx="2.2" fill="#1b3a66"/><rect x="39" y="28.5" width="8" height="8" rx="2.2" fill="#8db4f0"/></svg>
+            <span>Desktab</span>
+          </a>
+          <p>A native Windows desktop organization application that turns real folders into flexible, desktop-style workspaces.</p>
+          <span class="footer-version">Version 1.6.0 · Windows 10 &amp; 11 (x64)</span>
         </div>
-        <nav aria-label="Footer">
-          <ul class="footer-nav">
-            <li><a href="./">Home</a></li>
+
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul class="footer-links">
+            <li><a href="#showcase">Product Showcase</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="privacy/">Privacy Policy</a></li>
-            <li><a href="support/">Support</a></li>
-            <li><a href="tr/" lang="tr" hreflang="tr">Türkçe</a></li>
+            <li><a href="#demo">Interactive Demo</a></li>
+            <li><a href="#plans">Free vs Pro</a></li>
+            <li><a href="#whats-new">What’s New</a></li>
           </ul>
-        </nav>
+        </div>
+
+        <div class="footer-col">
+          <h3>Resources &amp; Legal</h3>
+          <ul class="footer-links">
+            <li><a href="support/">Support &amp; Troubleshooting</a></li>
+            <li><a href="privacy/">Privacy Policy</a></li>
+            <li><a href="https://apps.microsoft.com/detail/9P05F9J6TJ1R">Microsoft Store</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site">GitHub Repository</a></li>
+            <li><a href="https://github.com/nevzatius/desktab-site/issues">Report an Issue</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Language</h3>
+          <ul class="footer-links">
+            <li><a href="./" lang="en" aria-current="page">English (EN)</a></li>
+            <li><a href="tr/" lang="tr" hreflang="tr">Türkçe (TR)</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="copyright">
+
+      <div class="footer-bottom">
         <p>© 2026 nevzatius. All rights reserved.</p>
-        <p>Desktab is available on Microsoft Store. Microsoft, Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+        <p>Desktab is available on Microsoft Store. Microsoft, Windows, and Microsoft Store are trademarks of the Microsoft group of companies.</p>
       </div>
     </div>
   </footer>
+
   <script src="assets/demo.js?v=20261107-demo" defer></script>
+  <script src="assets/lightbox.js?v=20261116" defer></script>
 </body>
 </html>
